@@ -14,7 +14,7 @@ export default function NavBarMobile({ isOpen, closeMenu }) {
         <Image src="/Logo.png" alt="Loading..." width={100} height={100} />
       </div>
       <AiOutlineClose
-        className="text-white text-3xl cursor-pointer bg-amber-500 absolute -right-[14px] top-[88px] rounded-full p-1"
+        className="text-white text-3xl cursor-pointer bg-[#f68a09] absolute -right-[14px] top-[88px] rounded-full p-1"
         onClick={closeMenu}
       />
       <nav className="p-4">

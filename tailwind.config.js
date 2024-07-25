@@ -22,6 +22,10 @@ module.exports = {
           "clip-path":
             "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px))",
         },
+        ".clip-bottom-right": {
+          "clip-path":
+            "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)",
+        },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),

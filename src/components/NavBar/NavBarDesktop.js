@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NavBarDesktop() {
   return (
-    <nav className="absolute -bottom-5 w-[83%] text-white clip-bottom-angled mx-32 h-14 text-sm">
+    <nav className="absolute -bottom-5 w-[83%] text-white clip-bottom-angled mx-32 h-14 text-sm z-10">
       <div className="flex bg-[#f68a09] text-white h-full justify-between">
         <div className="flex items-center space-x-6 pl-8">
           <Link href="/" className="hover:text-gray-500">
