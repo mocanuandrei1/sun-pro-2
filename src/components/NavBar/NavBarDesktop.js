@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function NavBar() {
+export default function NavBarDesktop() {
   return (
     <nav className="absolute -bottom-5 w-[83%] text-white clip-bottom-angled mx-32 h-14 text-sm">
       <div className="flex bg-[#f68a09] text-white h-full justify-between">

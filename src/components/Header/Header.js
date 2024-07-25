@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import NavBar from "./NavBar";
-import NavBarMobile from "./NavBarMobile";
+import NavBarMobile from "../NavBar/NavBarMobile";
 import Image from "next/image";
 import HeaderCall from "./HeaderCall";
 import HeaderEmail from "./HeaderEmail";
 import HeaderLocation from "./HeaderLocation";
 import { AiOutlineMenu } from "react-icons/ai";
+import NavBarDesktop from "../NavBar/NavBarDesktop";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function Header() {
         </div>
       </div>
       <div className="hidden lg:flex">
-        <NavBar />
+        <NavBarDesktop />
       </div>
       <NavBarMobile isOpen={isMobileMenuOpen} closeMenu={closeMobileMenu} />
     </header>
