@@ -26,6 +26,10 @@ module.exports = {
           "clip-path":
             "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)",
         },
+        ".clip-bottom-left-rounded": {
+          "clip-path":
+            "polygon(100% 0, 0 0, 0 51%, 0 76%, 3% 80%, 7% 85%, 12% 91%, 14% 93%, 17% 95%, 23% 98%, 26% 99%, 33% 100%, 100% 100%, 100% 55%)",
+        },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),

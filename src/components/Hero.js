@@ -4,7 +4,7 @@ import { LuCrown } from "react-icons/lu";
 
 export default function Hero() {
   return (
-    <div className="relative flex items-center justify-center h-screen bg-black">
+    <section className="relative flex items-center justify-center h-screen bg-black">
       <Image
         src="/HeroPhoto.png"
         alt="Loading..."
@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="grid grid-cols-2 text-center text-white z-10">
         <div></div>
         <div className="col-span-1 text-left ">
-          <p className="flex text-lg items-center text-[#f68a09]">
+          <p className="flex text-lg items-center text-[#f68a09] font-semibold">
             <LuCrown className="pr-2 text-3xl" />
             Renovate - Refresh - Rejoice
           </p>
@@ -25,6 +25,6 @@ export default function Hero() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

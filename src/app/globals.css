@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes renovation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes design {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes experience {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+.animate-renovation {
+  animation: renovation 1.5s ease-in-out forwards;
+}
+
+.animate-design {
+  animation: design 1.5s ease-in-out forwards;
+}
+
+.animate-experience {
+  animation: experience 1.5s ease-in-out forwards;
+}
