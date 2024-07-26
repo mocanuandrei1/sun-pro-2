@@ -10,8 +10,8 @@ export default function Home() {
       <Hero />
       <About />
       <CTA />
-      <WhyUs />
       <Services />
+      <WhyUs />
     </main>
   );
 }
