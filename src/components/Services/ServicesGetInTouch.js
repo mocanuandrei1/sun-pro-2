@@ -34,6 +34,7 @@ export default function ServicesGetInTouch() {
       color: "gray",
     }),
   };
+
   return (
     <section className="bg-white p-10">
       <div className="grid grid-cols-2 gap-10 items-center">
