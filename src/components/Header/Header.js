@@ -20,31 +20,31 @@ export default function Header() {
   };
 
   return (
-    <header className="relative bg-black">
-      <div className="lg:grid lg:grid-cols-3 lg:h-28 lg:items-start items-center h-20 flex justify-between">
-        <div className="col-span-1 lg:ml-32 ml-4">
+    <header className="bg-black md:bg-gradient-to-r from-black via-black to-white to-70% ">
+      <div className="relative max-w-screen-xl xl:mx-auto md:mx-10 flex justify-between items-center md:items-start h-20 md:h-28">
+        <div className="basis-1/2 pl-4 md:pl-0 md:basis-1/4 md:pt-4">
           <Image
             src="/Logo.png"
             alt="Kotar Logo"
             width={100}
             height={100}
-            className="lg:w-24 lg:h-20 w-16 h-14"
+            className="cursor-pointer"
           />
         </div>
-        <div className="hidden lg:grid grid-cols-3 col-span-2 h-28 bg-gray-100 lg:pr-32 items-start pt-4">
+        <div className="basis-3/4 hidden md:flex bg-white items-start justify-around flex-nowrap h-full md:pt-4">
           <HeaderCall />
           <HeaderEmail />
           <HeaderLocation />
         </div>
-        <div className="lg:hidden pr-4">
+        <div className="md:hidden pr-4 md:pr-0 flex items-center justify-end basis-1/2">
           <AiOutlineMenu
             className="text-white text-3xl cursor-pointer"
             onClick={toggleMobileMenu}
           />
         </div>
-      </div>
-      <div className="hidden lg:flex">
-        <NavBarDesktop />
+        <div className="hidden md:flex">
+          <NavBarDesktop />
+        </div>
       </div>
       <NavBarMobile isOpen={isMobileMenuOpen} closeMenu={closeMobileMenu} />
     </header>

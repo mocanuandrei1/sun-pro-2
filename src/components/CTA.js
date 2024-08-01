@@ -4,7 +4,8 @@ import { LuCrown } from "react-icons/lu";
 
 export default function CTA() {
   return (
-    <section className="relative flex lg:flex-row flex-col items-center lg:justify-between lg:text-start text-center lg:px-20 px-6 justify-center h-80 bg-black text-white ">
+    <section className="relative w-full h-80 bg-black text-white flex items-center justify-between px-20">
+      {/*
       <Image
         src="/Logo.png"
         alt="Loading..."
@@ -31,6 +32,7 @@ export default function CTA() {
           WORK WITH US
         </button>
       </div>
+      */}
     </section>
   );
 }
