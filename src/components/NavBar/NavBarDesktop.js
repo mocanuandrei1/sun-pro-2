@@ -1,9 +1,30 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function NavBarDesktop() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const scrolled = window.scrollY > 100;
+    setIsScrolled(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="absolute -bottom-5 left-0 w-full text-white clip-bottom-angled h-14 text-sm z-10">
+    <nav
+      className={`hidden md:block text-white clip-bottom-angled h-14 text-sm z-10 ${
+        isScrolled
+          ? "fixed top-0 left-1/2 -translate-x-1/2 w-[90%] xl:w-[1280px] "
+          : "absolute -bottom-5 left-0 w-full"
+      }`}
+    >
       <div className="flex bg-[#f68a09] text-white h-full justify-between">
         <div className="flex items-center space-x-6 pl-8">
           <Link href="/" className="hover:text-gray-500">
