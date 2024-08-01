@@ -16,12 +16,13 @@ export default function Hero() {
         <div className="col-start-2">
           <p className="flex text-lg items-center text-[#f68a09] font-semibold justify-center">
             <LuCrown className="pr-2 text-3xl" />
-            <span>Renovate - Refresh - Rejoice</span>
+            <span>Personalizează - Protejează - Bucura-te</span>
           </p>
           <p className="lg:text-6xl text-3xl font-bold mt-4">
-            <span>PROFESSIONAL RENOVATION OF</span>
+            <span>PROTEJEAZĂ SPAȚIUL EXTERIOR</span>
+            <span>PROTEJEAZĂ SPAȚIUL EXTERIOR</span>
           </p>
-          <p className="lg:text-6xl text-3xl font-bold italic">YOUR HOME</p>
+
           <button className="mt-8 px-6 py-3 bg-[#f68a09] text-white  rounded-sm clip-bottom-right ">
             <span>DISCOVER MORE</span>
           </button>
