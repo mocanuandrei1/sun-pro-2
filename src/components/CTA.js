@@ -1,11 +1,9 @@
-import React from "react";
 import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
 
 export default function CTA() {
   return (
-    <section className="relative w-full h-80 bg-black text-white flex items-center justify-between px-20">
-      {/*
+    <section className="relative flex lg:flex-row lg:justify-between lg:text-start flex-col items-center text-center lg:px-20 px-6 justify-center w-full h-80 bg-black text-white ">
       <Image
         src="/Logo.png"
         alt="Loading..."
@@ -32,7 +30,6 @@ export default function CTA() {
           WORK WITH US
         </button>
       </div>
-      */}
     </section>
   );
 }

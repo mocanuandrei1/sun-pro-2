@@ -22,17 +22,17 @@ export default function WhyUs() {
   };
 
   return (
-    <section className="grid grid-cols-2 bg-black text-white clip-bottom-left-rounded my-20 overflow-hidden">
-      <div className="pr-10">
+    <section className="grid lg:grid-cols-2 grid-cols-1 bg-black text-white lg:clip-bottom-left-rounded my-20 lg:px-20 px-6">
+      <div className="lg:pr-10 order-2 lg:order-none">
         <Image
           src="/Logo.png"
           alt="Renovation"
           width={500}
           height={500}
-          className="mx-10 bg-black w-full h-full"
+          className=" bg-black w-full h-full"
         />
       </div>
-      <div className="p-8 mx-20 my-10">
+      <div className="lg:p-8  my-10">
         <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
           <LuCrown className="pr-2 text-3xl" />
           Why Choose Us Our Renovation Company
@@ -45,7 +45,7 @@ export default function WhyUs() {
           eco-friendly practices, contributing to environmental responsibility
           and potentially reducing operational costs.
         </p>
-        <div className="flex space-x-8 mb-8">
+        <div className="flex lg:space-x-8 space-x-4 mb-8">
           <button
             className={`py-2 px-8 clip-bottom-right ${
               activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
