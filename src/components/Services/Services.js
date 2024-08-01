@@ -32,7 +32,7 @@ const servicii = [
 ];
 const Services = () => {
   return (
-    <section>
+    <section className="px-6 lg:px-20">
       <p className="flex text-lg justify-center items-center text-[#f68a09] pb-4 font-semibold">
         <LuCrown className="pr-2 text-3xl" />
         Our Services

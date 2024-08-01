@@ -4,7 +4,7 @@ import { LuCrown } from "react-icons/lu";
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center h-screen bg-black">
+    <section className="relative flex items-center justify-center h-screen bg-black overflow-hidden">
       <Image
         src="/HeroPhoto.png"
         alt="Loading..."

@@ -4,7 +4,7 @@ import { LuCrown } from "react-icons/lu";
 
 export default function CTA() {
   return (
-    <section className="relative w-full h-80 bg-black text-white flex items-center justify-between px-20">
+    <section className="relative flex lg:flex-row flex-col items-center lg:justify-between lg:text-start text-center lg:px-20 px-6 justify-center h-80 bg-black text-white ">
       <Image
         src="/Logo.png"
         alt="Loading..."
@@ -13,14 +13,14 @@ export default function CTA() {
         className="opacity-30"
       />
       <div className="z-10">
-        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
+        <h2 className="flex lg:justify-start text-lg items-center text-[#f68a09] pb-4 font-semibold justify-center">
           <LuCrown className="pr-2 text-3xl" />
-          Get Consultation
-        </p>
-        <h2 className="text-5xl font-bold">
-          Get A Free Consultation <br />
-          Contact Us <span className="text-[#f68a09]">!</span>
+          <span>Get Consultation</span>
         </h2>
+        <h1 className="lg:text-5xl text-3xl font-bold">
+          <span>Get A Free Consultation</span> <br />
+          <span>Contact Us</span> <span className="text-[#f68a09]">!</span>
+        </h1>
       </div>
 
       <div className="z-10 flex space-x-4">
