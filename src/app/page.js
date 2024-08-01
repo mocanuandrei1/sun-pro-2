@@ -5,13 +5,5 @@ import WhyUs from "@/components/WhyUs/WhyUs";
 import Services from "@/components/Services/Services";
 
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <About />
-      <CTA />
-      <Services />
-      <WhyUs />
-    </main>
-  );
+  return <main></main>;
 }

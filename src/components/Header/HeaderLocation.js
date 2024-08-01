@@ -3,7 +3,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 export default function HeaderLocation() {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="xl:flex items-center space-x-2 hidden">
       <IoLocationOutline className="bg-white rounded-full text-black text-4xl p-1 ml-5 border-2 border-black" />
       <div>
         <p className="text-sm text-black">Location Address:</p>
