@@ -22,7 +22,7 @@ export default function WhyUs() {
   };
 
   return (
-    <section className="grid grid-cols-2 bg-black text-white clip-bottom-left-rounded my-20">
+    <section className="grid grid-cols-2 bg-black text-white clip-bottom-left-rounded my-20 overflow-hidden">
       <div className="pr-10">
         <Image
           src="/Logo.png"

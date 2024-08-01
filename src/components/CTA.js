@@ -14,14 +14,14 @@ export default function CTA() {
         className="opacity-30"
       />
       <div className="z-10">
-        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
+        <h2 className="flex lg:justify-start text-lg items-center text-[#f68a09] pb-4 font-semibold justify-center">
           <LuCrown className="pr-2 text-3xl" />
-          Get Consultation
-        </p>
-        <h2 className="text-5xl font-bold">
-          Get A Free Consultation <br />
-          Contact Us <span className="text-[#f68a09]">!</span>
+          <span>Get Consultation</span>
         </h2>
+        <h1 className="lg:text-5xl text-3xl font-bold">
+          <span>Get A Free Consultation</span> <br />
+          <span>Contact Us</span> <span className="text-[#f68a09]">!</span>
+        </h1>
       </div>
 
       <div className="z-10 flex space-x-4">
