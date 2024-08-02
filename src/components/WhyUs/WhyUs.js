@@ -22,58 +22,61 @@ export default function WhyUs() {
   };
 
   return (
-    <section className="grid lg:grid-cols-2 grid-cols-1 bg-black text-white lg:clip-bottom-left-rounded my-20 lg:px-20 px-6">
-      <div className="lg:pr-10 order-2 lg:order-none">
-        <Image
-          src="/Logo.png"
-          alt="Renovation"
-          width={500}
-          height={500}
-          className=" bg-black w-full h-full"
-        />
-      </div>
-      <div className="lg:p-8  my-10">
-        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
-          <LuCrown className="pr-2 text-3xl" />
-          Why Choose Us Our Renovation Company
-        </p>
-        <h1 className="text-4xl font-bold mb-4">
-          Discover The Advantages Of Our Renovation.
-        </h1>
-        <p className="mb-4">
-          Many construction services are adept at incorporating sustainable and
-          eco-friendly practices, contributing to environmental responsibility
-          and potentially reducing operational costs.
-        </p>
-        <div className="flex lg:space-x-8 space-x-4 mb-8">
-          <button
-            className={`py-2 px-8 clip-bottom-right ${
-              activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
-            }`}
-            onClick={handleShowSkills}
-          >
-            Our Skills
-          </button>
-          <button
-            className={` py-2 px-8 clip-bottom-right ${
-              activeTab === "mission" ? "bg-[#f68a09] " : "bg-gray-700 "
-            }`}
-            onClick={handleShowMission}
-          >
-            Our Mission
-          </button>
-          <button
-            className={` py-2 px-8 clip-bottom-right ${
-              activeTab === "vision" ? "bg-[#f68a09] " : "bg-gray-700 "
-            }`}
-            onClick={handleShowVision}
-          >
-            Our Vision
-          </button>
+    <section className="bg-black text-white lg:clip-bottom-left-rounded ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 max-w-screen-xl xl:mx-auto mx-10 my-28">
+        <div className="lg:pr-10 order-2 lg:order-none">
+          <Image
+            src="/Logo.png"
+            alt="Renovation"
+            width={500}
+            height={500}
+            className=" bg-black w-full h-full"
+          />
         </div>
-        {activeTab === "skills" && <WhyUsSkills />}
-        {activeTab === "mission" && <WhyUsMission />}
-        {activeTab === "vision" && <WhyUsVision />}
+        <div className="lg:p-8  my-10">
+          <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
+            <LuCrown className="pr-2 text-3xl" />
+            De Ce Să Alegi SunPro ?
+          </p>
+          <h1 className="text-4xl font-bold mb-4">
+            Descoperă Avantajele Soluțiilor Noastre Exterioare.
+          </h1>
+          <p className="mb-4">
+            Serviciile noastre de montaj aduc un plus de funcționalitate și stil
+            spațiilor tale exterioare. Ne concentrăm pe utilizarea materialelor
+            de calitate superioară și pe practici durabile, asigurându-ne că
+            fiecare proiect este executat la cele mai înalte standarde.
+          </p>
+          <div className="flex lg:space-x-8 space-x-4 mb-8">
+            <button
+              className={`py-2 px-8 clip-bottom-right ${
+                activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
+              }`}
+              onClick={handleShowSkills}
+            >
+              Abilități
+            </button>
+            <button
+              className={` py-2 px-8 clip-bottom-right ${
+                activeTab === "mission" ? "bg-[#f68a09] " : "bg-gray-700 "
+              }`}
+              onClick={handleShowMission}
+            >
+              Misiune
+            </button>
+            <button
+              className={` py-2 px-8 clip-bottom-right ${
+                activeTab === "vision" ? "bg-[#f68a09] " : "bg-gray-700 "
+              }`}
+              onClick={handleShowVision}
+            >
+              Viziune
+            </button>
+          </div>
+          {activeTab === "skills" && <WhyUsSkills />}
+          {activeTab === "mission" && <WhyUsMission />}
+          {activeTab === "vision" && <WhyUsVision />}
+        </div>
       </div>
     </section>
   );

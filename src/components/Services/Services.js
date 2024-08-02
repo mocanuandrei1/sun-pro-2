@@ -32,14 +32,14 @@ const servicii = [
 ];
 const Services = () => {
   return (
-    <section className="px-6 lg:px-20">
+    <section className="mx-10 my-28 max-w-screen-xl xl:mx-auto">
       <p className="flex text-lg justify-center items-center text-[#f68a09] pb-4 font-semibold">
         <LuCrown className="pr-2 text-3xl" />
-        Our Services
+        Serviciile Noastre
       </p>
-      <h2 className="flex justify-center text-3xl font-bold pb-4">
-        Ce Servicii Vă Oferim?
-      </h2>
+      <h1 className="text-3xl sm:text-4xl font-bold leading-relaxed mb-8 text-center">
+        Servicii Profesionale de Montaj
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {servicii.map((serviciu) => (
           <ServicesCards

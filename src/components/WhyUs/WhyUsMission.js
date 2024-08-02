@@ -5,29 +5,35 @@ export default function WhyUsMission() {
   return (
     <div>
       <h3 className="text-2xl font-bold mb-4">
-        Leading Way In Building & Civil Constructions!
+        Lider în Soluții pentru Spații Exterioare!
       </h3>
       <p className="mb-8">
-        Dramatically foster compelling result before vertical platforms.
-        Globally pursue client focused potentiality without global alignment.
-        Dramatical maximize covalent data with world-class schemas.
+        Descoperiți excelența în protecția și personalizarea spațiilor
+        exterioare. SunPro oferă soluții inovatoare și durabile pentru a
+        transforma și proteja terasele și curțile dumneavoastră. Cu un focus pe
+        calitate și funcționalitate, suntem partenerul ideal pentru orice
+        proiect.
       </p>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Commercial Services</p>
+          <p>Copertine Comerciale</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Residential Services</p>
+          <p>Pergole Retractabile</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Industrial Services</p>
+          <p>Sisteme de Închidere pentru Terase</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Construction Service</p>
+          <p>Rulouri Exterioare Adaptabile</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <GoVerified className="text-[#f68a09] text-lg" />
+          <p>Prelate PVC Rezistente</p>
         </div>
       </div>
     </div>
