@@ -4,58 +4,55 @@ import { LuCrown } from "react-icons/lu";
 
 export default function About() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 items-start bg-white py-28 lg:px-20 px-6">
-      <div className="w-full h-full lg:pr-10 order-4 lg:order-none">
+    <section className="grid-section-about items-start bg-white max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <div className="lg:pr-10 grid-about-1 mx-auto h-full w-full">
         <Image
-          src="/Logo.png"
+          src="/images/aboutus.png"
           alt="Renovation"
-          width={500}
-          height={500}
-          className="mr-10 mt-4 lg:mt-0 bg-black object-cover h-full w-full"
+          width={1200}
+          height={800}
+          className="bg-black object-cover w-full sm:w-2/3 lg:h-full lg:w-full mx-auto"
         />
       </div>
-      <div className="w-full order-3 lg:order-none">
-        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
-          <LuCrown className="pr-2 text-3xl" />
-          About Renovation Company
-        </p>
-        <h1 className="text-4xl font-bold mb-8">
-          Our Dream Home Awaits Lets Renovate Today.
-        </h1>
-        <p className="text-md mb-8">
-          BIM is a digital representation of a buildings physical and functional
-          characteristics. It enhances collaboration among stakeholders,
-          improves project visualization, and helps identify potential issues
-          before construction begins.
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
-          <div className="p-6 lg:mr-3 bg-gray-100 order-2 lg:order-none">
-            <div className="text-2xl font-medium flex mb-3">
-              <p className="text-[#f68a09] pr-2">25</p>
-              <h2> Years Experience</h2>
-            </div>
-            <p>
-              Construction services bring expertise and experience to the table,
-              ensuring that your project is managed.
-            </p>
+      <p className="flex text-lg items-center text-[#f68a09] font-semibold grid-about-2">
+        <LuCrown className="pr-2 text-3xl" />
+        Despre SunPro
+      </p>
+      <h1 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-0 text-center lg:text-left">
+        Protejează și Înfrumusețează-ți Spațiile Exterioare
+        <span className="hidden sm:block"> cu Noi</span>
+      </h1>
+      <p className="text-md text-custom-gray grid-about-4 my-10 lg:my-0">
+        Cu experiență în montarea copertinelor, pergolelor retractabile,
+        închiderilor de terase, rulourilor exterioare și prelatelor PVC, oferim
+        soluții de calitate pentru protecția spațiilor exterioare, asigurând
+        integrarea perfectă a detaliilor.
+      </p>
+      <div className="grid-about-5 flex flex-col sm:flex-row gap-5 lg:gap-2">
+        <div className="p-6 lg:mr-3 bg-gray-100 basis-1/2">
+          <div className="text-2xl font-medium flex mb-3">
+            <p className="text-[#f68a09] pr-2 font-montserrat">10</p>
+            <h2> Ani de Experiență</h2>
           </div>
-          <div className="p-6 lg:ml-3 bg-gray-100 order-3 lg:order-none">
-            <div className="text-2xl font-medium flex mb-3">
-              <p className="text-[#f68a09] pr-2">60</p>
-              <h2> Expert Technicians</h2>
-            </div>
-            <p>
-              The construction industry is a multifaceted sector involving the
-              planning, development, and realization of various projects.
-            </p>
-          </div>
+          <p className="text-custom-gray">
+            De peste un deceniu, oferim montaj profesional cu expertiză și
+            dedicare, mândri de reputația noastră de excelență și de proiectele
+            de succes.
+          </p>
         </div>
-        <button className="mt-8 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right hidden lg:block">
-          More about us
-        </button>
+        <div className="p-6 lg:ml-3 bg-gray-100 basis-1/2">
+          <div className="text-2xl font-medium flex mb-3">
+            <p className="text-[#f68a09] pr-2 font-montserrat">10</p>
+            <h2> Tehnicieni Experți</h2>
+          </div>
+          <p className="text-custom-gray">
+            Echipa noastră de 10 tehnicieni experimentați transformă viziunea ta
+            în realitate cu profesionalism și la cele mai înalte standarde.
+          </p>
+        </div>
       </div>
-      <button className="mt-8 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right lg:hidden order-5">
-        More about us
+      <button className="lg:mt-4 w-full sm:w-2/3 lg:w-full mt-10 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right block grid-about-6">
+        Află mai multe despre noi
       </button>
     </section>
   );
