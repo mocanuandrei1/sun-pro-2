@@ -41,7 +41,6 @@
   animation: experience 1.5s ease-in-out forwards;
 }
 
-/* styles/globals.css */
 @keyframes rotateY {
   from {
     transform: rotateY(0deg);
@@ -53,6 +52,79 @@
 
 .rotate-y {
   animation: rotateY 1s linear forwards;
+}
+/* Hero animation */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-left {
+  animation: fade-in-left 1.4s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1.4s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-\[0\.1s\] {
+  animation-delay: 0.1s;
+}
+.delay-\[0\.2s\] {
+  animation-delay: 0.2s;
+}
+.delay-\[0\.3s\] {
+  animation-delay: 0.3s;
+}
+.delay-\[0\.4s\] {
+  animation-delay: 0.4s;
+}
+.delay-\[0\.5s\] {
+  animation-delay: 0.5s;
+}
+.delay-\[0\.6s\] {
+  animation-delay: 0.6s;
+}
+.delay-\[0\.7s\] {
+  animation-delay: 0.7s;
+}
+.delay-\[0\.8s\] {
+  animation-delay: 0.8s;
 }
 
 /* fonts */
