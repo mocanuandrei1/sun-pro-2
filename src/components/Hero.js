@@ -55,7 +55,7 @@ export default function Hero() {
         layout="fill"
         objectFit="cover"
         quality={100}
-        className="z-0 opacity-40 bg-black lg:bg-none lg:opacity-100"
+        className="z-0 "
         key={currentImageIndex}
       />
       <div
