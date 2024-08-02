@@ -25,6 +25,13 @@ module.exports = {
         slideInClipDesktop: "slideInClipDesktop 2s ease-out forwards",
         slideInClipMobile: "slideInClipMobile 2s ease-out forwards",
       },
+      colors: {
+        "custom-gray": "#1f2937",
+      },
+      fontFamily: {
+        montserrat: "var(--font-montserrat)",
+        inter: "var(--font-inter)",
+      },
     },
   },
   plugins: [
