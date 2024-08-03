@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Hero() {
   const images = ["/Hero1.jpg", "/Hero2.jpg", "/Hero3.jpg"];
@@ -19,7 +20,7 @@ export default function Hero() {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       changeImage(1);
-    }, 8000);
+    }, 80000);
   };
 
   useEffect(() => {
@@ -80,8 +81,15 @@ export default function Hero() {
           <p className="lg:text-6xl text-3xl font-bold mt-4 animate-fade-in-left delay-700">
             <span>{texts[currentImageIndex]}</span>
           </p>
-          <button className="mt-8 px-6 py-3 bg-[#f68a09] text-white rounded-sm animate-fade-in-up clip-bottom-right">
-            <span>DISCOVER MORE</span>
+          <button className="relative mt-8 px-6 py-3 bg-[#f68a09] text-white hover:text-black rounded-sm animate-fade-in-up clip-bottom-right overflow-hidden group">
+            <div className="absolute inset-0">
+              <div className="bg-white w-full h-1/2 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+              <div className="bg-white w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+            </div>
+            <div className="flex items-center relative z-10">
+              <span className="">DISCOVER MORE</span>
+              <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
+            </div>
           </button>
         </div>
       </div>
