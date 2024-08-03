@@ -48,23 +48,22 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen bg-black px-6 lg:px-20">
+    <section className="relative lg:h-screen h-[calc(100vh-80px)] bg-black lg:px-20 overflow-hidden">
       <Image
         src={images[currentImageIndex]}
         alt="Background Image"
-        layout="fill"
-        objectFit="cover"
+        fill={true}
         quality={100}
-        className="z-0 "
+        className="object-cover"
         key={currentImageIndex}
       />
       <div
-        key={currentImageIndex}
+        key={`content-${currentImageIndex}`}
         className="relative grid lg:grid-cols-2 grid-cols-1 items-center text-white h-full w-full text-center z-20"
       >
-        <div className="absolute inset-0 bg-black lg:opacity-60 opacity-0 w-full h-full clip-hero lg:animate-slideInClipDesktop lg:w-[70%]"></div>
-        <div className="col-start-2 text-left">
-          <div className="flex items-center lg:text-lg text-base text-[#f68a09] font-semibold space-y-2">
+        <div className="absolute inset-0 bg-black opacity-60 w-full h-full lg:clip-hero lg:animate-slideInClipDesktop lg:w-[70%]"></div>
+        <div className="col-start-2 text-left pl-6">
+          <div className="flex items-center lg:text-lg text-sm text-[#f68a09] font-semibold space-y-2">
             <span className="animate-fade-in-down delay-[0.1s]">
               <LuCrown className="text-3xl pr-2 mt-1" />
             </span>
