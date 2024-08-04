@@ -4,28 +4,28 @@ import { GoVerified } from "react-icons/go";
 export default function WhyUsVision() {
   return (
     <div>
-      <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+      <h3 className="text-2xl font-bold mb-4">Viziunea Noastră</h3>
       <p className="mb-8">
-        Embrace holistic initiatives for the next generation of infrastructure.
-        We aim to seamlessly integrate technology and sustainability to enhance
-        urban living experiences.
+        Îmbrățișați inițiativele holistice pentru următoarea generație de
+        infrastructură. Ne propunem să integrăm perfect tehnologia și
+        sustenabilitatea pentru a îmbunătăți experiențele de viață urbană.
       </p>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Smart Cities</p>
+          <p>Orașe inteligente</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Green Buildings</p>
+          <p>Clădiri verzi</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Innovative Solutions</p>
+          <p>Soluții inovatoare</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Sustainable Development</p>
+          <p>Dezvoltare durabilă</p>
         </div>
       </div>
     </div>

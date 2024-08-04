@@ -5,29 +5,30 @@ export default function WhyUsMission() {
   return (
     <div>
       <h3 className="text-2xl font-bold mb-4">
-        Leading Way In Building & Civil Constructions!
+        Lider în construcții civile și de clădiri!
       </h3>
       <p className="mb-8">
-        Dramatically foster compelling result before vertical platforms.
-        Globally pursue client focused potentiality without global alignment.
-        Dramatical maximize covalent data with world-class schemas.
+        Promovați dramatic rezultate convingătoare înainte de platformele
+        verticale. Urmăriți global potențialitatea axată pe client fără aliniere
+        globală. Maximizați dramatic datele covalente cu scheme de clasă
+        mondială.
       </p>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Commercial Services</p>
+          <p>Servicii comerciale</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Residential Services</p>
+          <p>Servicii rezidențiale</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Industrial Services</p>
+          <p>Servicii industriale</p>
         </div>
         <div className="flex items-center space-x-2">
           <GoVerified className="text-[#f68a09] text-lg" />
-          <p>Construction Service</p>
+          <p>Servicii construcții</p>
         </div>
       </div>
     </div>

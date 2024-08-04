@@ -23,7 +23,7 @@ export default function WhyUs() {
 
   return (
     <section className="grid lg:grid-cols-2 grid-cols-1 bg-black text-white lg:clip-bottom-left-rounded my-20 lg:px-20 px-6">
-      <div className="lg:pr-10 order-2 lg:order-none">
+      <div className="lg:pr-10 order-2 lg:order-none py-10 lg:py-0">
         <Image
           src="/Hero1.jpg"
           alt="Renovation"
@@ -32,43 +32,43 @@ export default function WhyUs() {
           className=" bg-black w-full h-full"
         />
       </div>
-      <div className="lg:p-8  my-10">
-        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
+      <div className="lg:p-8 my-10 text-center">
+        <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold justify-center">
           <LuCrown className="pr-2 text-3xl" />
-          Why Choose Us Our Renovation Company
+          De ce să ne alegeți pe noi?
         </p>
-        <h1 className="text-4xl font-bold mb-4">
-          Discover The Advantages Of Our Renovation.
+        <h1 className="lg:text-4xl text-2xl  font-bold mb-4">
+          Descoperiți avantajele renovării noastre.
         </h1>
         <p className="mb-4">
-          Many construction services are adept at incorporating sustainable and
-          eco-friendly practices, contributing to environmental responsibility
-          and potentially reducing operational costs.
+          Multe servicii de construcție sunt pricepute în a încorpora practici
+          sustenabile și ecologice, contribuind la responsabilitatea de mediu și
+          reducând potențial costurile operaționale.
         </p>
-        <div className="flex lg:space-x-8 space-x-4 mb-8">
+        <div className="flex lg:flex-row flex-col lg:space-x-8 space-y-4 lg:space-y-0 mb-8 text-lg ">
           <button
-            className={`py-2 px-8 clip-bottom-right ${
+            className={`lg:w-full py-4 px-8 clip-bottom-right ${
               activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
             }`}
             onClick={handleShowSkills}
           >
-            Our Skills
+            Abilitățile noastre
           </button>
           <button
-            className={` py-2 px-8 clip-bottom-right ${
+            className={`lg:w-full py-4 px-8 clip-bottom-right ${
               activeTab === "mission" ? "bg-[#f68a09] " : "bg-gray-700 "
             }`}
             onClick={handleShowMission}
           >
-            Our Mission
+            Misiunea noastră
           </button>
           <button
-            className={` py-2 px-8 clip-bottom-right ${
+            className={`lg:w-full py-4 px-8 clip-bottom-right ${
               activeTab === "vision" ? "bg-[#f68a09] " : "bg-gray-700 "
             }`}
             onClick={handleShowVision}
           >
-            Our Vision
+            Viziunea noastră
           </button>
         </div>
         {activeTab === "skills" && <WhyUsSkills />}
