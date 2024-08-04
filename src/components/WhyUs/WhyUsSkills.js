@@ -6,7 +6,7 @@ export default function WhyUsSkills() {
       <h3 className="text-2xl font-bold mb-4">Our Skills</h3>
       <div className="mb-6">
         <div className="flex justify-between mb-2">
-          <h4 className="font-bold">Renovation</h4>
+          <h4 className="font-bold">Renovatii</h4>
           <h4 className="font-bold">80%</h4>
         </div>
         <div className="relative h-2 bg-gray-300 rounded">
@@ -24,7 +24,7 @@ export default function WhyUsSkills() {
       </div>
       <div>
         <div className="flex justify-between mb-2">
-          <h4 className="font-bold">Experience</h4>
+          <h4 className="font-bold">Experienta</h4>
           <h4 className="font-bold">70%</h4>
         </div>
         <div className="relative h-2 bg-gray-300 rounded">
