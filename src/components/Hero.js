@@ -20,7 +20,7 @@ export default function Hero() {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       changeImage(1);
-    }, 80000);
+    }, 8000);
   };
 
   useEffect(() => {

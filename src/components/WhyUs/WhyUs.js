@@ -25,7 +25,7 @@ export default function WhyUs() {
     <section className="grid lg:grid-cols-2 grid-cols-1 bg-black text-white lg:clip-bottom-left-rounded my-20 lg:px-20 px-6">
       <div className="lg:pr-10 order-2 lg:order-none">
         <Image
-          src="/Logo.png"
+          src="/Hero1.jpg"
           alt="Renovation"
           width={500}
           height={500}
