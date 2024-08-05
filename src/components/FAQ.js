@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import FAQItem from "./FAQItem"; // Assuming FAQItem is in the same directory
+import Image from "next/image";
 
 const faqs = [
   {
@@ -32,9 +32,9 @@ export default function FAQ() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 relative py-20">
-      <div className="flex justify-center items-center">
-        <div className="relative w-[600px] h-[600px] flex-shrink-0">
+    <div className="w-full h-full max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 relative py-20">
+      <div className="hidden lg:flex justify-center items-center">
+        <div className="relative w-full h-full flex-shrink-0">
           <Image
             src="/Hero1.jpg"
             alt="Construction workers"
@@ -48,29 +48,18 @@ export default function FAQ() {
           <LuCrown className="pr-2 text-3xl" />
           <span>Intrebări frecvente</span>
         </h2>
-        <h1 className="text-2xl font-bold mb-6">
+        <h1 className="text-2xl font-bold mb-6 text-center">
           Planificarea Proiectului și Consultanță
         </h1>
         <div className="flex flex-col justify-center gap-4">
           {faqs.map((faq, index) => (
-            <div key={index}>
-              <div
-                className="flex justify-between items-center pl-3  cursor-pointer rounded-lg border border-black"
-                onClick={() => toggleFAQ(index)}
-              >
-                <span className="text-black">{faq.question}</span>
-                <div className="h-12 w-12 text-white flex items-center justify-center transition-colors duration-1000 rounded-r-lg bg-[#f68a09]">
-                  {activeIndex === index ? <FaMinus /> : <FaPlus />}
-                </div>
-              </div>
-              <div
-                className={`overflow-hidden transition-[max-height] duration-1000 ease-in-out rounded-lg ${
-                  activeIndex === index ? "max-h-screen" : "max-h-0"
-                }`}
-              >
-                <div className="bg-gray-100 p-4 text-sm">{faq.answer}</div>
-              </div>
-            </div>
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isActive={activeIndex === index}
+              onClick={() => toggleFAQ(index)}
+            />
           ))}
         </div>
       </div>
