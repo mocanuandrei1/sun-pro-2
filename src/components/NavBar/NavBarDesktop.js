@@ -29,8 +29,9 @@ export default function NavBarDesktop() {
     >
       <div className="flex bg-[#f68a09] h-full justify-between">
         <div className="flex items-center h-full">
-          {navBarLinks.map((link) => (
+          {navBarLinks.map((link, id) => (
             <Link
+              key={id}
               href="/"
               className="hover:bg-black flex h-full items-center px-5 transition-all duration-200 font-semibold hover:text-white"
             >

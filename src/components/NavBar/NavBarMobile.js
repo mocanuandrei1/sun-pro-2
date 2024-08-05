@@ -15,8 +15,9 @@ export default function NavBarMobile() {
         </DrawerClose>
       </DrawerHeader>
       <nav className="flex flex-col items-center h-[calc(100vh-80px)] gap-5 justify-center">
-        {navBarLinks.map((link) => (
+        {navBarLinks.map((link, id) => (
           <Link
+            key={id}
             href="/"
             className="p-4 hover:bg-black hover:text-white transition-all duration-200"
           >

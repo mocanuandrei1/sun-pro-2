@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { LuCrown } from "react-icons/lu";
+import Button from "./custom ui/Button";
 
 export default function About() {
   return (
@@ -19,10 +20,10 @@ export default function About() {
         <LuCrown className="pr-2 text-3xl" />
         Despre SunPro
       </p>
-      <h1 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-0 text-center lg:text-left">
+      <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-0 text-center lg:text-left">
         Protejează și Înfrumusețează-ți Spațiile Exterioare {""}
         <span className="hidden sm:inline-block"> cu Noi</span>
-      </h1>
+      </h2>
       <p className="text-md text-custom-gray grid-about-4 my-10 lg:my-0">
         Cu experiență în montarea copertinelor, pergolelor retractabile,
         închiderilor de terase, rulourilor exterioare și prelatelor PVC, oferim
@@ -32,8 +33,10 @@ export default function About() {
       <div className="grid-about-5 flex flex-col sm:flex-row gap-5 lg:gap-2">
         <div className="p-6 lg:mr-3 bg-gray-100 basis-1/2">
           <div className="text-2xl font-medium flex mb-3">
-            <p className="text-[#f68a09] pr-2 font-montserrat">10</p>
-            <h2> Ani de Experiență</h2>
+            <p className="text-[#f68a09] pr-2 font-montserrat">13</p>
+            <h2>
+              Ani <span className="block">Experiență</span>
+            </h2>
           </div>
           <p className="text-custom-gray">
             De peste un deceniu, oferim montaj profesional cu expertiză și
@@ -44,7 +47,9 @@ export default function About() {
         <div className="p-6 lg:ml-3 bg-gray-100 basis-1/2">
           <div className="text-2xl font-medium flex mb-3">
             <p className="text-[#f68a09] pr-2 font-montserrat">10</p>
-            <h2> Tehnicieni Experți</h2>
+            <h2>
+              Tehnicieni <span className="block">Experți</span>
+            </h2>
           </div>
           <p className="text-custom-gray">
             Echipa noastră de 10 tehnicieni experimentați transformă viziunea ta
@@ -52,16 +57,12 @@ export default function About() {
           </p>
         </div>
       </div>
-      <button className="relative lg:mt-4 w-full sm:w-2/3 lg:w-full mt-10 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right block grid-about-6 group overflow-hidden">
-        <div className="lg:absolute lg:inset-0">
-          <div className="bg-black w-full h-1/2 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-          <div className="bg-black w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-        </div>
-        <div className="flex items-center relative z-10">
-          <span>Afla mai multe despre noi</span>
-          <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 lg:group-hover:rotate-45" />
-        </div>
-      </button>
+      <Button
+        type="link"
+        href="despre-noi"
+        text="Află Mai Multe Despre Noi"
+        customClass="mt-10 lg:mt-4 w-full sm:w-[290px] grid-about-6 "
+      />
     </section>
   );
 }
