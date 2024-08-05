@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { LuCrown } from "react-icons/lu";
-import FAQItem from "./FAQItem"; // Assuming FAQItem is in the same directory
 import Image from "next/image";
+import FAQItem from "./FAQItem";
 
 const faqs = [
   {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+
 import { LuCrown } from "react-icons/lu";
 import Button from "./custom ui/Button";
 

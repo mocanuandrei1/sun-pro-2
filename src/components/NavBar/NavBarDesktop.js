@@ -32,7 +32,7 @@ export default function NavBarDesktop() {
           {navBarLinks.map((link, id) => (
             <Link
               key={id}
-              href="/"
+              href={link.path}
               className="hover:bg-black flex h-full items-center px-5 transition-all duration-200 font-semibold hover:text-white"
             >
               {link.name.toUpperCase()}
