@@ -5,6 +5,7 @@ export default function WhyUsVision() {
   return (
     <div>
       <h3 className="text-2xl font-bold mb-4">Viziunea Noastră</h3>
+      <h3 className="text-2xl font-bold mb-4">Viziunea Noastră</h3>
       <p className="mb-8">
         Ne angajăm să oferim soluții excepționale pentru spațiile exterioare,
         îmbinând inovația și durabilitatea pentru a îmbunătăți calitatea vieții

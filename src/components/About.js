@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FiArrowUpRight } from "react-icons/fi";
 import { LuCrown } from "react-icons/lu";
 
 export default function About() {
@@ -51,8 +52,15 @@ export default function About() {
           </p>
         </div>
       </div>
-      <button className="lg:mt-4 w-full sm:w-2/3 lg:w-full mt-10 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right block grid-about-6">
-        Află mai multe despre noi
+      <button className="relative lg:mt-4 w-full sm:w-2/3 lg:w-full mt-10 px-6 py-3 bg-[#f68a09] text-white rounded-sm clip-bottom-right block grid-about-6 group overflow-hidden">
+        <div className="lg:absolute lg:inset-0">
+          <div className="bg-black w-full h-1/2 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+          <div className="bg-black w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+        </div>
+        <div className="flex items-center relative z-10">
+          <span>Afla mai multe despre noi</span>
+          <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 lg:group-hover:rotate-45" />
+        </div>
       </button>
     </section>
   );
