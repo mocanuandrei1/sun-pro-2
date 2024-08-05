@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
 import { LuCrown } from "react-icons/lu";
 import Button from "./custom ui/Button";
+import HomeHeading from "./custom ui/HomeHeading";
 
 export default function About() {
   return (
@@ -16,14 +16,13 @@ export default function About() {
           className="bg-black object-cover w-full sm:w-2/3 lg:h-full lg:w-full mx-auto"
         />
       </div>
-      <p className="flex text-lg items-center text-[#f68a09] font-semibold grid-about-2">
-        <LuCrown className="pr-2 text-3xl" />
-        Despre SunPro
-      </p>
-      <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-0 text-center lg:text-left">
-        Protejează și Înfrumusețează-ți Spațiile Exterioare {""}
-        <span className="hidden sm:inline-block"> cu Noi</span>
-      </h2>
+      <HomeHeading
+        smallTitle="Despre SunPro"
+        smallTitleCSS="justify-center lg:justify-start"
+        bigTitle="Protejează și Înfrumusețează-ți Spațiile Exterioare"
+        bigTitleSecond="cu Noi"
+        bigTitleCSS="justify-center text-center lg:text-left"
+      />
       <p className="text-md text-custom-gray grid-about-4 my-10 lg:my-0">
         Cu experiență în montarea copertinelor, pergolelor retractabile,
         închiderilor de terase, rulourilor exterioare și prelatelor PVC, oferim

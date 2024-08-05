@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
 import { LuCrown } from "react-icons/lu";
+import HomeHeading from "./custom ui/HomeHeading";
 
 export default function CTA() {
   return (
-    <section className="flex justify-center relative h-80 bg-black text-white">
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:items-center h-full lg:max-w-7xl lg:w-full lg:mx-0 mx-10">
+    <section className="relative h-60 bg-black text-white">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center h-full max-w-screen-xl xl:mx-auto mx-10 my-28">
         <div className="absolute inset-0">
           <Image
             src="/Hero1.jpg"
@@ -15,16 +16,13 @@ export default function CTA() {
             className="opacity-30"
           />
         </div>
-        <div className="z-10 flex flex-col justify-end pb-2 lg:block">
-          <h2 className="flex justify-center lg:justify-start lg:text-xl text-lg items-center text-[#f68a09] pb-2 font-semibold">
-            <LuCrown className="pr-2 text-3xl" />
-            <span>Obtine consultatie</span>
-          </h2>
-          <h1 className="lg:text-5xl text-2xl font-bold lg:text-start text-center">
-            <span>Obtine o consultatie </span> <br />
-            <span>Contacteaza-ne</span>
-            <span className="text-[#f68a09]">!</span>
-          </h1>
+        <div className="z-10 block">
+          <HomeHeading
+            smallTitle="Contactează-ne"
+            smallTitleCSS="justify-center lg:justify-start"
+            bigTitle="Obține o Constultatie Gratuita"
+            bigTitleCSS="justify-center text-center lg:text-left mb-0"
+          />
         </div>
         <div className="flex lg:flex-row flex-col lg:space-x-8 space-y-2 lg:space-y-0 items-center lg:justify-end">
           <button className="relative lg:w-[40%] w-[80%] py-4 bg-[#f68a09] text-white hover:text-black rounded-sm clip-bottom-right overflow-hidden group">

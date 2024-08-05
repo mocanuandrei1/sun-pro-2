@@ -5,6 +5,7 @@ import { LuCrown } from "react-icons/lu";
 import WhyUsSkills from "./WhyUsSkills";
 import WhyUsMission from "./WhyUsMission";
 import WhyUsVision from "./WhyUsVision";
+import HomeHeading from "../custom ui/HomeHeading";
 
 export default function WhyUs() {
   const [activeTab, setActiveTab] = useState("skills");
@@ -34,13 +35,12 @@ export default function WhyUs() {
           />
         </div>
         <div className="lg:p-8  my-10">
-          <p className="flex text-lg items-center justify-center md:justify-start text-[#f68a09] font-semibold grid-about-2">
-            <LuCrown className="pr-2 text-3xl" />
-            De Ce Să Alegi SunPro ?
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-3 text-center lg:text-left">
-            Descoperă Avantajele Soluțiilor Noastre Exterioare.
-          </h2>
+          <HomeHeading
+            smallTitle="De Ce Să Alegi SunPro ?"
+            bigTitle="Descoperă Avantajele Soluțiilor Noastre Exterioare."
+            smallTitleCSS="justify-center lg:justify-start"
+            bigTitleCSS="justify-center text-center lg:text-left"
+          />
           <p className="mb-4">
             Serviciile noastre de montaj aduc un plus de funcționalitate și stil
             spațiilor tale exterioare. Ne concentrăm pe utilizarea materialelor
