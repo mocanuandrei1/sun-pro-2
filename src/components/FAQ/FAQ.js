@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { LuCrown } from "react-icons/lu";
-import FAQItem from "./FAQItem"; // Assuming FAQItem is in the same directory
 import Image from "next/image";
-import HomeHeading from "./custom ui/HomeHeading";
+import FAQItem from "./FAQItem";
 
 const faqs = [
   {
@@ -33,7 +32,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-screen-xl xl:mx-auto mx-10 my-28">
+    <div className="w-full h-full max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 relative py-20">
       <div className="hidden lg:flex justify-center items-center">
         <div className="relative w-full h-full flex-shrink-0">
           <Image
@@ -45,13 +44,14 @@ export default function FAQ() {
         </div>
       </div>
       <div>
-        <HomeHeading
-          smallTitle="Intrebări Frecvente"
-          smallTitleCSS="justify-center lg:justify-start"
-          bigTitle="Planificarea Proiectului și Consultanță"
-          bigTitleCSS="justify-center text-center lg:text-left"
-        />
-        <div className="flex flex-col items-stretch gap-4">
+        <p className="flex text-lg items-center justify-center md:justify-start text-[#f68a09] font-semibold grid-about-2">
+          <LuCrown className="pr-2 text-3xl" />
+          Intrebări frecvente
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-3 text-center lg:text-left">
+          Planificarea Proiectului și Consultanță
+        </h2>
+        <div className="flex flex-col justify-center gap-4">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}
@@ -63,6 +63,6 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

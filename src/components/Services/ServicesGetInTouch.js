@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import { FaUser, FaEnvelope, FaPhone, FaEdit } from "react-icons/fa";
 import Select from "react-select";
+import Button from "../custom ui/Button";
+import { LuCrown } from "react-icons/lu";
 
 export default function ServicesGetInTouch() {
   const options = [
@@ -11,6 +13,7 @@ export default function ServicesGetInTouch() {
     { label: "Industry" },
     { label: "Architect" },
   ];
+
   const customStyles = {
     option: (provided, state) => ({
       ...provided,
@@ -36,20 +39,23 @@ export default function ServicesGetInTouch() {
   };
 
   return (
-    <section className="bg-white p-10">
-      <div className="grid grid-cols-2 gap-10 items-center">
+    <section className="bg-white pt-20 max-w-7xl lg:mx-auto w-full px-10 lg:px-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-[#f68a09] font-bold mb-4">GET IN TOUCH</h2>
-          <h1 className="text-4xl font-bold mb-6">
-            Have An Upcoming Projects? Lets Talk to Now!
-          </h1>
+          <p className="flex text-lg items-center text-[#f68a09] font-semibold grid-about-2 mb-6">
+            <LuCrown className="pr-2 text-3xl" />
+            Intram in legatura
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-4 text-center lg:text-left">
+            Ai un proiect viitor? Trimite-ne un mesaj acum!
+          </h2>
           <form className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
                 <FaUser className="absolute flex top-4 left-3 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Numele tau"
                   className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                 />
               </div>
@@ -57,7 +63,7 @@ export default function ServicesGetInTouch() {
                 <FaEnvelope className="absolute flex top-4 left-3 text-gray-400" />
                 <input
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Adresa de email"
                   className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                 />
               </div>
@@ -67,29 +73,29 @@ export default function ServicesGetInTouch() {
                 <FaPhone className="absolute flex top-4 left-3 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Phone Number"
+                  placeholder="Numarul tau de telefon"
                   className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                 />
               </div>
               <Select
                 options={options}
                 styles={customStyles}
-                placeholder="Select Subject"
+                placeholder="Selecteaza subiectul"
               />
             </div>
             <div className="relative">
               <FaEdit className="absolute flex top-4 left-3 text-gray-400" />
               <textarea
-                placeholder="Your Message"
+                placeholder="Mesajul tau"
                 className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="mt-8 px-6 py-3 bg-[#f68a09] text-white  rounded-sm clip-bottom-right "
-            >
-              SEND MESSAGE
-            </button>
+            <Button
+              type="link"
+              href="despre-noi"
+              text="Trimite Mesajul"
+              customClass="mt-10 lg:mt-4 w-full sm:w-[290px] grid-about-6 "
+            />
           </form>
         </div>
         <div className="bg-black">
