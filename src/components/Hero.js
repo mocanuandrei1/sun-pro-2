@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+
 import Button from "./custom ui/Button";
 
 export default function Hero() {
@@ -90,10 +90,10 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-4 z-30">
+      <div className="absolute lg:top-1/2 lg:right-4 bottom-4 lg:bottom-auto transform lg:-translate-y-1/2 w-full lg:w-auto flex justify-center lg:justify-end lg:flex-col lg:space-y-4 z-30">
         <button
           onClick={handlePrevImage}
-          className={`text-white bg-black bg-opacity-50 rounded-2xl p-3 hover:bg-opacity-70 ${
+          className={`text-white bg-black bg-opacity-50 rounded-2xl p-3 m-2 hover:bg-opacity-70 ${
             isButtonDisabled ? "cursor-not-allowed" : ""
           }`}
           disabled={isButtonDisabled}
@@ -102,7 +102,7 @@ export default function Hero() {
         </button>
         <button
           onClick={handleNextImage}
-          className={`text-white bg-black bg-opacity-50 rounded-2xl p-3 hover:bg-opacity-70 ${
+          className={`text-white bg-black bg-opacity-50 rounded-2xl p-3 m-2 hover:bg-opacity-70 ${
             isButtonDisabled ? "cursor-not-allowed" : ""
           }`}
           disabled={isButtonDisabled}
