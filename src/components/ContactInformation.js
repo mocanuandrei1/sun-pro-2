@@ -1,10 +1,10 @@
 import React from "react";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
 import { LuCrown } from "react-icons/lu";
 
 export default function ContactInformation() {
   return (
-    <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 py-10">
       <div className="space-y-6">
         <p className="flex text-lg items-center justify-center md:justify-start text-[#f68a09] font-semibold grid-about-2 mb-4">
           <LuCrown className="pr-2 text-3xl" />
@@ -41,8 +41,6 @@ export default function ContactInformation() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.5854053398634!2d25.946798515524073!3d44.59974837910061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b206a7ba2ca731%3A0xc6e68d9e3b2f7e3a!2sCrevedia%2C%20Romania!5e0!3m2!1sen!2sus!4v1626874932012!5m2!1sen!2sus"
           width="100%"
           height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
           className="w-full rounded-lg"
         ></iframe>
