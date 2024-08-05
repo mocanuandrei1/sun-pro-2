@@ -1,6 +1,8 @@
 "use client";
+import { navBarLinks } from "@/lib/variables";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Button from "../custom ui/Button";
 
 export default function NavBarDesktop() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,39 +21,30 @@ export default function NavBarDesktop() {
 
   return (
     <nav
-      className={`hidden md:block text-white clip-bottom-angled h-14 text-sm z-10 ${
+      className={`hidden md:block clip-bottom-angled h-14 text-sm z-10 ${
         isScrolled
           ? "fixed top-0 left-1/2 -translate-x-1/2 w-[90%] xl:w-[1280px] "
           : "absolute -bottom-5 left-0 w-full"
       }`}
     >
-      <div className="flex bg-[#f68a09] text-white h-full justify-between">
-        <div className="flex items-center space-x-6 pl-8">
-          <Link href="/" className="hover:text-gray-500">
-            HOME
-          </Link>
-          <Link href="/about" className="hover:text-gray-500">
-            ABOUT US
-          </Link>
-          <Link href={"/service"} className="relative group">
-            <button className="hover:text-gray-500">SERVICE +</button>
-          </Link>
-          <Link href={"/service"} className="relative group">
-            <button className="hover:text-gray-500">PAGES +</button>
-          </Link>
-          <Link href={"/service"} className="relative group">
-            <button className="hover:text-gray-500">BLOG +</button>
-          </Link>
-          <Link href="/contact" className="hover:text-gray-500">
-            CONTACT US
-          </Link>
+      <div className="flex bg-[#f68a09] h-full justify-between">
+        <div className="flex items-center h-full">
+          {navBarLinks.map((link) => (
+            <Link
+              href="/"
+              className="hover:bg-black flex h-full items-center px-5 transition-all duration-200 font-semibold hover:text-white"
+            >
+              {link.name.toUpperCase()}
+            </Link>
+          ))}
         </div>
-        <Link
+
+        <Button
+          type="link"
           href="/contact"
-          className="flex items-center bg-gray-800 hover:text-gray-500 px-8 font-medium"
-        >
-          GET A QUOTE
-        </Link>
+          customClass="font-semibold"
+          text="OBȚINE O CONSULTAȚIE"
+        />
       </div>
     </nav>
   );

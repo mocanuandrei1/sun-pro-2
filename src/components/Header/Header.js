@@ -1,22 +1,12 @@
 import React from "react";
 import NavBarMobile from "../NavBar/NavBarMobile";
 import Image from "next/image";
-import HeaderCall from "./HeaderCall";
-import HeaderEmail from "./HeaderEmail";
-import HeaderLocation from "./HeaderLocation";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavBarDesktop from "../NavBar/NavBarDesktop";
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { companyData } from "@/lib/variables";
+import HeaderIcon from "./HeaderIcon";
 
 export default function Header() {
   return (
@@ -26,16 +16,25 @@ export default function Header() {
           <div className="basis-1/2 pl-4 md:pl-0 md:basis-1/4">
             <Image
               src="/logo2.png"
-              alt="Kotar Logo"
+              alt="Sun Pro Logo"
               width={80}
               height={80}
               className="cursor-pointer h-20 "
             />
           </div>
           <div className="basis-3/4 hidden md:flex bg-white items-start justify-around flex-nowrap h-full md:pt-4">
-            <HeaderCall />
-            <HeaderEmail />
-            <HeaderLocation />
+            <HeaderIcon
+              phone={companyData.phone}
+              text="Telefon:"
+              icon="phone"
+            />
+            <HeaderIcon email={companyData.email} text="E-mail:" icon="email" />
+            <HeaderIcon
+              customCss="lg:flex hidden"
+              location={companyData.location}
+              text="Locatie:"
+              icon="location"
+            />
           </div>
           <div className="md:hidden pr-4 md:pr-0 flex items-center justify-end basis-1/2">
             <DrawerTrigger>

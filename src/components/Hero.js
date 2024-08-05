@@ -4,6 +4,7 @@ import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
+import Button from "./custom ui/Button";
 
 export default function Hero() {
   const images = ["/Hero1.jpg", "/Hero2.jpg", "/Hero3.jpg"];
@@ -49,7 +50,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative lg:h-screen h-[calc(100vh-80px)] bg-black lg:px-20 overflow-hidden">
+    <section className="relative lg:h-[calc(100vh-112px)] h-[calc(100vh-80px)] bg-black lg:px-20 overflow-hidden">
       <Image
         src={images[currentImageIndex]}
         alt="Background Image"
@@ -81,16 +82,12 @@ export default function Hero() {
           <p className="lg:text-6xl text-3xl font-bold mt-4 animate-fade-in-left delay-700">
             <span>{texts[currentImageIndex]}</span>
           </p>
-          <button className="relative mt-8 px-6 py-3 bg-[#f68a09] text-white hover:text-black rounded-sm animate-fade-in-up clip-bottom-right overflow-hidden group">
-            <div className="absolute inset-0">
-              <div className="bg-white w-full h-1/2 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-              <div className="bg-white w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-            </div>
-            <div className="flex items-center relative z-10">
-              <span className="">DISCOVER MORE</span>
-              <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
-            </div>
-          </button>
+          <Button
+            type="link"
+            href="/servicii"
+            customClass="animate-fade-in-up w-[205px] mt-8"
+            text="VEZI SERVICIILE"
+          />
         </div>
       </div>
       <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-4 z-30">
