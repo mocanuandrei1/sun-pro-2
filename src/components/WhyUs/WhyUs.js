@@ -26,11 +26,11 @@ export default function WhyUs() {
       <div className="grid lg:grid-cols-2 grid-cols-1 max-w-screen-xl xl:mx-auto mx-10 my-28">
         <div className="lg:pr-10 order-2 lg:order-none">
           <Image
-            src="/Logo.png"
+            src="/Hero1.jpg"
             alt="Renovation"
-            width={500}
-            height={500}
-            className=" bg-black w-full h-full"
+            width={1600}
+            height={1200}
+            className=" bg-black w-full h-full object-cover"
           />
         </div>
         <div className="lg:p-8  my-10">
