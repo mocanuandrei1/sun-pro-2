@@ -14,7 +14,7 @@ export default function NavBarMobile() {
           <AiOutlineClose className="text-white text-3xl cursor-pointer rounded-full" />
         </DrawerClose>
       </DrawerHeader>
-      <nav className="flex flex-col items-center h-[calc(100vh-80px)] gap-5 justify-center">
+      <nav className="flex flex-col items-center h-[calc(100svh-80px)] gap-5 justify-center">
         {navBarLinks.map((link, id) => (
           <Link
             key={id}

@@ -50,7 +50,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative lg:h-[calc(100vh-112px)] h-[calc(100vh-80px)] bg-black lg:px-20 overflow-hidden">
+    <section className="relative lg:h-[calc(100svh-112px)] h-[calc(100svh-80px)] bg-black lg:px-20 overflow-hidden">
       <Image
         src={images[currentImageIndex]}
         alt="Background Image"
