@@ -22,7 +22,7 @@ export default function WhyUs() {
   };
 
   return (
-    <section className="bg-black text-white lg:clip-bottom-left-rounded ">
+    <section className="bg-black text-white">
       <div className="grid lg:grid-cols-2 grid-cols-1 max-w-screen-xl xl:mx-auto mx-10 my-28">
         <div className="lg:pr-10 order-2 lg:order-none">
           <Image
@@ -30,24 +30,24 @@ export default function WhyUs() {
             alt="Renovation"
             width={1600}
             height={1200}
-            className=" bg-black w-full h-full object-cover"
+            className=" bg-black w-full h-full object-cove pb-10 sm:pb-0"
           />
         </div>
         <div className="lg:p-8  my-10">
-          <p className="flex text-lg items-center text-[#f68a09] pb-4 font-semibold">
+          <p className="flex text-lg items-center justify-center md:justify-start text-[#f68a09] font-semibold grid-about-2">
             <LuCrown className="pr-2 text-3xl" />
             De Ce Să Alegi SunPro ?
           </p>
-          <h1 className="text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-3 text-center lg:text-left">
             Descoperă Avantajele Soluțiilor Noastre Exterioare.
-          </h1>
+          </h2>
           <p className="mb-4">
             Serviciile noastre de montaj aduc un plus de funcționalitate și stil
             spațiilor tale exterioare. Ne concentrăm pe utilizarea materialelor
             de calitate superioară și pe practici durabile, asigurându-ne că
             fiecare proiect este executat la cele mai înalte standarde.
           </p>
-          <div className="flex lg:space-x-8 space-x-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <button
               className={`py-2 px-8 clip-bottom-right ${
                 activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
