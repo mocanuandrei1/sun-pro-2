@@ -18,11 +18,12 @@ export default function CTA() {
         <div className="z-10 flex flex-col justify-end pb-2 lg:block">
           <h2 className="flex justify-center lg:justify-start lg:text-xl text-lg items-center text-[#f68a09] pb-2 font-semibold">
             <LuCrown className="pr-2 text-3xl" />
-            <span>Get Consultation</span>
+            <span>Obtine consultatie</span>
           </h2>
           <h1 className="lg:text-5xl text-2xl font-bold lg:text-start text-center">
-            <span>Get A Free Consultation</span> <br />
-            <span>Contact Us</span> <span className="text-[#f68a09]">!</span>
+            <span>Obtine o consultatie </span> <br />
+            <span>Contacteaza-ne</span>
+            <span className="text-[#f68a09]">!</span>
           </h1>
         </div>
         <div className="flex lg:flex-row flex-col lg:space-x-8 space-y-2 lg:space-y-0 items-center lg:justify-end">
@@ -32,7 +33,7 @@ export default function CTA() {
               <div className="bg-white w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             </div>
             <div className="flex items-center relative z-10 justify-center">
-              <span className="">GET CONSULTATION</span>
+              <span className="">Obtine o consultatie gratuita</span>
               <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
             </div>
           </button>
@@ -42,7 +43,7 @@ export default function CTA() {
               <div className="bg-[#f68a09] w-full h-1/2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             </div>
             <div className="flex items-center relative z-10 justify-center">
-              <span className="">WORK WITH US</span>
+              <span className="">Lucreaza cu noi</span>
               <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
             </div>
           </button>

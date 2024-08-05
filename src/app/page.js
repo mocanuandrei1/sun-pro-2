@@ -12,8 +12,8 @@ export default function Home() {
       <About />
       <Services />
       <WhyUs />
-      <CTA />
       <FAQ />
+      <CTA />
     </main>
   );
 }
