@@ -47,7 +47,7 @@ export default function WhyUs() {
             de calitate superioară și pe practici durabile, asigurându-ne că
             fiecare proiect este executat la cele mai înalte standarde.
           </p>
-          <div className="flex lg:space-x-8 space-x-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <button
               className={`py-2 px-8 clip-bottom-right ${
                 activeTab === "skills" ? "bg-[#f68a09] " : "bg-gray-700 "
