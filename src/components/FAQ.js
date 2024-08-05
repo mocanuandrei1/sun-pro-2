@@ -44,13 +44,13 @@ export default function FAQ() {
         </div>
       </div>
       <div>
-        <h2 className="flex justify-center lg:justify-start lg:text-xl text-lg items-center text-[#f68a09] pb-2 font-semibold">
+        <p className="flex text-lg items-center justify-center md:justify-start text-[#f68a09] font-semibold grid-about-2">
           <LuCrown className="pr-2 text-3xl" />
-          <span>Intrebări frecvente</span>
-        </h2>
-        <h1 className="text-2xl font-bold mb-6 text-center">
+          Intrebări frecvente
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold leading-relaxed grid-about-3 mb-8 lg:mb-3 text-center lg:text-left">
           Planificarea Proiectului și Consultanță
-        </h1>
+        </h2>
         <div className="flex flex-col justify-center gap-4">
           {faqs.map((faq, index) => (
             <FAQItem
