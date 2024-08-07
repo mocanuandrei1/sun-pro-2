@@ -84,30 +84,30 @@ export default function PhotoGallery() {
           onClick={closeModal}
         >
           <div
-            className="relative bg-white rounded-lg flex items-center justify-center m-8"
+            className="relative bg-white rounded-lg flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
             {...handlers}
           >
             <button
               onClick={closeModal}
-              className="absolute top-0 right-0 bg-red-500 text-white rounded-bl-lg rounded-tr-lg p-2"
+              className="absolute top-0 right-0 bg-red-500 text-white rounded-bl-lg rounded-tr-lg lg:p-2"
             >
               <IoClose size={24} />
             </button>
-            <div className="absolute top-0 left-0 bg-[#f68a09] text-white rounded-br-lg rounded-tl-lg px-2 py-1">
+            <div className="absolute top-0 left-0 bg-[#f68a09] text-white rounded-br-lg rounded-tl-lg px-2 lg:py-1">
               {`${currentImageIndex + 1}/${images.length}`}
             </div>
             <button
               onClick={prevImage}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#f68a09] text-white rounded-r-lg p-2"
             >
-              <FaArrowLeft size={24} />
+              <FaArrowLeft className="lg:text-2xl text-sm" />
             </button>
             <button
               onClick={nextImage}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#f68a09] text-white rounded-l-lg p-2"
             >
-              <FaArrowRight size={24} />
+              <FaArrowRight className="lg:text-2xl text-sm" />
             </button>
             {images[currentImageIndex] && (
               <Image
@@ -115,7 +115,7 @@ export default function PhotoGallery() {
                 alt={`Image ${currentImageIndex + 1}`}
                 width={800}
                 height={600}
-                className="object-contain rounded-lg"
+                className="object-contain rounded-lg w-full h-full"
               />
             )}
           </div>
