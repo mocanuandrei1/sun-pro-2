@@ -21,7 +21,7 @@ export default function About() {
         smallTitleCSS="justify-center lg:justify-start"
         bigTitle="Protejează și Înfrumusețează-ți Spațiile Exterioare"
         bigTitleSecond="cu Noi"
-        bigTitleCSS="justify-center text-center lg:text-left"
+        bigTitleCSS="justify-center text-center lg:text-left mb-8"
       />
       <p className="text-md text-custom-gray grid-about-4 my-10 lg:my-0">
         Cu experiență în montarea copertinelor, pergolelor retractabile,
@@ -61,6 +61,8 @@ export default function About() {
         href="despre-noi"
         text="Află Mai Multe Despre Noi"
         customClass="mt-10 lg:mt-4 w-full sm:w-[290px] grid-about-6 "
+        mainColor="orange"
+        secondColor="blue"
       />
     </section>
   );

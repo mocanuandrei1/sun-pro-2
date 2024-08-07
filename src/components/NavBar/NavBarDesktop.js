@@ -45,6 +45,8 @@ export default function NavBarDesktop() {
           href="/contact"
           customClass="font-semibold"
           text="OBȚINE O CONSULTAȚIE"
+          mainColor="blue"
+          secondColor="black"
         />
       </div>
     </nav>

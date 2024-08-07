@@ -2,6 +2,8 @@ export const companyData = {
   phone: "0725585985",
   email: "sun.pro@gmail.com",
   location: "Crevedia, Darza, Dambovita",
+  regCom: "J23/3718/2013",
+  cui: "32577423",
 };
 
 export const navBarLinks = [
@@ -10,6 +12,15 @@ export const navBarLinks = [
   { name: "Despre noi", path: "/despre-noi" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
+];
+
+export const legalLinks = [
+  {
+    name: "Politica de confidentialitate",
+    path: "/politica-de-confidentialitate",
+  },
+  { name: "Termeni si conditii", path: "/termeni-si-conditii" },
+  { name: "Politica de cookies", path: "/politica-de-cookies" },
 ];
 
 export const servicii = [

@@ -87,6 +87,8 @@ export default function Hero() {
             href="/servicii"
             customClass="animate-fade-in-up w-[205px] mt-8"
             text="VEZI SERVICIILE"
+            mainColor="orange"
+            secondColor="blue"
           />
         </div>
       </div>

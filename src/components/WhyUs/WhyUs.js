@@ -39,7 +39,7 @@ export default function WhyUs() {
             smallTitle="De Ce Să Alegi SunPro ?"
             bigTitle="Descoperă Avantajele Soluțiilor Noastre Exterioare."
             smallTitleCSS="justify-center lg:justify-start"
-            bigTitleCSS="justify-center text-center lg:text-left"
+            bigTitleCSS="justify-center text-center lg:text-left mb-8"
           />
           <p className="mb-4">
             Serviciile noastre de montaj aduc un plus de funcționalitate și stil
