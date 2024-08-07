@@ -90,24 +90,24 @@ export default function PhotoGallery() {
           >
             <button
               onClick={closeModal}
-              className="absolute top-0 right-0 bg-red-500 text-white rounded-bl-lg rounded-tr-lg lg:p-2"
+              className="absolute top-0 right-0 bg-red-500 text-white rounded-bl-lg rounded-tr-lg p-2"
             >
-              <IoClose size={24} />
+              <IoClose className="lg:text-2xl text-lg" />
             </button>
-            <div className="absolute top-0 left-0 bg-[#f68a09] text-white rounded-br-lg rounded-tl-lg px-2 lg:py-1">
+            <div className="absolute top-0 left-0 bg-[#f68a09] text-white rounded-br-lg rounded-tl-lg px-2 py-1">
               {`${currentImageIndex + 1}/${images.length}`}
             </div>
             <button
               onClick={prevImage}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#f68a09] text-white rounded-r-lg p-2"
             >
-              <FaArrowLeft className="lg:text-2xl text-sm" />
+              <FaArrowLeft className="lg:text-2xl text-lg" />
             </button>
             <button
               onClick={nextImage}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#f68a09] text-white rounded-l-lg p-2"
             >
-              <FaArrowRight className="lg:text-2xl text-sm" />
+              <FaArrowRight className="lg:text-2xl text-lg" />
             </button>
             {images[currentImageIndex] && (
               <Image
