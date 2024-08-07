@@ -21,7 +21,7 @@ const HomeHeading = ({
       </p>
       <h2
         className={
-          "text-3xl lg:text-4xl font-bold leading-relaxed grid-about-3 " +
+          "text-2xl sm:text-3xl font-bold leading-relaxed grid-about-3 " +
           bigTitleCSS
         }
       >

@@ -37,16 +37,28 @@ export default function Footer() {
             și specificațiile fiecărui proiect.
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="p-2 bg-custom-orange rounded">
+            <a
+              href="#"
+              className="p-2 bg-custom-orange rounded hover:text-black"
+            >
               <FaFacebookF className="text-xl" />
             </a>
-            <a href="#" className="p-2 bg-custom-orange rounded">
+            <a
+              href="#"
+              className="p-2 bg-custom-orange rounded hover:text-black"
+            >
               <FaTwitter className="text-xl" />
             </a>
-            <a href="#" className="p-2 bg-custom-orange rounded">
+            <a
+              href="#"
+              className="p-2 bg-custom-orange rounded hover:text-black"
+            >
               <FaLinkedinIn className="text-xl" />
             </a>
-            <a href="#" className="p-2 bg-custom-orange rounded">
+            <a
+              href="#"
+              className="p-2 bg-custom-orange rounded hover:text-black"
+            >
               <FaWhatsapp className="text-xl" />
             </a>
           </div>
@@ -56,7 +68,9 @@ export default function Footer() {
           <ul>
             {navBarLinks.map((link, index) => (
               <li className="mb-2" key={index}>
-                <Link href={link.path}>{link.name}</Link>
+                <Link href={link.path} className="hover:text-custom-orange">
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -66,7 +80,9 @@ export default function Footer() {
           <ul>
             {legalLinks.map((link, index) => (
               <li className="mb-2" key={index}>
-                <Link href={link.path}>{link.name}</Link>
+                <Link href={link.path} className="hover:text-custom-orange">
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -76,7 +92,9 @@ export default function Footer() {
           <ul>
             {servicii.map((link, index) => (
               <li className="mb-2" key={index}>
-                <Link href={link.href}>{link.title}</Link>
+                <Link href={link.href} className="hover:text-custom-orange">
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
@@ -84,13 +102,19 @@ export default function Footer() {
         <div className="md:col-span-1">
           <h3 className="font-bold text-xl mb-4">Contact</h3>
           <div className="flex flex-col gap-2">
-            <a href={`tel:${companyData.phone}`}>
+            <a
+              href={`tel:${companyData.phone}`}
+              className="hover:text-custom-orange"
+            >
               <div className="flex gap-1">
                 <TbPhoneCall className="text-2xl" />
                 <p>{companyData.phone}</p>
               </div>
             </a>
-            <a href={`mailto:${companyData.email}`}>
+            <a
+              href={`mailto:${companyData.email}`}
+              className="hover:text-custom-orange"
+            >
               <div className="flex gap-1">
                 <MdOutlineMailOutline className="text-2xl" />
                 <p>{companyData.email}</p>
@@ -100,6 +124,7 @@ export default function Footer() {
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                 companyData.location
               )}`}
+              className="hover:text-custom-orange"
             >
               <div className="flex gap-1">
                 <MdOutlineLocationOn className="text-2xl" />
