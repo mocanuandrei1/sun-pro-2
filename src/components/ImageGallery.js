@@ -16,17 +16,13 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const photos = [
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
+  { src: "/Hero1.jpg", width: 1600, height: 900 },
+  { src: "/Hero1.jpg", width: 1600, height: 900 },
 ];
 
 function renderNextImage(RenderImageProps, RenderImageContext) {
