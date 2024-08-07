@@ -58,7 +58,7 @@ export default function ImageGallery() {
 
   return (
     <>
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl xl:mx-auto mx-10">
         <RowsPhotoAlbum
           photos={photos}
           render={{ renderNextImage }}
