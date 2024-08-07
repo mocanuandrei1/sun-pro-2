@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { DrawerClose, DrawerHeader } from "../ui/drawer";
 import { navBarLinks } from "@/lib/variables";
+import { usePathname } from "next/navigation";
 
 export default function NavBarMobile() {
+  const pathname = usePathname();
   return (
     <div>
       <DrawerHeader className="bg-black h-20 flex justify-between">
@@ -18,8 +21,10 @@ export default function NavBarMobile() {
         {navBarLinks.map((link, id) => (
           <Link
             key={id}
-            href="/"
-            className="p-4 hover:bg-black hover:text-white transition-all duration-200"
+            href={link.path}
+            className={`p-4 hover:bg-black rounded-lg hover:text-white transition-all duration-200 ${
+              pathname === link.path ? "text-lg bg-black text-white" : ""
+            }`}
           >
             {link.name.toUpperCase()}
           </Link>
