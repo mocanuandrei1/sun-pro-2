@@ -1,5 +1,6 @@
 import CTA from "@/components/CTA";
 import HomeHeading from "@/components/custom ui/HomeHeading";
+import ImageGallery from "@/components/ImageGallery";
 import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1";
 import React from "react";
 
@@ -217,6 +218,7 @@ const page = () => {
         thirdH3={texts4.thirdH3}
         thirdH3Text={texts4.thirdH3Text}
       />
+      <ImageGallery />
       <CTA />
     </>
   );
