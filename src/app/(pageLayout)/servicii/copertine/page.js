@@ -1,4 +1,5 @@
 import CTA from "@/components/CTA";
+import Button from "@/components/custom ui/Button";
 import HomeHeading from "@/components/custom ui/HomeHeading";
 import ImageGallery from "@/components/ImageGallery";
 import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1";
@@ -158,19 +159,67 @@ const page = () => {
           bigTitle="Introducere"
           bigTitleCSS="justify-center text-left mb-8"
         />
-        <p className="mb-1">
+        <p className="mb-2">
           Copertinele reprezintă o soluție practică și estetică pentru protecția
           spațiilor exterioare împotriva soarelui, ploii și altor condiții
           meteorologice.
         </p>
-        <p>
+        <p className="mb-6">
           La SunPro, oferim o gamă variată de copertine, inclusiv copertine cu
           brațe laterale, copertine cu casetă, copertine fixe (capotine) și
           copertine retractabile, toate montate profesional pentru a satisface
           nevoile și preferințele clienților noștri.
         </p>
+        <p className="mb-2">
+          Copertinele pe care le oferim sunt disponibile în următoarele
+          categorii:
+        </p>
+        <ul className="flex flex-col gap-1">
+          <li>
+            <a
+              href="#copertine-cu-brate-laterale"
+              className="text-custom-orange underline underline-offset-4 font-bold"
+            >
+              1. Copertine cu brațe laterale
+            </a>
+          </li>
+          <li>
+            <a
+              href="#copertine-cu-caseta"
+              className="text-custom-orange underline underline-offset-4 font-bold"
+            >
+              2. Copertine cu casetă
+            </a>
+          </li>
+          <li>
+            <a
+              href="#copertine-fixe-capotine"
+              className="text-custom-orange underline underline-offset-4 font-bold"
+            >
+              3. Copertine fixe - capotine
+            </a>
+          </li>
+          <li>
+            <a
+              href="#copertine-retractabile"
+              className="text-custom-orange underline underline-offset-4 font-bold"
+            >
+              4. Copertine retractabile
+            </a>
+          </li>
+        </ul>
+        <Button
+          type="link"
+          href="/contact"
+          customClass="font-semibold w-full sm:w-[280px] mt-6"
+          text="OBȚINE O CONSULTAȚIE"
+          mainColor="blue"
+          secondColor="orange"
+        />
       </section>
       <ServiciiBlockModel1
+        CTAButton={false}
+        id="copertine-cu-brate-laterale"
         reversed={true}
         backgroundColor="bg-black text-white"
         smallHeading={texts.smallHeading}
@@ -183,6 +232,8 @@ const page = () => {
         thirdH3Text={texts.thirdH3Text}
       />
       <ServiciiBlockModel1
+        CTAButton={true}
+        id="copertine-cu-caseta"
         reversed={false}
         backgroundColor="bg-white text-black"
         smallHeading={texts2.smallHeading}
@@ -195,6 +246,8 @@ const page = () => {
         thirdH3Text={texts2.thirdH3Text}
       />
       <ServiciiBlockModel1
+        CTAButton={false}
+        id="copertine-fixe-capotine"
         reversed={true}
         backgroundColor="bg-black text-white"
         smallHeading={texts3.smallHeading}
@@ -207,6 +260,8 @@ const page = () => {
         thirdH3Text={texts3.thirdH3Text}
       />
       <ServiciiBlockModel1
+        CTAButton={true}
+        id="copertine-retractabile"
         reversed={false}
         backgroundColor="bg-white text-black"
         smallHeading={texts4.smallHeading}
