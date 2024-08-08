@@ -3,8 +3,10 @@ import { navBarLinks } from "@/lib/variables";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Button from "../custom ui/Button";
+import { usePathname } from "next/navigation";
 
 export default function NavBarDesktop() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -33,7 +35,9 @@ export default function NavBarDesktop() {
             <Link
               key={id}
               href={link.path}
-              className="hover:bg-black flex h-full items-center px-5 transition-all duration-200 font-semibold hover:text-white"
+              className={`hover:bg-black flex h-full items-center px-5 transition-all font-semibold duration-200 hover:text-white ${
+                pathname === link.path ? "text-lg" : ""
+              }`}
             >
               {link.name.toUpperCase()}
             </Link>
