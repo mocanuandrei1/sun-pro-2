@@ -4,8 +4,8 @@ import CountUp from "react-countup";
 
 export default function AboutStatistics() {
   return (
-    <div className="bg-orange-500 text-white py-8">
-      <div className="container mx-auto flex justify-between">
+    <div className="bg-[#f68a09] text-white py-8">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-6 lg:gap-10 mx-auto">
         <div className="text-center">
           <CountUp
             end={2000}

@@ -195,15 +195,31 @@ h6 {
     order: 6;
   }
 }
-@keyframes spin-slow {
+
+@keyframes rotateX {
   0% {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotateY(180deg);
   }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 10s linear infinite;
+@keyframes rotateXReverse {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.icon-rotate {
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.icon-rotate:hover {
+  transform: rotateY(180deg);
+  transition-delay: 0.1s;
 }

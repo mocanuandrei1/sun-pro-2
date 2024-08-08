@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { LuCrown } from "react-icons/lu";
 import Image from "next/image";
 import FAQItem from "./FAQItem";
 import HomeHeading from "../custom ui/HomeHeading";
