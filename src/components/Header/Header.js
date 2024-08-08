@@ -17,6 +17,7 @@ export default function Header() {
             <Image
               src="/logo2.png"
               alt="Sun Pro Logo"
+              priority
               width={80}
               height={80}
               className="cursor-pointer h-20 "

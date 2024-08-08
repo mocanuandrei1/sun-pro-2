@@ -53,7 +53,8 @@ export default function Hero() {
     <section className="relative lg:h-[calc(100svh-112px)] h-[calc(100svh-80px)] bg-black lg:px-20 overflow-hidden">
       <Image
         src={images[currentImageIndex]}
-        alt="Background Image"
+        alt="Hero Image"
+        priority
         fill={true}
         quality={100}
         className="object-cover"
