@@ -31,7 +31,7 @@ const ServiciiBlockModel1 = ({
           alt="Copertine cu brațe laterale"
           width={1200}
           height={800}
-          className={reversed ? "lg:order-2" : "lg:order-1"}
+          className={`rounded-lg ${reversed ? "lg:order-2" : "lg:order-1"}`}
         ></Image>
         <div
           className={`flex flex-col gap-3 justify-around ${

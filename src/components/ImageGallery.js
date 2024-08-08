@@ -4,12 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
-
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -36,6 +33,7 @@ function renderNextImage(RenderImageProps, RenderImageContext) {
         position: "relative",
         aspectRatio: `${width} / ${height}`,
       }}
+      className="bg-black rounded-lg"
     >
       <Image
         fill
@@ -44,6 +42,7 @@ function renderNextImage(RenderImageProps, RenderImageContext) {
         title={title}
         sizes={sizes}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
+        className="hover:opacity-70 rounded-lg"
       />
     </div>
   );
@@ -57,7 +56,9 @@ export default function ImageGallery() {
       <div className="max-w-screen-xl xl:mx-auto mx-10">
         <RowsPhotoAlbum
           photos={photos}
-          render={{ renderNextImage }}
+          render={{
+            image: renderNextImage,
+          }}
           defaultContainerWidth={1280}
           targetRowHeight={150}
           onClick={({ index }) => setIndex(index)}

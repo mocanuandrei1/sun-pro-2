@@ -7,10 +7,11 @@ export default function PageLayout({ children }) {
     <main>
       <div className="relative w-full h-64">
         <Image
-          src={"/Hero1.jpg"}
-          alt="About us"
-          layout="fill"
-          objectFit="cover"
+          src="/Hero1.jpg"
+          alt="Construction workers"
+          width={1200}
+          height={800}
+          className=" object-cover w-full relative h-full"
         />
         <Breadcrumb />
       </div>

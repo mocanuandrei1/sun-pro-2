@@ -12,9 +12,9 @@ export default function CTA() {
           <Image
             src="/Hero1.jpg"
             alt="Loading..."
-            layout="fill"
-            objectFit="cover"
-            className="opacity-30"
+            width={800}
+            height={200}
+            className="opacity-30 object-cover w-full relative h-full"
           />
         </div>
         <div className="z-10 block">

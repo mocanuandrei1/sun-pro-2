@@ -39,8 +39,9 @@ export default function FAQ() {
           <Image
             src="/Hero1.jpg"
             alt="Construction workers"
-            layout="fill"
-            objectFit="cover"
+            width={1200}
+            height={800}
+            className=" object-cover w-full relative h-full"
           />
         </div>
       </div>
