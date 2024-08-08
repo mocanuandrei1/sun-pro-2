@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { LuCrown } from "react-icons/lu";
+
 import Button from "./custom ui/Button";
 import HomeHeading from "./custom ui/HomeHeading";
 

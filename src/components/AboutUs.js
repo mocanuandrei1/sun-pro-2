@@ -1,23 +1,12 @@
-"use client";
 import Image from "next/image";
 import { GrUserManager } from "react-icons/gr";
 import { PiCertificate } from "react-icons/pi";
-import { useState } from "react";
+
 import { LuCrown } from "react-icons/lu";
 
 export default function AboutUs() {
-  const [rotateIcon, setRotateIcon] = useState(null);
-
-  const handleMouseEnter = (icon) => {
-    setRotateIcon(icon);
-  };
-
-  const handleAnimationEnd = () => {
-    setRotateIcon(null);
-  };
-
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 py-20 max-w-7xl mx-auto">
+    <div className="grid lg:grid-cols-2 grid-cols-1 py-20 max-w-7xl lg:mx-auto mx-10">
       <div className="pr-10">
         <Image
           src="/Logo.png"
@@ -42,19 +31,13 @@ export default function AboutUs() {
           impactul proiectelor lor asupra mediului.
         </p>
 
-        <div className="grid grid-cols-2 justify-items-end">
-          <div className="bg-gray-100 mr-4 p-4">
-            <div className="flex items-center mb-4">
-              <div
-                className={`text-5xl text-[#f68a09] ${
-                  rotateIcon === "userManager" ? "rotate-y" : ""
-                }`}
-                onMouseEnter={() => handleMouseEnter("userManager")}
-                onAnimationEnd={handleAnimationEnd}
-              >
+        <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-end">
+          <div className="bg-gray-100 lg:mr-4 p-4">
+            <div className="flex  items-center mb-4">
+              <div className="lg:text-5xl text-3xl text-[#f68a09] icon-rotate">
                 <GrUserManager />
               </div>
-              <h3 className="text-xl font-semibold ml-2">
+              <h3 className="lg:text-xl text-base font-semibold ml-2">
                 Membrii echipei de calitate și experți
               </h3>
             </div>
@@ -64,18 +47,12 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="bg-gray-100 ml-4 p-4">
-            <div className="flex items-center mb-4">
-              <div
-                className={`text-5xl text-[#f68a09] ${
-                  rotateIcon === "certificate" ? "rotate-y" : ""
-                }`}
-                onMouseEnter={() => handleMouseEnter("certificate")}
-                onAnimationEnd={handleAnimationEnd}
-              >
+          <div className="bg-gray-100 lg:ml-4 p-4 lg:mt-0 mt-4">
+            <div className="flex  items-center mb-4">
+              <div className="lg:text-5xl text-3xl text-[#f68a09] icon-rotate">
                 <PiCertificate />
               </div>
-              <h3 className="text-xl font-semibold ml-2">
+              <h3 className="lg:text-xl text-base font-semibold ml-2">
                 Leaderi de piata in domeniu
               </h3>
             </div>
