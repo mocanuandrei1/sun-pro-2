@@ -10,6 +10,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import HomeHeading from "./custom ui/HomeHeading";
 
 const photos = [
   { src: "/Hero1.jpg", width: 1600, height: 900 },
@@ -48,22 +49,26 @@ function renderNextImage(RenderImageProps, RenderImageContext) {
   );
 }
 
-export default function ImageGallery() {
+export default function ImageGallery({ smallHeading, bigHeading }) {
   const [index, setIndex] = useState(-1);
 
   return (
-    <>
-      <div className="max-w-screen-xl xl:mx-auto mx-10">
-        <RowsPhotoAlbum
-          photos={photos}
-          render={{
-            image: renderNextImage,
-          }}
-          defaultContainerWidth={1280}
-          targetRowHeight={150}
-          onClick={({ index }) => setIndex(index)}
-        />
-      </div>
+    <section className="max-w-screen-xl xl:mx-auto mx-10">
+      <HomeHeading
+        smallTitle={smallHeading}
+        smallTitleCSS="justify-start"
+        bigTitle={bigHeading}
+        bigTitleCSS="justify-center text-left mb-14"
+      />
+      <RowsPhotoAlbum
+        photos={photos}
+        render={{
+          image: renderNextImage,
+        }}
+        defaultContainerWidth={1280}
+        targetRowHeight={150}
+        onClick={({ index }) => setIndex(index)}
+      />
       <Lightbox
         slides={photos}
         open={index >= 0}
@@ -72,6 +77,6 @@ export default function ImageGallery() {
         // enable optional lightbox plugins
         plugins={[Fullscreen, Thumbnails, Zoom]}
       />
-    </>
+    </section>
   );
 }
