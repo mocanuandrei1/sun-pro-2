@@ -26,7 +26,7 @@ export default function TestimonialsMobile({ slides }) {
 
   return (
     <div className="w-full mx-auto py-16 relative" {...swipeHandlers}>
-      <p className="flex text-lg items-center justify-center text-[#f68a09] font-semibold mb-4">
+      <p className="flex text-lg items-center justify-center text-[#0975F6] font-semibold mb-4">
         <LuCrown className="pr-2 text-3xl" />
         Testimoniale
       </p>
@@ -43,14 +43,21 @@ export default function TestimonialsMobile({ slides }) {
         >
           {slides.map((slide, index) => (
             <div key={index} className="flex-none w-full p-4">
-              <div className="h-full p-6 rounded-lg text-center border-2 border-[#f68a09] shadow-md text-[#f68a09]">
-                <h2 className="text-2xl font-bold mb-1">{slide.name}</h2>
+              <div className="group h-full p-6 rounded-lg text-center border-2 border-[#0975F6] shadow-md shadow-[#0975F6] transition-all duration-300 group-hover:border-[#f68a09] group-hover:shadow-[#f68a09]">
+                <h2 className="text-2xl font-bold text-[#0975F6] group-hover:text-[#f68a09] transition-colors duration-300">
+                  {slide.name}
+                </h2>
                 <div className="flex justify-center mb-2">
-                  <FaStar size={24} />
-                  <FaStar size={24} />
-                  <FaStar size={24} />
-                  <FaStar size={24} />
-                  <FaStar size={24} />
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar
+                      key={i}
+                      size={20}
+                      className="text-[#0975F6] transition-colors duration-300 group-hover:text-[#f68a09]"
+                      style={{
+                        transitionDelay: `${i * 50}ms`, // Creează un efect de tranziție de la stânga la dreapta
+                      }}
+                    />
+                  ))}
                 </div>
                 <h4 className="text-lg text-gray-600 mb-3">{slide.role}</h4>
                 <p className="text-gray-700 text-base">{slide.review}</p>
