@@ -26,7 +26,7 @@ export default function TestimonialsMobile({ slides }) {
 
   return (
     <div className="w-full mx-auto py-16 relative" {...swipeHandlers}>
-      <p className="flex text-lg items-center justify-center text-[#0975F6] font-semibold mb-4">
+      <p className="flex text-lg items-center justify-center text-[#f68a09] font-semibold mb-4">
         <LuCrown className="pr-2 text-3xl" />
         Testimoniale
       </p>
@@ -43,10 +43,11 @@ export default function TestimonialsMobile({ slides }) {
         >
           {slides.map((slide, index) => (
             <div key={index} className="flex-none w-full p-4">
-              <div className="group h-full p-6 rounded-lg text-center border-2 border-[#0975F6] shadow-md shadow-[#0975F6] transition-all duration-300 group-hover:border-[#f68a09] group-hover:shadow-[#f68a09]">
-                <h2 className="text-2xl font-bold text-[#0975F6] group-hover:text-[#f68a09] transition-colors duration-300">
+              <div className="group h-full p-6 rounded-lg text-center border-2 shadow-md border-[#f68a09] shadow-[#f68a09]">
+                <h2 className="text-2xl font-bold text-[#f68a09]">
                   {slide.name}
                 </h2>
+                <h4 className="text-lg text-gray-600">{slide.role}</h4>
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
@@ -59,7 +60,7 @@ export default function TestimonialsMobile({ slides }) {
                     />
                   ))}
                 </div>
-                <h4 className="text-lg text-gray-600 mb-3">{slide.role}</h4>
+
                 <p className="text-gray-700 text-base">{slide.review}</p>
               </div>
             </div>

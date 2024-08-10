@@ -20,7 +20,7 @@ export default function TestimonialsDesktop({ slides }) {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-16 relative">
-      <p className="flex text-lg items-center justify-center text-[#0975F6] font-semibold mb-4">
+      <p className="flex text-lg items-center justify-center text-[#f68a09] font-semibold mb-4">
         <LuCrown className="pr-2 text-3xl" />
         Testimoniale
       </p>

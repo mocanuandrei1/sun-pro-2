@@ -3,10 +3,18 @@ import React from "react";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { GiChoice, GiHammerNails } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
+import { LuCrown } from "react-icons/lu";
 
 export default function WorkProcess() {
   return (
     <div className="py-20">
+      <p className="flex text-lg items-center justify-center text-[#f68a09] font-semibold ">
+        <LuCrown className="pr-2 text-3xl" />
+        Procesul de lucru
+      </p>
+      <h2 className="text-3xl font-bold leading-relaxed mb-12 text-center">
+        Cum functioneaza
+      </h2>
       <div className="relative max-w-6xl w-full mx-auto">
         <Image
           src={"/WorkProcess.png"}
