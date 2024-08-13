@@ -3,74 +3,40 @@ import TestimonialsMobile from "./TestimonialsMobile";
 import TestimonialsDesktop from "./TestimonialsDesktop";
 
 const slides = [
-  // Copertine retractabile, fixe, din policarbonat sau din pânză
+  // Testimonial 1
   {
-    name: "Index1Alexandru Marin",
-    role: "Proprietar Cafenea",
+    name: "Marius Popescu",
+    role: "Proprietar Hotel",
     review:
-      "Copertina retractabilă de la Sun Pro a transformat terasa cafenelei mele. Calitate impecabilă și montaj rapid!",
+      "Soluțiile de umbrire de la Sun Pro au adus un plus de confort clienților noștri. Servicii de calitate și montaj profesionist!",
   },
+  // Testimonial 2
   {
-    name: "Index2Cristina Voicu",
-    role: "Proprietar Vilă",
-    review:
-      "Copertinele din policarbonat de la Sun Pro oferă protecție excelentă împotriva soarelui și a ploii. Recomand cu încredere!",
-  },
-
-  // Pergole retractabile din aluminiu sau din lemn
-  {
-    name: "Index3Mihai Radu",
-    role: "Manager Restaurant",
-    review:
-      "Pergola retractabilă de la Sun Pro adaugă eleganță și funcționalitate terasei noastre. Un produs excelent!",
-  },
-  {
-    name: "Index4Alina Dobre",
-    role: "Proprietar Pensiune",
-    review:
-      "Pergola din lemn de la Sun Pro se potrivește perfect cu estetica pensiunii noastre. Suntem foarte mulțumiți!",
-  },
-
-  // Închideri terase din sticlă sau din policarbonat
-  {
-    name: "Index5Răzvan Ionescu",
+    name: "Ana Ionescu",
     role: "Proprietar Restaurant",
     review:
-      "Închiderea terasei cu sticlă de la Sun Pro ne permite să o folosim tot anul. Calitate de top!",
+      "Pergola retractabilă de la Sun Pro a transformat terasa noastră într-un loc preferat pentru clienți, indiferent de vreme.",
   },
+  // Testimonial 3
   {
-    name: "Index6Ioana Tudor",
-    role: "Proprietar Casă de Vacanță",
+    name: "Vlad Radu",
+    role: "Proprietar Pensiune",
     review:
-      "Închiderea terasei cu policarbonat de la Sun Pro ne-a transformat spațiul într-un loc preferat pentru relaxare.",
+      "Rulourile exterioare de la Sun Pro ne oferă intimitate și protecție împotriva soarelui puternic. Foarte mulțumiți!",
   },
-
-  // Rulouri exterioare din aluminiu sau PVC
+  // Testimonial 4
   {
-    name: "Index7Andrei Popa",
-    role: "Proprietar Locuință",
+    name: "Elena Marin",
+    role: "Manager Spa",
     review:
-      "Rulourile din aluminiu de la Sun Pro oferă protecție excelentă și adaugă siguranță casei noastre.",
+      "Prelatele de la Sun Pro sunt rezistente și estetice, perfect integrate în designul centrului nostru. Recomandăm cu încredere!",
   },
+  // Testimonial 5
   {
-    name: "Index8Elena Stancu",
-    role: "Proprietar Apartament",
+    name: "Răzvan Tudor",
+    role: "Proprietar Cafenea",
     review:
-      "Rulourile din PVC de la Sun Pro sunt estetice, durabile și eficiente în izolarea termică. O alegere excelentă!",
-  },
-
-  // Prelate PVC pentru terase, piscine, balcoane
-  {
-    name: "Index9Sorin Dumitru",
-    role: "Proprietar Terasă",
-    review:
-      "Prelata din PVC de la Sun Pro a schimbat aspectul terasei noastre. Este rezistentă și ușor de întreținut!",
-  },
-  {
-    name: "Index10Oana Georgescu",
-    role: "Manager Centru SPA",
-    review:
-      "Prelatele PVC de la Sun Pro sunt robuste, ușor de manevrat și oferă protecție totală. Mulțumim, Sun Pro!",
+      "Copertina retractabilă de la Sun Pro este excelentă pentru terasa noastră. Montaj rapid și servicii impecabile!",
   },
 ];
 
