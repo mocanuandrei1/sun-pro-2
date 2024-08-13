@@ -7,8 +7,8 @@ import { LuCrown } from "react-icons/lu";
 export default function TestimonialsMobile({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const containerRef = useRef(null);
   const [animateStars, setAnimateStars] = useState(false);
+  const containerRef = useRef(null);
 
   const handleNext = () => {
     if (isAnimating) return;
@@ -35,7 +35,6 @@ export default function TestimonialsMobile({ slides }) {
     setAnimateStars(false);
 
     const prevIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-
     setCurrentIndex(prevIndex);
 
     containerRef.current.style.transition = "none";
@@ -86,14 +85,17 @@ export default function TestimonialsMobile({ slides }) {
               transform: "translateX(0)",
             }}
           >
-            {[slides[currentIndex]].map((slide, index) => (
+            {[
+              slides[currentIndex],
+              slides[(currentIndex + 1) % slides.length],
+            ].map((slide, index) => (
               <div key={index} className="flex-none w-full p-4">
                 <div
-                  className={`group h-full p-6 rounded-lg text-center transition-all duration-1000 ${
+                  className={`group h-full p-6 rounded-lg text-center border-2 ${
                     animateStars
                       ? "border-[#0975F6] shadow-[#0975F6]"
                       : "border-[#f68a09] shadow-[#f68a09]"
-                  } border-2 shadow-md`}
+                  } shadow-md transition-all duration-1000`}
                 >
                   <h2
                     className={`text-2xl font-bold ${
@@ -119,6 +121,7 @@ export default function TestimonialsMobile({ slides }) {
                       />
                     ))}
                   </div>
+
                   <p className="text-gray-700 text-base">{slide.review}</p>
                 </div>
               </div>
