@@ -8,12 +8,12 @@ export default function TestimonialsMobile({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef(null);
-  const [animationClass, setAnimationClass] = useState("");
+  const [animateStars, setAnimateStars] = useState(false);
 
   const handleNext = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setAnimationClass(""); // Resetează clasa de animație
+    setAnimateStars(false);
 
     containerRef.current.style.transition = "transform 0.5s ease-in-out";
     containerRef.current.style.transform = `translateX(-100%)`;
@@ -25,13 +25,14 @@ export default function TestimonialsMobile({ slides }) {
       containerRef.current.style.transition = "none";
       containerRef.current.style.transform = "translateX(0)";
       setIsAnimating(false);
+      setAnimateStars(true);
     }, 500);
   };
 
   const handlePrev = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setAnimationClass(""); // Resetează clasa de animație
+    setAnimateStars(false);
 
     const prevIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
 
@@ -47,14 +48,14 @@ export default function TestimonialsMobile({ slides }) {
 
     setTimeout(() => {
       setIsAnimating(false);
+      setAnimateStars(true);
     }, 500);
   };
 
-  // Efect pentru a declanșa animația după schimbarea slide-ului
   useEffect(() => {
     if (!isAnimating) {
       setTimeout(() => {
-        setAnimationClass("animate"); // Declanșează animația
+        setAnimateStars(true);
       }, 500); // Așteaptă până la finalizarea tranziției slide-ului
     }
   }, [currentIndex, isAnimating]);
@@ -85,21 +86,18 @@ export default function TestimonialsMobile({ slides }) {
               transform: "translateX(0)",
             }}
           >
-            {[
-              slides[currentIndex],
-              slides[(currentIndex + 1) % slides.length],
-            ].map((slide, index) => (
+            {[slides[currentIndex]].map((slide, index) => (
               <div key={index} className="flex-none w-full p-4">
                 <div
                   className={`group h-full p-6 rounded-lg text-center transition-all duration-1000 ${
-                    animationClass
+                    animateStars
                       ? "border-[#0975F6] shadow-[#0975F6]"
                       : "border-[#f68a09] shadow-[#f68a09]"
                   } border-2 shadow-md`}
                 >
                   <h2
                     className={`text-2xl font-bold ${
-                      animationClass ? "text-[#0975F6]" : "text-[#f68a09]"
+                      animateStars ? "text-[#0975F6]" : "text-[#f68a09]"
                     } transition-colors duration-1000`}
                   >
                     {slide.name}
@@ -111,12 +109,16 @@ export default function TestimonialsMobile({ slides }) {
                         key={i}
                         size={20}
                         className={`${
-                          animationClass ? "text-[#0975F6]" : "text-[#f68a09]"
-                        } transition-colors duration-1000 delay-${i * 200}`}
+                          animateStars ? "text-[#0975F6]" : "text-[#f68a09]"
+                        } transition-colors duration-300`}
+                        style={{
+                          transitionDelay: animateStars
+                            ? `${i * 100}ms`
+                            : "0ms",
+                        }}
                       />
                     ))}
                   </div>
-
                   <p className="text-gray-700 text-base">{slide.review}</p>
                 </div>
               </div>
