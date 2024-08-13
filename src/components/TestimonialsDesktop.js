@@ -38,8 +38,8 @@ export default function TestimonialsDesktop({ slides }) {
           >
             {slides.map((slide, index) => (
               <div key={index} className="flex-none w-1/3 p-4">
-                <div className="group h-full p-6 rounded-lg text-center border-2 border-[#0975F6] shadow-md shadow-[#0975F6] transition-all duration-1000 hover:border-[#f68a09] hover:shadow-[#f68a09]">
-                  <h2 className="text-2xl font-bold text-[#0975F6] group-hover:text-[#f68a09] transition-colors duration-1000">
+                <div className="group h-full p-6 rounded-lg text-center border-2 border-[#f68a09] shadow-md shadow-[#f68a09] transition-all duration-1000 hover:border-[#0975F6] hover:shadow-[#0975F6]">
+                  <h2 className="text-2xl font-bold text-[#f68a09] group-hover:text-[#0975F6] transition-colors duration-1000">
                     {slide.name}
                   </h2>
                   <h4 className="text-lg text-gray-600">{slide.role}</h4>
@@ -48,7 +48,7 @@ export default function TestimonialsDesktop({ slides }) {
                       <FaStar
                         key={i}
                         size={20}
-                        className="text-[#0975F6] transition-colors duration-300 group-hover:text-[#f68a09]"
+                        className="text-[#f68a09] transition-colors duration-300 group-hover:text-[#0975F6]"
                         style={{
                           transitionDelay: `${i * 100}ms`, // Creează un efect de tranziție de la stânga la dreapta
                         }}

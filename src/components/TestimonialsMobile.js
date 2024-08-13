@@ -43,8 +43,8 @@ export default function TestimonialsMobile({ slides }) {
         >
           {slides.map((slide, index) => (
             <div key={index} className="flex-none w-full p-4">
-              <div className="group h-full p-6 rounded-lg text-center border-2 shadow-md border-[#f68a09] shadow-[#f68a09]">
-                <h2 className="text-2xl font-bold text-[#f68a09]">
+              <div className="group h-full p-6 rounded-lg text-center border-2 border-[#f68a09] shadow-md shadow-[#f68a09] transition-all duration-1000 hover:border-[#0975F6] hover:shadow-[#0975F6]">
+                <h2 className="text-2xl font-bold text-[#f68a09] group-hover:text-[#0975F6] transition-colors duration-1000">
                   {slide.name}
                 </h2>
                 <h4 className="text-lg text-gray-600">{slide.role}</h4>
@@ -53,7 +53,7 @@ export default function TestimonialsMobile({ slides }) {
                     <FaStar
                       key={i}
                       size={20}
-                      className="text-[#0975F6] transition-colors duration-300 group-hover:text-[#f68a09]"
+                      className="text-[#f68a09] transition-colors duration-300 group-hover:text-[#0975F6]"
                       style={{
                         transitionDelay: `${i * 50}ms`, // Creează un efect de tranziție de la stânga la dreapta
                       }}
