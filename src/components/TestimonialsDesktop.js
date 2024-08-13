@@ -1,21 +1,57 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
 import { LuCrown } from "react-icons/lu";
 
 export default function TestimonialsDesktop({ slides }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 3 : prevIndex - 1
-    );
-  };
+  const [currentSlides, setCurrentSlides] = useState(slides);
+  const containerRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 3 ? 0 : prevIndex + 1
-    );
+    if (isAnimating) return;
+    setIsAnimating(true);
+
+    // Mută slide-urile spre stânga cu 33.33%
+    containerRef.current.style.transition = "transform 0.5s ease-in-out";
+    containerRef.current.style.transform = "translateX(-33.33%)";
+
+    setTimeout(() => {
+      // Mutăm primul slide la final după ce tranziția s-a încheiat
+      const [firstSlide, ...restSlides] = currentSlides;
+      setCurrentSlides([...restSlides, firstSlide]);
+
+      // Resetăm poziția containerului la 0 fără tranziție
+      setTimeout(() => {
+        containerRef.current.style.transition = "none";
+        containerRef.current.style.transform = "translateX(0)";
+      }, 0);
+
+      setIsAnimating(false);
+    }, 500); // Durata animației CSS
+  };
+
+  const handlePrev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+
+    // Mutăm ultimul slide la început înainte de a începe tranziția
+    const lastSlide = currentSlides[currentSlides.length - 1];
+    setCurrentSlides([lastSlide, ...currentSlides.slice(0, -1)]);
+
+    // Setăm poziția inițială la -33.33% pentru a pregăti animația
+    containerRef.current.style.transition = "none";
+    containerRef.current.style.transform = "translateX(-33.33%)";
+
+    // Începe animația pentru a muta spre dreapta cu 33.33%
+    setTimeout(() => {
+      containerRef.current.style.transition = "transform 0.5s ease-in-out";
+      containerRef.current.style.transform = "translateX(0)";
+    }, 0);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 550); // Asigurăm că animația este completă
   };
 
   return (
@@ -31,12 +67,13 @@ export default function TestimonialsDesktop({ slides }) {
       <div className="relative">
         <div className="overflow-hidden mx-12">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            ref={containerRef}
+            className="flex"
             style={{
-              transform: `translateX(-${(currentIndex * 100) / 3}%)`,
+              transform: "translateX(0)",
             }}
           >
-            {slides.map((slide, index) => (
+            {currentSlides.map((slide, index) => (
               <div key={index} className="flex-none w-1/3 p-4">
                 <div className="group h-full p-6 rounded-lg text-center border-2 border-[#f68a09] shadow-md shadow-[#f68a09] transition-all duration-1000 hover:border-[#0975F6] hover:shadow-[#0975F6]">
                   <h2 className="text-2xl font-bold text-[#f68a09] group-hover:text-[#0975F6] transition-colors duration-1000">
@@ -50,7 +87,7 @@ export default function TestimonialsDesktop({ slides }) {
                         size={20}
                         className="text-[#f68a09] transition-colors duration-300 group-hover:text-[#0975F6]"
                         style={{
-                          transitionDelay: `${i * 100}ms`, // Creează un efect de tranziție de la stânga la dreapta
+                          transitionDelay: `${i * 100}ms`,
                         }}
                       />
                     ))}
