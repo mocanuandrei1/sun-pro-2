@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
 import { FaStar } from "react-icons/fa";
 import { LuCrown } from "react-icons/lu";
@@ -20,7 +20,6 @@ export default function TestimonialsMobile({ slides }) {
       const nextIndex = (currentIndex + 1) % slides.length;
       setCurrentIndex(nextIndex);
 
-      // Rearanjăm slide-urile după ce animația s-a încheiat
       containerRef.current.style.transition = "none";
       containerRef.current.style.transform = "translateX(0)";
       setIsAnimating(false);
@@ -74,7 +73,6 @@ export default function TestimonialsMobile({ slides }) {
               transform: "translateX(0)",
             }}
           >
-            {/* Includeți slide-ul curent și următorul slide în container */}
             {[
               slides[currentIndex],
               slides[(currentIndex + 1) % slides.length],
@@ -90,10 +88,9 @@ export default function TestimonialsMobile({ slides }) {
                       <FaStar
                         key={i}
                         size={20}
-                        className="text-[#f68a09] transition-colors duration-300 group-hover:text-[#0975F6]"
-                        style={{
-                          transitionDelay: `${i * 50}ms`,
-                        }}
+                        className={`text-[#f68a09] transition-colors duration-1000 delay-${
+                          i * 200
+                        } group-hover:text-[#0975F6]`}
                       />
                     ))}
                   </div>
