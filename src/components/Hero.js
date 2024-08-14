@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { LuCrown } from "react-icons/lu";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
 import Button from "./custom ui/Button";
 
 export default function Hero() {
@@ -67,20 +66,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black opacity-60 w-full h-full lg:clip-hero lg:animate-slideInClipDesktop lg:w-[70%]"></div>
         <div className="col-start-2 text-left pl-6">
           <div className="flex items-center lg:text-lg text-sm text-[#f68a09] font-semibold space-y-2">
-            <span className="animate-fade-in-down delay-[0.1s]">
+            <span className="animate-fade-in-down delay-1">
               <LuCrown className="text-3xl pr-2 mt-1" />
             </span>
-            <span className="animate-fade-in-down delay-[0.2s]">
-              Personalizează
-            </span>
-            <hr className="animate-fade-in-down delay-[0.3s] w-5 border-t-2 border-[#f68a09] mx-1" />
-            <span className="animate-fade-in-down delay-[0.4s]">
-              Protejează
-            </span>
-            <hr className="animate-fade-in-down delay-[0.5s] w-5 border-t-2 border-[#f68a09] mx-1" />
-            <span className="animate-fade-in-down delay-[0.6s]">Bucura-te</span>
+            <span className="animate-fade-in-down delay-2">Personalizează</span>
+            <hr className="animate-fade-in-down delay-3 w-5 border-t-2 border-[#f68a09] mx-1" />
+            <span className="animate-fade-in-down delay-4">Protejează</span>
+            <hr className="animate-fade-in-down delay-5 w-5 border-t-2 border-[#f68a09] mx-1" />
+            <span className="animate-fade-in-down delay-6">Bucura-te</span>
           </div>
-          <p className="lg:text-6xl text-3xl font-bold mt-4 animate-fade-in-left delay-700">
+          <p className="lg:text-6xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
             <span>{texts[currentImageIndex]}</span>
           </p>
           <Button
