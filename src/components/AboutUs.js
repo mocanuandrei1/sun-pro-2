@@ -7,7 +7,7 @@ import { LuCrown } from "react-icons/lu";
 export default function AboutUs() {
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 py-20 max-w-7xl lg:mx-auto mx-10">
-      <div className="pr-10">
+      <div className="pr-10 lg:block hidden">
         <Image
           src="/Hero1.jpg "
           alt="Renovation"
