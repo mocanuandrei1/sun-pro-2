@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import NavBarMobile from "../NavBar/NavBarMobile";
 import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -9,6 +10,8 @@ import { companyData } from "@/lib/variables";
 import HeaderIcon from "./HeaderIcon";
 
 export default function Header() {
+  const triggerRef = useRef(null);
+
   return (
     <header className="md:relative sticky top-0 left-0 z-50 bg-black md:bg-gradient-to-r from-black via-black to-white to-70% ">
       <Drawer direction="right">
@@ -20,7 +23,7 @@ export default function Header() {
               priority
               width={80}
               height={80}
-              className="cursor-pointer h-20 "
+              className="cursor-pointer h-20"
             />
           </div>
           <div className="basis-3/4 hidden md:flex bg-white items-start justify-around flex-nowrap h-full md:pt-4">
@@ -38,14 +41,14 @@ export default function Header() {
             />
           </div>
           <div className="md:hidden pr-4 md:pr-0 flex items-center justify-end basis-1/2">
-            <DrawerTrigger>
+            <DrawerTrigger ref={triggerRef}>
               <AiOutlineMenu className="text-white text-3xl cursor-pointer" />
             </DrawerTrigger>
           </div>
           <NavBarDesktop />
         </div>
         <DrawerContent>
-          <NavBarMobile />
+          <NavBarMobile triggerRef={triggerRef} />
         </DrawerContent>
       </Drawer>
     </header>

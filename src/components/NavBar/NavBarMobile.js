@@ -7,8 +7,15 @@ import { DrawerClose, DrawerHeader } from "../ui/drawer";
 import { navBarLinks } from "@/lib/variables";
 import { usePathname } from "next/navigation";
 
-export default function NavBarMobile() {
+export default function NavBarMobile({ triggerRef }) {
   const pathname = usePathname();
+
+  const handleLinkClick = () => {
+    if (triggerRef.current) {
+      triggerRef.current.click(); // Simulăm un click pe DrawerTrigger pentru a închide meniul
+    }
+  };
+
   return (
     <div>
       <DrawerHeader className="bg-black h-20 flex justify-between">
@@ -25,6 +32,7 @@ export default function NavBarMobile() {
             className={`p-4 hover:bg-black rounded-lg hover:text-white transition-all duration-200 ${
               pathname === link.path ? "text-lg bg-black text-white" : ""
             }`}
+            onClick={handleLinkClick} // Închide drawer-ul la click
           >
             {link.name.toUpperCase()}
           </Link>
