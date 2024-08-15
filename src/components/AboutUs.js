@@ -9,7 +9,7 @@ export default function AboutUs() {
     <div className="grid lg:grid-cols-2 grid-cols-1 py-20 max-w-7xl lg:mx-auto mx-10">
       <div className="pr-10">
         <Image
-          src="/Logo.png"
+          src="/Hero1.jpg "
           alt="Renovation"
           width={500}
           height={500}
