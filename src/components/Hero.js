@@ -8,9 +8,9 @@ import Button from "./custom ui/Button";
 export default function Hero() {
   const images = ["/Hero1.jpg", "/Hero2.jpg", "/Hero3.jpg"];
   const texts = [
-    "PROTEJEAZĂ SPAȚIUL EXTERIOR",
-    "PROTEJEAZĂ SPAȚIUL EXTERIOR2",
-    "PROTEJEAZĂ SPAȚIUL EXTERIOR3",
+    "Transformă Ideile Tale în Realitate",
+    "Asigură Confort și Siguranță în Orice Vreme",
+    "Savurează Momente de Liniște și Relaxare",
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -75,7 +75,7 @@ export default function Hero() {
             <hr className="animate-fade-in-down delay-5 w-5 border-t-2 border-[#f68a09] mx-1" />
             <span className="animate-fade-in-down delay-6">Bucura-te</span>
           </div>
-          <p className="lg:text-6xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
+          <p className="lg:text-5xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
             <span>{texts[currentImageIndex]}</span>
           </p>
           <Button
