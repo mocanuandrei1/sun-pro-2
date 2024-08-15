@@ -241,3 +241,10 @@ h6 {
 .group:hover .vertical-rect {
   transform: translateX(500%) rotate(-30deg); /* Translatează și menține rotația */
 }
+
+/* Adaugă acest CSS fie în fișierul global, fie într-un fișier CSS specific */
+a,
+button,
+.drawer-trigger {
+  outline: none;
+}

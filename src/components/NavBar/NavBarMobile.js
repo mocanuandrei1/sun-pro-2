@@ -21,7 +21,10 @@ export default function NavBarMobile({ triggerRef }) {
       <DrawerHeader className="bg-black h-20 flex justify-between">
         <Image src="/logo2.png" alt="Kotar Logo" width={80} height={80} />
         <DrawerClose>
-          <AiOutlineClose className="text-white text-3xl cursor-pointer rounded-full" />
+          <AiOutlineClose
+            className="text-white text-3xl cursor-pointer rounded-full"
+            style={{ outline: "none" }}
+          />
         </DrawerClose>
       </DrawerHeader>
       <nav className="flex flex-col items-center h-[calc(100svh-80px)] gap-5 justify-center">
@@ -32,6 +35,7 @@ export default function NavBarMobile({ triggerRef }) {
             className={`p-4 hover:bg-black rounded-lg hover:text-white transition-all duration-200 ${
               pathname === link.path ? "text-lg bg-black text-white" : ""
             }`}
+            style={{ outline: "none" }} // Elimina outline
             onClick={handleLinkClick} // Închide drawer-ul la click
           >
             {link.name.toUpperCase()}

@@ -42,7 +42,10 @@ export default function Header() {
           </div>
           <div className="md:hidden pr-4 md:pr-0 flex items-center justify-end basis-1/2">
             <DrawerTrigger ref={triggerRef}>
-              <AiOutlineMenu className="text-white text-3xl cursor-pointer" />
+              <AiOutlineMenu
+                className="text-white text-3xl cursor-pointer"
+                style={{ outline: "none" }}
+              />
             </DrawerTrigger>
           </div>
           <NavBarDesktop />
