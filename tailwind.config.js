@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        custom: "1300px", // Definim un nou punct de rupere la 1300px
+      },
       keyframes: {
         slideInClipDesktop: {
           "0%": { transform: "translateX(0)" },

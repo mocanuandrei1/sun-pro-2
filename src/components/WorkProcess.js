@@ -21,11 +21,11 @@ export default function WorkProcess() {
           alt="Loading.. "
           width={1200}
           height={400}
-          className="w-[80%] h-full object-fill hidden md:block"
+          className="w-[80%] h-full object-fill hidden custom:block"
         />
 
         {/* Layout pentru desktop */}
-        <div className="hidden md:block">
+        <div className="hidden custom:block">
           <div className="absolute -top-5 -left-16 flex items-center">
             <div className="rounded-full bg-gray-100 w-28 h-28 flex items-center justify-center text-white border-2 border-black ">
               <IoNewspaperOutline className="text-[#f68a09] text-5xl icon-rotate" />
@@ -80,56 +80,55 @@ export default function WorkProcess() {
         </div>
 
         {/* Layout pentru mobil */}
-        <div className="block md:hidden px-10">
-          <div className="grid grid-cols-4 items-center mb-6">
-            <div className="col-span-1 rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black ">
+        <div className="block custom:hidden px-10">
+          <div className="flex items-center mb-6">
+            <div className="min-w-[64px] rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black">
               <IoNewspaperOutline className="text-[#f68a09] text-3xl icon-rotate" />
             </div>
-            <div className="col-span-3 text-left">
-              <p className="text-custom-gray text-xs font-semibold">STEP-01</p>
-              <p className="text-lg font-bold">Project Research</p>
+            <div className="ml-4 flex-1 text-left">
+              <p className="text-custom-gray text-xs font-semibold">Pasul 1</p>
+              <p className="text-lg font-bold">Consultare</p>
               <p className="text-custom-gray text-xs">
-                In the initial phases, architects and designers play a crucial
-                role.
+                Evaluăm nevoile și preferințele clientului.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-4 items-center mb-6">
-            <div className="rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black ">
+          <div className="flex items-center mb-6">
+            <div className="min-w-[64px] rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black">
               <GiChoice className="text-[#f68a09] text-3xl icon-rotate" />
             </div>
-            <div className="col-span-3 text-left">
-              <p className="text-custom-gray text-xs font-semibold">STEP-02</p>
-              <p className="text-lg font-bold">Design Build</p>
+            <div className="ml-4 flex-1 text-left">
+              <p className="text-custom-gray text-xs font-semibold">Pasul 2</p>
+              <p className="text-lg font-bold">Alegerea produsului</p>
               <p className="text-custom-gray text-xs">
-                Vulnerable for web iterate process before meta services.
+                Ghidăm clientul în selecția copertinei ideale.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-4 items-center mb-6">
-            <div className="rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black ">
+          <div className="flex items-center mb-6">
+            <div className="min-w-[64px] rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black">
               <GiHammerNails className="text-[#f68a09] text-3xl icon-rotate" />
             </div>
-            <div className="col-span-3 text-left">
-              <p className="text-custom-gray text-xs font-semibold">STEP-03</p>
-              <p className="text-lg font-bold">Starting Work</p>
+            <div className="ml-4 flex-1 text-left">
+              <p className="text-custom-gray text-xs font-semibold">Pasul 3</p>
+              <p className="text-lg font-bold">Montaj</p>
               <p className="text-custom-gray text-xs">
-                Of setting for web iterate process before meta services.
+                Efectuăm montajul profesional al copertinei alese.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-4 items-center mb-6">
-            <div className="rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black ">
+          <div className="flex items-center mb-6">
+            <div className="min-w-[64px] rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black">
               <FaHandshake className="text-[#f68a09] text-3xl icon-rotate" />
             </div>
-            <div className="col-span-3 text-left">
-              <p className="text-custom-gray text-xs font-semibold">STEP-04</p>
-              <p className="text-lg font-bold">Finished Work</p>
+            <div className="ml-4 flex-1 text-left">
+              <p className="text-custom-gray text-xs font-semibold">Pasul 4</p>
+              <p className="text-lg font-bold">Servicii post-vânzare</p>
               <p className="text-custom-gray text-xs">
-                Getting on for web iterate process before meta services.
+                Oferim suport și întreținere pentru produsele noastre.
               </p>
             </div>
           </div>
