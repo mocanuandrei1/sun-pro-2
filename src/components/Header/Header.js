@@ -8,6 +8,7 @@ import NavBarDesktop from "../NavBar/NavBarDesktop";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { companyData } from "@/lib/variables";
 import HeaderIcon from "./HeaderIcon";
+import Link from "next/link";
 
 export default function Header() {
   const triggerRef = useRef(null);
@@ -17,14 +18,16 @@ export default function Header() {
       <Drawer direction="right">
         <div className="relative max-w-screen-xl xl:mx-auto md:mx-10 flex justify-between items-center md:items-start h-20 md:h-28">
           <div className="basis-1/2 pl-4 md:pl-0 md:basis-1/4">
-            <Image
-              src="/logo2.png"
-              alt="Sun Pro Logo"
-              priority
-              width={80}
-              height={80}
-              className="cursor-pointer h-20"
-            />
+            <Link href="/">
+              <Image
+                src="/logo2.png"
+                alt="Sun Pro Logo"
+                priority
+                width={80}
+                height={80}
+                className="cursor-pointer h-20"
+              />
+            </Link>
           </div>
           <div className="basis-3/4 hidden md:flex bg-white items-start justify-around flex-nowrap h-full md:pt-4">
             <HeaderIcon
