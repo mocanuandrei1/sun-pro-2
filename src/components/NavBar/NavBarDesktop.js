@@ -47,7 +47,7 @@ export default function NavBarDesktop() {
   const handleMouseLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setDropdownPosition(null);
-    }, 600);
+    }, 200);
   };
 
   const handleDropdownMouseEnter = () => {
@@ -59,7 +59,7 @@ export default function NavBarDesktop() {
   const handleDropdownMouseLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setDropdownPosition(null);
-    }, 600);
+    }, 200);
   };
 
   const renderDropdown = () => {
