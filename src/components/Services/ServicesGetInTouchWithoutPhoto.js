@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
 import { FaUser, FaEnvelope, FaPhone, FaEdit } from "react-icons/fa";
-import Select from "react-select";
+import dynamic from "next/dynamic";
 import Button from "../custom ui/Button";
 import { LuCrown } from "react-icons/lu";
+
+// Importă componenta `Select` doar pe client, prevenind rendering-ul pe server
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 export default function ServicesGetInTouchWithoutPhoto() {
   const options = [
@@ -36,6 +39,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
       color: "gray",
     }),
   };
+
   return (
     <section className="bg-white w-full ">
       <div>
@@ -78,6 +82,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
               options={options}
               styles={customStyles}
               placeholder="Selecteaza subiectul"
+              inputId="subject-select" // ID fix
             />
           </div>
           <div className="relative">
