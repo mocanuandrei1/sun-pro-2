@@ -1,5 +1,6 @@
 import AboutStatistics from "@/components/AboutStatistics";
 import AboutUs from "@/components/AboutUs";
+import CompanyHistory from "@/components/CompanyHistory";
 import CTA from "@/components/CTA";
 import Testimonials from "@/components/Testimonials";
 import WorkProcess from "@/components/WorkProcess";
@@ -12,6 +13,7 @@ export default function page() {
       <AboutStatistics />
       <CTA />
       <WorkProcess />
+      <CompanyHistory />
       <Testimonials />
     </div>
   );
