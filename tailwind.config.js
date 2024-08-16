@@ -17,7 +17,7 @@ module.exports = {
       keyframes: {
         slideInClipDesktop: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(475px)" },
+          "100%": { transform: "translateX(50%)" },
         },
         slideInClipMobile: {
           "0%": { transform: "translateX(0)" },
