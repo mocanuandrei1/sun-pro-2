@@ -1,5 +1,5 @@
 "use client";
-import { navBarLinks } from "@/lib/variables";
+import { navBarLinks, servicii } from "@/lib/variables";
 import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../custom ui/Button";
@@ -24,14 +24,6 @@ export default function NavBarDesktop() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const servicesLinks = [
-    { name: "Copertine", path: "/copertine" },
-    { name: "Pergole Retractabile", path: "/pergole-retractabile" },
-    { name: "Inchideri Terase", path: "/inchideri-terase" },
-    { name: "Rulouri Exterioare", path: "/rulouri-exterioare" },
-    { name: "Prelate PVC", path: "/prelate-pvc" },
-  ];
 
   const handleMouseEnter = (e) => {
     if (closeTimeoutRef.current) {
@@ -76,13 +68,13 @@ export default function NavBarDesktop() {
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleDropdownMouseLeave}
       >
-        {servicesLinks.map((service, index) => (
+        {servicii.map((service, index) => (
           <Link
             key={index}
-            href={service.path}
+            href={service.href}
             className="block px-4 py-2 hover:bg-gray-100"
           >
-            {service.name}
+            {service.title}
           </Link>
         ))}
       </div>,
