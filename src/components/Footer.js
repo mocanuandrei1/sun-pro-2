@@ -146,10 +146,22 @@ export default function Footer() {
         <p>Copyright © SunPro 2024. Toate drepturile rezervate.</p>
         <div className="flex gap-6 flex-col md:flex-row">
           <a href="https://anpc.ro/ce-este-sal/">
-            <Image src="/anpc-sal.webp" alt="ANPC" width={250} height={130} />
+            <Image
+              src="/anpc-sal.webp"
+              alt="ANPC"
+              width={250}
+              height={130}
+              className="w-auto h-auto"
+            />
           </a>
           <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO">
-            <Image src="/anpc-sol.webp" alt="ANPC" width={250} height={130} />
+            <Image
+              src="/anpc-sol.webp"
+              alt="ANPC"
+              width={250}
+              height={130}
+              className="w-auto h-auto"
+            />
           </a>
         </div>
       </div>

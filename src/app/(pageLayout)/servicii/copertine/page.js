@@ -273,7 +273,7 @@ const page = () => {
         thirdH3={texts4.thirdH3}
         thirdH3Text={texts4.thirdH3Text}
       />
-      <ImageGallery />
+      <ImageGallery smallHeading="Copertine" bigHeading="Galerie" />
       <CTA />
     </>
   );

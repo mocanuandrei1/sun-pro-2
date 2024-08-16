@@ -14,13 +14,13 @@ import HomeHeading from "./custom ui/HomeHeading";
 
 const photos = [
   { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
+  { src: "/Hero2.jpg", width: 1600, height: 900 },
+  { src: "/Hero3.jpg", width: 1600, height: 900 },
+  { src: "/Hero4.jpg", width: 1600, height: 900 },
+  { src: "/Hero5.jpg", width: 1600, height: 900 },
+  { src: "/Hero6.jpg", width: 1600, height: 900 },
+  { src: "/Hero7.jpg", width: 1600, height: 900 },
+  { src: "/Hero8.jpg", width: 1600, height: 900 },
 ];
 
 function renderNextImage(RenderImageProps, RenderImageContext) {

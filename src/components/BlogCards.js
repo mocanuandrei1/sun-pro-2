@@ -15,7 +15,7 @@ export default function BlogCards() {
     },
     {
       id: 2,
-      image: "/Hero1.jpg",
+      image: "/Hero2.jpg",
       author: "Andrei Mocanu",
       date: "6 Iunie, 2024",
       title: "Redefinirea unui spatiu verde",
@@ -23,7 +23,7 @@ export default function BlogCards() {
     },
     {
       id: 3,
-      image: "/Hero1.jpg",
+      image: "/Hero3.jpg",
       author: "Andrei Mocanu",
       date: "6 August, 2024",
       title: "Intemeierea unei noi cladiri",

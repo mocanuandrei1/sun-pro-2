@@ -1,6 +1,4 @@
 import React from "react";
-
-import { LuCrown } from "react-icons/lu";
 import ServicesCards from "./ServicesCards";
 import { servicii } from "@/lib/variables";
 import HomeHeading from "../custom ui/HomeHeading";
