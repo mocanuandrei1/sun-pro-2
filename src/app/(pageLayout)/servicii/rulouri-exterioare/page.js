@@ -170,6 +170,7 @@ const page = () => {
         ]}
       />
       <ImageGallery smallHeading="Rulouri Exterioare" bigHeading="Galerie" />
+      <WorkProcess />
       <CTA />
     </>
   );

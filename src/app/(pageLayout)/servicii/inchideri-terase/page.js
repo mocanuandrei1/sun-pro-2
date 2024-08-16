@@ -3,11 +3,12 @@ import Button from "@/components/custom ui/Button";
 import HomeHeading from "@/components/custom ui/HomeHeading";
 import ImageGallery from "@/components/ImageGallery";
 import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1";
+import WorkProcess from "@/components/WorkProcess";
 import React from "react";
 
 const texts = {
   smallHeading: "Închideri Terase",
-  bigHeading: "Închideri Terase cu Caseta și Ghidaje Laterale",
+  bigHeading: "Închideri terase cu caseta și ghidaje laterale",
   firstH3: "Ce sunt inchiderile terase cu caseta și ghidaje laterale?",
   firstH3Text:
     "Aceste sisteme sunt o alternativă modernă și eficientă la geamurile tradiționale. Sunt ideale pentru protejarea teraselor, balcoanelor și a altor spații exterioare împotriva vântului, ploii și zăpezii. Sistemul include o casetă din aluminiu și ghidaje laterale, toate vopsite electrostatic pentru o durabilitate extinsă.",
@@ -36,7 +37,7 @@ const texts = {
 
 const texts2 = {
   smallHeading: "Închideri Terase",
-  bigHeading: "Închideri Terase cu Tambur – Tip Rulou",
+  bigHeading: "Închideri terase cu tambur – tip rulou",
   firstH3: "Ce sunt inchiderile terase cu tambur - tip rulou?",
   firstH3Text:
     "Sistemul de inchideri cu tambur de tip rulou este o soluție eficientă pentru protejarea teraselor și a altor spații exterioare. Datorită policristalului transparent, lumina naturală este păstrată, oferind un mediu plăcut și luminos.",
@@ -65,7 +66,7 @@ const texts2 = {
 
 const texts3 = {
   smallHeading: "Închideri Terase",
-  bigHeading: "Închideri Terase cu Capse și Bride",
+  bigHeading: "Închideri terase cu capse și bride",
   firstH3: "Ce sunt inchiderile terase cu capse și bride?",
   firstH3Text:
     "Pentru o soluție simplă și eficientă, inchiderile terase cu capse și bride oferă protecție excelentă pe durata anotimpului rece. Acest sistem utilizează policristal transparent de 0,8 mm grosime, perfect pentru izolarea termică a spațiilor exterioare.",
@@ -94,7 +95,7 @@ const texts3 = {
 
 const texts4 = {
   smallHeading: "Închideri Terase",
-  bigHeading: "Închideri Terase cu Sticlă Pliabilă",
+  bigHeading: "Închideri terase cu sticlă pliabilă",
   firstH3: "Ce sunt inchiderile terase cu sticlă pliabilă?",
   firstH3Text:
     "Sistemul de inchideri terase cu sticlă pliabilă este soluția ideală pentru cei care doresc să combine protecția împotriva intemperiilor cu un design modern și elegant. Sticla securizată de 10 mm grosime și profilele din aluminiu extrudat asigură o durabilitate remarcabilă.",
@@ -154,7 +155,7 @@ const page = () => {
               href="#inchideri-cu-caseta"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              1. Inchideri Terase cu Caseta și Ghidaje Laterale
+              1. Inchideri terase cu caseta și ghidaje laterale
             </a>
           </li>
           <li>
@@ -162,7 +163,7 @@ const page = () => {
               href="#inchideri-cu-tambur"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              2. Inchideri Terase cu Tambur – Tip Rulou
+              2. Inchideri terase cu tambur – tip rulou
             </a>
           </li>
           <li>
@@ -170,7 +171,7 @@ const page = () => {
               href="#inchideri-cu-capse"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              3. Inchideri Terase cu Capse și Bride
+              3. Inchideri terase cu capse și bride
             </a>
           </li>
           <li>
@@ -178,7 +179,7 @@ const page = () => {
               href="#inchideri-cu-sticla-pliabila"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              4. Inchideri Terase cu Sticlă Pliabilă
+              4. Inchideri terase cu sticlă pliabilă
             </a>
           </li>
         </ul>
@@ -248,6 +249,7 @@ const page = () => {
         thirdH3Text={texts4.thirdH3Text}
       />
       <ImageGallery smallHeading="Închideri Terase" bigHeading="Galerie" />
+      <WorkProcess />
       <CTA />
     </>
   );
