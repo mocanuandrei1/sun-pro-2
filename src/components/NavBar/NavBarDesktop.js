@@ -1,7 +1,7 @@
 "use client";
 import { navBarLinks } from "@/lib/variables";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Button from "../custom ui/Button";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
@@ -10,9 +10,8 @@ export default function NavBarDesktop() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState(null);
-  const [isClosing, setIsClosing] = useState(false);
 
-  let dropdownTimeout;
+  const closeTimeoutRef = useRef(null);
 
   const handleScroll = () => {
     const scrolled = window.scrollY > 100;
@@ -35,22 +34,32 @@ export default function NavBarDesktop() {
   ];
 
   const handleMouseEnter = (e) => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
     }
-    setIsClosing(false);
     const rect = e.currentTarget.getBoundingClientRect();
     setDropdownPosition({
-      top: rect.bottom + window.scrollY,
-      left: rect.left + window.scrollX,
+      top: rect.bottom,
+      left: rect.left,
     });
   };
 
-  const handleDropdownMouseLeave = () => {
-    setIsClosing(true);
-    dropdownTimeout = setTimeout(() => {
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
       setDropdownPosition(null);
-    }, 1000);
+    }, 600);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setDropdownPosition(null);
+    }, 600);
   };
 
   const renderDropdown = () => {
@@ -58,19 +67,13 @@ export default function NavBarDesktop() {
 
     return createPortal(
       <div
-        className={`bg-white text-black w-48 z-50 border-b-4 border-[#f68a09] ${
-          isClosing ? "swing-out-top-bck" : "swing-in-top-bck"
-        }`}
+        className="bg-white text-black w-48 z-50 border-b-4 border-[#f68a09] swing-in-top-bck"
         style={{
-          position: "absolute",
+          position: "fixed", // Folosim "fixed" pentru a ne asigura că dropdown-ul rămâne în poziția corectă față de navbar
           top: dropdownPosition.top,
           left: dropdownPosition.left,
         }}
-        onMouseEnter={() => {
-          if (dropdownTimeout) {
-            clearTimeout(dropdownTimeout);
-          }
-        }}
+        onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleDropdownMouseLeave}
       >
         {servicesLinks.map((service, index) => (
@@ -89,14 +92,14 @@ export default function NavBarDesktop() {
 
   return (
     <nav
-      className={`hidden md:block clip-bottom-angled h-14 text-sm z-10 ${
+      className={`hidden md:block clip-bottom-angled h-14 text-sm z-50 ${
         isScrolled
           ? "fixed top-0 left-1/2 -translate-x-1/2 w-[90%] xl:w-[1280px]"
           : "absolute -bottom-5 left-0 w-full"
       }`}
     >
       <div className="flex bg-[#f68a09] h-full justify-between relative">
-        <div className="flex items-center h-full">
+        <div className="flex items-center h-full relative">
           {navBarLinks.map((link, id) => {
             if (link.name.toLowerCase() === "servicii") {
               return (
@@ -104,6 +107,7 @@ export default function NavBarDesktop() {
                   key={id}
                   className="relative"
                   onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     href={link.path}
