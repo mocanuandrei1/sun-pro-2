@@ -64,7 +64,7 @@ export default function Hero() {
         className="relative grid lg:grid-cols-2 grid-cols-1 items-center text-white h-full w-full text-center z-20"
       >
         <div className="absolute inset-0 bg-black opacity-60 w-full h-full lg:clip-hero lg:animate-slideInClipDesktop lg:w-[70%]"></div>
-        <div className="col-start-2 text-left pl-6">
+        <div className="lg:col-start-2 text-left pl-6">
           <div className="flex items-center lg:text-lg text-sm text-[#f68a09] font-semibold space-y-2">
             <span className="animate-fade-in-down delay-1">
               <LuCrown className="text-3xl pr-2 mt-1" />
@@ -75,7 +75,7 @@ export default function Hero() {
             <hr className="animate-fade-in-down delay-5 w-5 border-t-2 border-[#f68a09] mx-1" />
             <span className="animate-fade-in-down delay-6">Bucura-te</span>
           </div>
-          <p className="lg:text-5xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
+          <p className="xl:text-5xl lg:text-4xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
             <span>{texts[currentImageIndex]}</span>
           </p>
           <Button
