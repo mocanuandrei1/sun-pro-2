@@ -30,7 +30,7 @@ const ServiciiBlockModel1 = ({
         } grid lg:grid-cols-2 grid-cols-1 items-center gap-10`}
       >
         <div
-          className={`flex flex-col gap-10 ${
+          className={`flex flex-col gap-10 order-2 ${
             reversed ? "lg:order-2" : "lg:order-1"
           }`}
         >
@@ -53,7 +53,7 @@ const ServiciiBlockModel1 = ({
           )}
         </div>
         <div
-          className={`flex flex-col gap-3 justify-around ${
+          className={`flex flex-col order-1 gap-3 justify-around ${
             reversed ? "lg:order-1" : "lg:order-2"
           }`}
         >

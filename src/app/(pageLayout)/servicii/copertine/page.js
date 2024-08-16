@@ -6,145 +6,153 @@ import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1
 import React from "react";
 
 const texts = {
-  smallHeading: "Copertine",
-  bigHeading: "Copertine cu brațe laterale",
-  firstH3: "Ce sunt copertinele cu brațe laterale?",
+  smallHeading: "Închideri Terase",
+  bigHeading: "Închideri Terase cu Caseta și Ghidaje Laterale",
+  firstH3: "Ce sunt inchiderile terase cu caseta și ghidaje laterale?",
   firstH3Text:
-    "Copertinele cu brațe laterale sunt proiectate pentru a oferi protecție solară eficientă și ajustabilitate. Acestea sunt prevăzute cu brațe articulate care permit reglarea unghiului și extinderea copertinei după necesități.",
+    "Aceste sisteme sunt o alternativă modernă și eficientă la geamurile tradiționale. Sunt ideale pentru protejarea teraselor, balcoanelor și a altor spații exterioare împotriva vântului, ploii și zăpezii. Sistemul include o casetă din aluminiu și ghidaje laterale, toate vopsite electrostatic pentru o durabilitate extinsă.",
   secondH3: "Beneficii",
   secondH3Text: [
     {
-      title: "Protecție solară: ",
-      text: "Blochează eficient razele UV.",
+      title: "Protecție superioară: ",
+      text: "Ideale pentru protejarea teraselor și balcoanelor împotriva intemperiilor.",
     },
     {
-      title: "Ajustabilitate: ",
-      text: "Permite reglarea unghiului și a lungimii extinse.",
+      title: "Estetică modernă: ",
+      text: "Caseta din aluminiu și ghidajele laterale asigură un aspect curat și elegant.",
     },
     {
-      title: "Durabilitate: ",
-      text: "Materiale rezistente la intemperii și uzură.",
-    },
-  ],
-  thirdH3: "Exemple de utilizare",
-  thirdH3Text: [
-    {
-      title: "Terase: ",
-      text: "Ideal pentru spații exterioare de relaxare.",
-    },
-    {
-      title: "Grădini: ",
-      text: "Protejează plantele și mobilierul de grădină.",
-    },
-    {
-      title: "Spații comerciale: ",
-      text: "Oferă confort clienților în zonele de exterior.",
-    },
-  ],
-};
-
-const texts2 = {
-  smallHeading: "Copertine",
-  bigHeading: "Copertine cu casetă",
-  firstH3: "Ce sunt copertinele cu casetă?",
-  firstH3Text:
-    "Copertinele cu casetă sunt echipate cu un mecanism care închide complet copertina într-o casetă protectoare atunci când nu este utilizată. Aceasta prelungește durata de viață a materialului și menține un aspect curat și modern.",
-  secondH3: "Beneficii",
-  secondH3Text: [
-    {
-      title: "Protecție completă: ",
-      text: "Materialul este protejat în totalitate de casetă.",
-    },
-    {
-      title: "Design modern: ",
-      text: "Aspect estetic și elegant.",
-    },
-    {
-      title: "Durabilitate: ",
-      text: "Rezistență crescută datorită protecției oferite de casetă.",
+      title: "Luminozitate naturală: ",
+      text: "Polimerul transparent permite pătrunderea luminii naturale.",
     },
   ],
   thirdH3: "Exemple de utilizare",
   thirdH3Text: [
     {
       title: "Balcoane: ",
-      text: "Asigură intimitate și protecție.",
+      text: "Perfecte pentru spațiile exterioare care necesită protecție suplimentară.",
     },
     {
-      title: "Ferestre: ",
-      text: "Protejează interiorul de razele solare directe.",
+      title: "Terase rezidențiale: ",
+      text: "Oferă protecție și confort în orice anotimp.",
     },
     {
       title: "Spații comerciale: ",
-      text: "Adaugă valoare estetică și funcțională.",
+      text: "Asigură confortul clienților în zonele exterioare.",
+    },
+  ],
+};
+
+const texts2 = {
+  smallHeading: "Închideri Terase",
+  bigHeading: "Închideri Terase cu Tambur – Tip Rulou",
+  firstH3: "Ce sunt inchiderile terase cu tambur - tip rulou?",
+  firstH3Text:
+    "Sistemul de inchideri cu tambur de tip rulou este o soluție eficientă pentru protejarea teraselor și a altor spații exterioare. Datorită policristalului transparent, lumina naturală este păstrată, oferind un mediu plăcut și luminos.",
+  secondH3: "Beneficii",
+  secondH3Text: [
+    {
+      title: "Utilizare facilă: ",
+      text: "Sistemul este simplu de manevrat, fie manual, fie electric.",
+    },
+    {
+      title: "Rezistență la intemperii: ",
+      text: "Proiectat să reziste la temperaturi scăzute și condiții meteo dure.",
+    },
+    {
+      title: "Transparență: ",
+      text: "Polimerul transparent păstrează lumina naturală în spațiul închis.",
+    },
+  ],
+  thirdH3: "Exemple de utilizare",
+  thirdH3Text: [
+    {
+      title: "Terase de case și vile: ",
+      text: "Ideal pentru spațiile exterioare care necesită protecție sezonieră.",
+    },
+    {
+      title: "Balcoane: ",
+      text: "Oferă protecție suplimentară și păstrează lumina naturală.",
+    },
+    {
+      title: "Spații comerciale: ",
+      text: "Asigură confortul clienților și protecția necesară împotriva intemperiilor.",
     },
   ],
 };
 
 const texts3 = {
-  smallHeading: "Copertine",
-  bigHeading: "Copertine fixe - capotine",
-  firstH3: "Ce sunt copertinele fixe - capotine?",
+  smallHeading: "Închideri Terase",
+  bigHeading: "Închideri Terase cu Capse și Bride",
+  firstH3: "Ce sunt inchiderile terase cu capse și bride?",
   firstH3Text:
-    "Copertinele fixe, cunoscute și ca capotine, sunt structuri rigide care oferă protecție permanentă. Acestea sunt ideale pentru zonele care necesită o protecție constantă și durabilă.",
+    "Pentru o soluție simplă și eficientă, inchiderile terase cu capse și bride oferă protecție excelentă pe durata anotimpului rece. Acest sistem utilizează policristal transparent de 0,8 mm grosime, perfect pentru izolarea termică a spațiilor exterioare.",
   secondH3: "Beneficii",
   secondH3Text: [
     {
-      title: "Rezistență în condiții meteo extreme: ",
-      text: "Construcție solidă care rezistă vântului puternic și ploii.",
+      title: "Soluție economică: ",
+      text: "Ideală pentru protecția temporară a teraselor.",
     },
     {
-      title: "Întreținere redusă: ",
-      text: "Necesită minimă întreținere datorită construcției robuste.",
+      title: "Izolare termică: ",
+      text: "Materialul asigură un mediu confortabil și izolat.",
+    },
+    {
+      title: "Ușor de montat: ",
+      text: "Sistemul este simplu de instalat și utilizat.",
     },
   ],
   thirdH3: "Exemple de utilizare",
   thirdH3Text: [
     {
-      title: "Intrări de clădiri: ",
-      text: "Protejează intrarea de intemperii.",
+      title: "Terase rezidențiale: ",
+      text: "Perfecte pentru spațiile exterioare pe timp de iarnă.",
     },
     {
-      title: "Ferestre: ",
-      text: "Reduce căldura solară și protejează geamurile.",
+      title: "Spații temporare: ",
+      text: "Oferă protecție suplimentară în zonele exterioare temporare.",
+    },
+    {
+      title: "Balcoane mici: ",
+      text: "Protejează eficient spațiile exterioare de dimensiuni reduse.",
     },
   ],
 };
 
 const texts4 = {
-  smallHeading: "Copertine",
-  bigHeading: "Copertine retractabile",
-  firstH3: "Ce sunt copertinele retractabile?",
+  smallHeading: "Închideri Terase",
+  bigHeading: "Închideri Terase cu Sticlă Pliabilă",
+  firstH3: "Ce sunt inchiderile terase cu sticlă pliabilă?",
   firstH3Text:
-    "Copertinele retractabile sunt sisteme flexibile care permit extinderea și retragerea copertinei în funcție de necesități, oferind astfel control complet asupra expunerii la soare și umbră.",
+    "Sistemul de inchideri terase cu sticlă pliabilă este soluția ideală pentru cei care doresc să combine protecția împotriva intemperiilor cu un design modern și elegant. Sticla securizată de 10 mm grosime și profilele din aluminiu extrudat asigură o durabilitate remarcabilă.",
   secondH3: "Beneficii",
   secondH3Text: [
     {
+      title: "Aspect modern: ",
+      text: "Design elegant cu sticlă securizată și profile din aluminiu.",
+    },
+    {
+      title: "Durabilitate ridicată: ",
+      text: "Sistem robust și rezistent la condiții meteo extreme.",
+    },
+    {
       title: "Flexibilitate: ",
-      text: "Poate fi ajustată în funcție de condițiile meteorologice.",
-    },
-    {
-      title: "Economie de spațiu: ",
-      text: "Retractabilitatea permite economisirea spațiului când nu este utilizată.",
-    },
-    {
-      title: "Control facil: ",
-      text: "Ușor de manevrat, manual sau automat.",
+      text: "Posibilitatea de a plia sticla pentru a deschide complet spațiul.",
     },
   ],
   thirdH3: "Exemple de utilizare",
   thirdH3Text: [
     {
-      title: "Terase: ",
-      text: "Ideal pentru controlul expunerii la soare.",
+      title: "Terase de lux: ",
+      text: "Ideal pentru spațiile exterioare elegante și moderne.",
     },
     {
-      title: "Spații comerciale: ",
-      text: "Oferă confort clienților și flexibilitate pentru afaceri.",
+      title: "Balcoane cu vedere panoramică: ",
+      text: "Asigură protecție și un aspect elegant.",
     },
     {
-      title: "Grădini: ",
-      text: "Protejează zonele verzi și mobilierul de exterior.",
+      title: "Spații exterioare ale restaurantelor: ",
+      text: "Oferă un design modern și protecție completă.",
     },
   ],
 };
@@ -154,57 +162,59 @@ const page = () => {
     <>
       <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
         <HomeHeading
-          smallTitle="Copertine"
+          smallTitle="Închideri Terase"
           smallTitleCSS="justify-start"
           bigTitle="Introducere"
           bigTitleCSS="justify-center text-left mb-8"
         />
         <p className="mb-2">
-          Copertinele reprezintă o soluție practică și estetică pentru protecția
-          spațiilor exterioare împotriva soarelui, ploii și altor condiții
-          meteorologice.
+          SunPro oferă soluții inovatoare pentru închiderea teraselor, concepute
+          pentru a proteja spațiile exterioare de intemperii și pentru a
+          transforma fiecare spațiu deschis într-un loc confortabil și protejat
+          pe tot parcursul anului.
         </p>
         <p className="mb-6">
-          La SunPro, oferim o gamă variată de copertine, inclusiv copertine cu
-          brațe laterale, copertine cu casetă, copertine fixe (capotine) și
-          copertine retractabile, toate montate profesional pentru a satisface
-          nevoile și preferințele clienților noștri.
+          La SunPro, oferim o gamă variată de soluții de închidere terase,
+          inclusiv sisteme cu caseta și ghidaje laterale, sisteme de tip rulou,
+          inchideri cu capse și bride și inchideri cu sticlă pliabilă, toate
+          montate profesional pentru a satisface nevoile și preferințele
+          clienților noștri.
         </p>
         <p className="mb-2">
-          Copertinele pe care le oferim sunt disponibile în următoarele
+          Soluțiile noastre de închidere terase sunt disponibile în următoarele
           categorii:
         </p>
         <ul className="flex flex-col gap-1">
           <li>
             <a
-              href="#copertine-cu-brate-laterale"
+              href="#inchideri-cu-caseta"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              1. Copertine cu brațe laterale
+              1. Inchideri Terase cu Caseta și Ghidaje Laterale
             </a>
           </li>
           <li>
             <a
-              href="#copertine-cu-caseta"
+              href="#inchideri-cu-tambur"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              2. Copertine cu casetă
+              2. Inchideri Terase cu Tambur – Tip Rulou
             </a>
           </li>
           <li>
             <a
-              href="#copertine-fixe-capotine"
+              href="#inchideri-cu-capse"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              3. Copertine fixe - capotine
+              3. Inchideri Terase cu Capse și Bride
             </a>
           </li>
           <li>
             <a
-              href="#copertine-retractabile"
+              href="#inchideri-cu-sticla-pliabila"
               className="text-custom-orange underline underline-offset-4 font-bold"
             >
-              4. Copertine retractabile
+              4. Inchideri Terase cu Sticlă Pliabilă
             </a>
           </li>
         </ul>
@@ -219,7 +229,7 @@ const page = () => {
       </section>
       <ServiciiBlockModel1
         CTAButton={false}
-        id="copertine-cu-brate-laterale"
+        id="inchideri-cu-caseta"
         reversed={true}
         backgroundColor="bg-black text-white"
         smallHeading={texts.smallHeading}
@@ -233,7 +243,7 @@ const page = () => {
       />
       <ServiciiBlockModel1
         CTAButton={true}
-        id="copertine-cu-caseta"
+        id="inchideri-cu-tambur"
         reversed={false}
         backgroundColor="bg-white text-black"
         smallHeading={texts2.smallHeading}
@@ -247,7 +257,7 @@ const page = () => {
       />
       <ServiciiBlockModel1
         CTAButton={false}
-        id="copertine-fixe-capotine"
+        id="inchideri-cu-capse"
         reversed={true}
         backgroundColor="bg-black text-white"
         smallHeading={texts3.smallHeading}
@@ -261,7 +271,7 @@ const page = () => {
       />
       <ServiciiBlockModel1
         CTAButton={true}
-        id="copertine-retractabile"
+        id="inchideri-cu-sticla-pliabila"
         reversed={false}
         backgroundColor="bg-white text-black"
         smallHeading={texts4.smallHeading}
@@ -273,7 +283,7 @@ const page = () => {
         thirdH3={texts4.thirdH3}
         thirdH3Text={texts4.thirdH3Text}
       />
-      <ImageGallery smallHeading="Copertine" bigHeading="Galerie" />
+      <ImageGallery smallHeading="Închideri Terase" bigHeading="Galerie" />
       <CTA />
     </>
   );

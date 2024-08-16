@@ -23,8 +23,8 @@ const ServiciiBlockModel3 = ({
           <HomeHeading
             smallTitle={smallHeading}
             bigTitle={bigHeading}
-            smallTitleCSS="justify-center lg:justify-start"
-            bigTitleCSS="justify-center text-center lg:text-left mb-8"
+            smallTitleCSS="justify-start"
+            bigTitleCSS="justify-center text-left mb-8"
           />
           <p className="mb-8">{description}</p>
           <ServiciiBlockModel3Card cards={cards} />
