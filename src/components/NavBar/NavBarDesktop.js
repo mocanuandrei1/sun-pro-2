@@ -80,7 +80,7 @@ export default function NavBarDesktop() {
           <Link
             key={index}
             href={service.path}
-            className="block px-4 py-2 hover:bg-gray-100"
+            className="block px-4 py-2 hover:bg-gray-100 text-base font-semibold"
           >
             {service.name}
           </Link>
