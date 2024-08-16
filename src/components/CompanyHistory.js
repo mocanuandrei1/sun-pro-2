@@ -25,7 +25,7 @@ export default function CompanyHistory() {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-20 lg:max-w-7xl lg:mx-auto mx-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6  py-20 lg:max-w-7xl lg:mx-auto mx-10">
       <div className="relative h-full">
         <Image
           src="/Hero1.jpg"
@@ -39,7 +39,7 @@ export default function CompanyHistory() {
         <HomeHeading
           smallTitle="Istoria Companiei"
           smallTitleCSS="justify-start"
-          bigTitle="Îmbunătățirea Confortului Exterior cu SunPro"
+          bigTitle="Exterior confortabil, protecție garantată"
           bigTitleCSS="justify-center text-left mb-6"
         />
         <div className="space-y-8">
