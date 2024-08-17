@@ -5,6 +5,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Button from "../custom ui/Button";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function NavBarDesktop() {
   const pathname = usePathname();
@@ -72,7 +73,7 @@ export default function NavBarDesktop() {
           <Link
             key={index}
             href={service.href}
-            className="block px-4 py-2 hover:bg-gray-100"
+            className="block px-4 py-2 text-[.9rem] font-semibold hover:bg-gray-200"
           >
             {service.title}
           </Link>
@@ -84,7 +85,7 @@ export default function NavBarDesktop() {
 
   return (
     <nav
-      className={`hidden md:block clip-bottom-angled h-14 text-sm z-50 ${
+      className={`hidden md:block clip-bottom-angled h-14 z-50 ${
         isScrolled
           ? "fixed top-0 left-1/2 -translate-x-1/2 w-[90%] xl:w-[1280px]"
           : "absolute -bottom-5 left-0 w-full"
@@ -104,10 +105,21 @@ export default function NavBarDesktop() {
                   <Link
                     href={link.path}
                     className={`hover:bg-black flex h-14 items-center px-5 transition-all font-semibold duration-200 hover:text-white ${
-                      pathname === link.path ? "text-lg" : ""
-                    }`}
+                      pathname === link.path
+                        ? "text-md lg:text-lg"
+                        : "text-sm lg:text-base"
+                    } ${dropdownPosition ? "bg-black text-white" : ""}`}
                   >
                     {link.name.toUpperCase()}
+                    <IoIosArrowForward
+                      className={`transition-[transform] delay-100  ${
+                        dropdownPosition ? "rotate-90" : ""
+                      } ${
+                        pathname === link.path
+                          ? "text-md lg:text-lg"
+                          : "text-sm lg:text-base"
+                      }`}
+                    />
                   </Link>
                 </div>
               );
@@ -117,7 +129,9 @@ export default function NavBarDesktop() {
                 key={id}
                 href={link.path}
                 className={`hover:bg-black flex h-full items-center px-5 transition-all font-semibold duration-200 hover:text-white ${
-                  pathname === link.path ? "text-lg" : ""
+                  pathname === link.path
+                    ? "text-md lg:text-lg"
+                    : "text-sm lg:text-base"
                 }`}
               >
                 {link.name.toUpperCase()}

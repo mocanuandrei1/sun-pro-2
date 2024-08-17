@@ -8,6 +8,7 @@ import { GiFlexibleStar } from "react-icons/gi";
 import { FaHandFist } from "react-icons/fa6";
 import Button from "@/components/custom ui/Button";
 import ServiciiBlockModel3 from "@/components/pages/servicii/ServiciiBlockModel3";
+import WorkProcess from "@/components/WorkProcess";
 
 const texts = {
   smallHeading: "Rulouri Exterioare",
