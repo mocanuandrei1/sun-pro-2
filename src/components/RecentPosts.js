@@ -32,14 +32,15 @@ export default function RecentPosts() {
           {posts.map((post, index) => (
             <li key={index} className="mb-6 flex items-center">
               <div className="w-20 h-20 flex-shrink-0">
-                <div className="relative w-full h-full rounded-lg ">
+                <div className="relative w-full h-full rounded-lg group overflow-hidden">
                   <Image
                     src={post.imageUrl}
                     alt={post.title}
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-lg"
+                    className="w-20 h-20 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="vertical-rect"></div>
                 </div>
               </div>
               <div className="ml-4">

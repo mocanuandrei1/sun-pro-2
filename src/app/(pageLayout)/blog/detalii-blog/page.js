@@ -9,13 +9,17 @@ export default function BlogPost() {
       {/* Secțiunea principală - Conținutul blogului */}
       <article className="w-3/4">
         <div className="bg-gray-100 mb-6 rounded-lg ">
-          <div className="relative h-64 w-full mb-6 rounded-t-lg ">
+          <div className="relative overflow-hidden group">
+            {/* Imaginea principală */}
             <Image
               src="/Hero1.jpg"
               alt="Ghid Complet: Cum Alegi Copertina Perfectă pentru Terasa Ta"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-t-lg transition-transform duration-500 group-hover:scale-105"
+              width={800}
+              height={600}
+              className="w-full h-56 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 
+         (max-width: 1200px) 50vw, 
+         33vw"
             />
             <div className="vertical-rect"></div>
           </div>
