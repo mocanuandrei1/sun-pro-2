@@ -37,6 +37,9 @@ module.exports = {
         montserrat: "var(--font-montserrat)",
         inter: "var(--font-inter)",
       },
+      transitionProperty: {
+        transform: "transform",
+      },
     },
   },
   plugins: [
