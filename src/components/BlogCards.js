@@ -11,7 +11,7 @@ export default function BlogCards() {
       author: "Andrei Mocanu",
       date: "6 Iulie, 2024",
       title: "Cea mai buna echipa de constructii din Romania",
-      link: "#",
+      link: "/blog/detalii-blog",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function BlogCards() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-3 grid-cols-1  lg:gap-4 gap-8 lg:mx-auto mx-10 max-w-7xl py-20">
+    <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8 lg:mx-auto mx-10 max-w-7xl py-20">
       {blogs.map((blog) => (
         <div
           key={blog.id}
