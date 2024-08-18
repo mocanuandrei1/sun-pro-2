@@ -25,7 +25,7 @@ export default function RecentPosts() {
   ];
 
   return (
-    <div className="w-full lg:w-1/4">
+    <div className="w-full lg:w-1/4 lg:block hidden">
       <div className="sticky top-20 bg-gray-100 p-4 rounded-lg">
         <h3 className="text-xl font-semibold mb-4">Latest Posts</h3>
         <ul>

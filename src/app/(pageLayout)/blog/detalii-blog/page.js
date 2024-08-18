@@ -5,9 +5,9 @@ import RecentPosts from "@/components/RecentPosts";
 
 export default function BlogPost() {
   return (
-    <div className="flex max-w-7xl mx-auto py-10 gap-10">
+    <div className="lg:flex lg:max-w-7xl lg:mx-auto py-10 gap-10 mx-10 grid grid-cols-1">
       {/* Secțiunea principală - Conținutul blogului */}
-      <article className="w-3/4">
+      <article className="lg:w-3/4 w-full">
         <div className="bg-gray-100 mb-6 rounded-lg ">
           <div className="relative overflow-hidden group">
             {/* Imaginea principală */}
@@ -24,33 +24,33 @@ export default function BlogPost() {
             <div className="vertical-rect"></div>
           </div>
           <div className="p-8">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="lg:text-4xl text-2xl font-bold mb-4">
               Ghid Complet: Cum Alegi Copertina Perfectă pentru Terasa Ta
             </h1>
-            <div className="flex items-center mb-6 text-[#f68a09]">
+            <div className="flex items-center mb-6 text-[#f68a09] gap-1">
               <span className="flex items-center gap-2 ">
                 <FaUser />
                 <span className="text-gray-500 hover:text-[#f68a09]">
                   Mocanu Andrei
                 </span>
               </span>
-              <span className="mx-4 ">|</span>
+              <span className="mx-4 lg:block hidden ">|</span>
               <span className="flex items-center gap-2 hover:text-[#f68a09]">
                 <FaCalendarAlt />
-                <span className="text-gray-500 hover:text-[#f68a09]">
+                <span className="text-gray-500 hover:text-[#f68a09] ">
                   16 August 2024
                 </span>
               </span>
-              <span className="mx-4 ">|</span>
-              <span className="flex items-center gap-2 hover:text-[#f68a09]">
+              <span className="mx-4 lg:block hidden">|</span>
+              <span className="lg:flex hidden items-center gap-2 hover:text-[#f68a09]">
                 <FaTags />
                 <span className="text-gray-500 hover:text-[#f68a09]">
                   Copertine
                 </span>
               </span>
             </div>
-            <h2 className="text-2xl font-bold mb-4">Introducere</h2>
-            <p className="text-lg">
+            <h2 className="lg:text-2xl text-xl font-bold mb-4">Introducere</h2>
+            <p className="lg:text-lg text-base">
               Copertinele sunt o soluție esențială pentru protejarea spațiilor
               exterioare de soare, ploaie și alte condiții meteorologice.
               Indiferent dacă îți dorești să îmbunătățești confortul terasei
@@ -66,14 +66,14 @@ export default function BlogPost() {
 
         {/* Restul conținutului articolului */}
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">
             1. Tipuri de Copertine pentru Terase
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
             1.1 Copertine cu Brațe Laterale
           </h3>
-          <p className="text-lg mb-4">
+          <p className="lg:text-lg text-base mb-4">
             Copertinele cu brațe laterale sunt o soluție excelentă pentru
             protecția solară eficientă, oferind și o mare flexibilitate. Acestea
             sunt echipate cu brațe articulate care permit reglarea unghiului și
@@ -102,7 +102,7 @@ export default function BlogPost() {
           <h3 className="text-xl font-semibold mb-2">
             1.2 Copertine cu Casetă
           </h3>
-          <p className="text-lg mb-4">
+          <p className="lg:text-lg text-base mb-4">
             Copertinele cu casetă sunt apreciate pentru designul lor modern și
             funcționalitatea practică. Aceste copertine sunt echipate cu un
             mecanism care le permite să se închidă complet într-o casetă
@@ -123,7 +123,7 @@ export default function BlogPost() {
               protecției oferite de casetă.
             </li>
           </ul>
-          <p className="text-lg mb-4">
+          <p className="lg:text-lg text-base mb-4">
             <strong>Exemple de utilizare:</strong> Balcoane, Ferestre, Spații
             comerciale
           </p>
@@ -182,12 +182,14 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-2xl text-xl  font-bold mb-4">
             2. Materialele Utilizate pentru Copertine
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">2.1 Materiale Textile</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            2.1 Materiale Textile
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Materialele textile utilizate în fabricarea copertinelor sunt de
             obicei tratate pentru a rezista la apă și la razele UV. Acestea sunt
             disponibile într-o varietate de culori și texturi, permițând
@@ -196,16 +198,20 @@ export default function BlogPost() {
             durată și un aspect estetic plăcut.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">2.2 Aluminiu</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            2.2 Aluminiu
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Aluminiul este un material preferat pentru structurile copertinelor
             datorită rezistenței sale la coroziune și ușurinței cu care poate fi
             modelat. Acesta este durabil și necesită puțină întreținere, fiind
             ideal pentru utilizare pe termen lung în toate tipurile de climă.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">2.3 Policarbonat</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            2.3 Policarbonat
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Policarbonatul este un material ușor, dar robust, care permite
             luminii să pătrundă, oferind în același timp protecție împotriva
             razelor UV și a intemperiilor. Este o alegere populară pentru
@@ -214,28 +220,34 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">
             3. Designuri și Stiluri de Copertine
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">3.1 Stil Modern</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            3.1 Stil Modern
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Copertinele în stil modern sunt caracterizate prin linii simple,
             culori neutre și materiale inovatoare, precum aluminiul sau
             policarbonatul. Acestea sunt perfecte pentru terasele cu un design
             contemporan, adăugând un aer sofisticat și elegant.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">3.2 Stil Clasic</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            3.2 Stil Clasic
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Pentru un aspect clasic, copertinele pot include detalii ornamentale
             și sunt fabricate din materiale tradiționale, cum ar fi lemnul sau
             fierul forjat. Acestea completează arhitectura tradițională și aduc
             un plus de farmec terasei tale.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">3.3 Stil Mediteranean</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            3.3 Stil Mediteranean
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Copertinele în stil mediteranean aduc un aer cald și relaxant
             spațiului tău exterior, fiind adesea realizate din materiale
             naturale și culori pământii, precum teracota sau bejul.
@@ -243,14 +255,14 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">
             4. Factori de Luat în Considerare la Alegerea unei Copertine
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
             4.1 Dimensiunea și Forma Terasei
           </h3>
-          <p className="text-lg mb-4">
+          <p className="lg:text-lg text-base mb-4">
             Dimensiunea și forma terasei tale vor determina tipul de copertină
             pe care o poți alege. Terasele mari pot beneficia de copertine
             retractabile de mari dimensiuni, în timp ce spațiile mai mici ar
@@ -258,16 +270,20 @@ export default function BlogPost() {
             compacte.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">4.2 Orientarea Terasei</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            4.2 Orientarea Terasei
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Orientarea terasei față de soare este esențială în alegerea
             copertinei. Dacă terasa ta este expusă la soare pe tot parcursul
             zilei, o copertină retractabilă te va ajuta să reglezi nivelul de
             umbră în funcție de nevoi.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">4.3 Clima Locală</h3>
-          <p className="text-lg mb-4">
+          <h3 className="lg:text-xl text-lg font-semibold mb-2">
+            4.3 Clima Locală
+          </h3>
+          <p className="lg:text-lg text-base mb-4">
             Clima din zona ta joacă un rol crucial în alegerea materialului și
             tipului de copertină. În zonele cu vânturi puternice, o copertină cu
             structură solidă, precum cea din aluminiu, este esențială. În
@@ -277,10 +293,10 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">
             5. Întreținerea Copertinelor
           </h2>
-          <p className="text-lg mb-4">
+          <p className="lg:text-lg text-base mb-4">
             Întreținerea regulată a copertinei este esențială pentru a-i asigura
             o durată de viață lungă. Iată câteva sfaturi esențiale:
           </p>
@@ -303,8 +319,10 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">6. Montajul Copertinelor</h2>
-          <p className="text-lg mb-4">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">
+            6. Montajul Copertinelor
+          </h2>
+          <p className="lg:text-lg text-base mb-4">
             Montajul corect este crucial pentru a asigura funcționarea optimă și
             siguranța copertinei. La SunPro, oferim servicii profesionale de
             montaj, asigurându-ne că fiecare copertină este instalată conform
@@ -313,8 +331,8 @@ export default function BlogPost() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-8 mb-6">
-          <h2 className="text-2xl font-bold mb-4">Concluzie</h2>
-          <p className="text-lg">
+          <h2 className="lg:text-2xl text-xl font-bold mb-4">Concluzie</h2>
+          <p className="lg:text-lg text-base">
             Alegerea copertinei perfecte pentru terasa ta implică luarea în
             considerare a mai multor factori, de la tipul de copertină și
             materialele utilizate, până la stilul dorit și clima locală. La
