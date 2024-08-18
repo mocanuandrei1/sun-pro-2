@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaCalendarAlt, FaUser } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -32,11 +33,12 @@ export default function BlogCards() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8 lg:mx-auto mx-10 max-w-7xl py-20">
+    <div className="grid lg:grid-cols-3 grid-cols-1  lg:gap-4 gap-8 lg:mx-auto mx-10 max-w-7xl py-20">
       {blogs.map((blog) => (
-        <div
+        <Link
           key={blog.id}
-          className="bg-white rounded-lg shadow-lg flex flex-col group"
+          href={blog.link}
+          className="bg-white rounded-lg shadow-lg flex flex-col group "
         >
           <div className="relative overflow-hidden">
             {/* Imaginea principală */}
@@ -45,7 +47,7 @@ export default function BlogCards() {
               alt={blog.title}
               width={400}
               height={300}
-              className="w-full h-56 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-56 object-cover rounded-t-lg transition-transform duration-500 hover:scale-105"
             />
             <div className="vertical-rect"></div>
           </div>
@@ -66,17 +68,14 @@ export default function BlogCards() {
                 {blog.title}
               </h3>
               <div className="mt-auto">
-                <a
-                  href={blog.link}
-                  className="text-[#f68a09] text-sm font-bold flex items-center group"
-                >
+                <span className="text-[#f68a09] text-sm font-bold flex items-center group">
                   Citeste mai mult
                   <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
-                </a>
+                </span>
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
