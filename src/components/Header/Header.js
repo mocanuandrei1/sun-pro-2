@@ -20,12 +20,12 @@ export default function Header() {
           <div className="basis-1/2 pl-4 md:pl-0 md:basis-1/4">
             <Link href="/">
               <Image
-                src="/logo2.png"
+                src="/logo-black.webp"
                 alt="Sun Pro Logo"
                 priority
                 width={80}
                 height={80}
-                className="cursor-pointer h-20"
+                className="cursor-pointer"
               />
             </Link>
           </div>

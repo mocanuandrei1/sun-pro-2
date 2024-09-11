@@ -67,15 +67,7 @@ export default function TestimonialsMobile({ slides }) {
   });
 
   return (
-    <div className="w-full mx-auto py-16 relative" {...swipeHandlers}>
-      <p className="flex text-lg items-center justify-center text-[#f68a09] font-semibold mb-4">
-        <LuCrown className="pr-2 text-3xl" />
-        Testimoniale
-      </p>
-      <h2 className="text-3xl font-bold leading-relaxed mb-8 text-center">
-        Ce spun clienții noștri
-      </h2>
-
+    <div className="w-full mx-auto relative" {...swipeHandlers}>
       <div className="relative">
         <div className="overflow-hidden mx-4">
           <div

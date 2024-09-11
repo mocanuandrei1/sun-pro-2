@@ -150,10 +150,20 @@ const texts4 = {
   ],
 };
 
+const photos = [];
+
+for (let i = 1; i <= 24; i++) {
+  photos.push({
+    src: `/images/copertine/sunpro-copertine (${i}).webp`,
+    width: 1000,
+    height: 1000,
+  });
+}
+
 const page = () => {
   return (
     <>
-      <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
         <HomeHeading
           smallTitle="Copertine"
           smallTitleCSS="justify-start"
@@ -219,6 +229,7 @@ const page = () => {
         />
       </section>
       <ServiciiBlockModel1
+        image="/images/copertine/sunpro-copertine (21).webp"
         CTAButton={false}
         id="copertine-cu-brate-laterale"
         reversed={true}
@@ -233,6 +244,7 @@ const page = () => {
         thirdH3Text={texts.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/copertine/sunpro-copertine (3).webp"
         CTAButton={true}
         id="copertine-cu-caseta"
         reversed={false}
@@ -247,6 +259,7 @@ const page = () => {
         thirdH3Text={texts2.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/copertine/sunpro-copertine (18).webp"
         CTAButton={false}
         id="copertine-fixe-capotine"
         reversed={true}
@@ -261,6 +274,7 @@ const page = () => {
         thirdH3Text={texts3.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/copertine/sunpro-copertine (7).webp"
         CTAButton={true}
         id="copertine-retractabile"
         reversed={false}
@@ -274,7 +288,11 @@ const page = () => {
         thirdH3={texts4.thirdH3}
         thirdH3Text={texts4.thirdH3Text}
       />
-      <ImageGallery smallHeading="Copertine" bigHeading="Galerie" />
+      <ImageGallery
+        photos={photos}
+        smallHeading="Copertine"
+        bigHeading="Galerie"
+      />
       <WorkProcess />
       <CTA />
     </>

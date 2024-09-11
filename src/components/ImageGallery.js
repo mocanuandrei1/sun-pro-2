@@ -12,17 +12,6 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import HomeHeading from "./custom ui/HomeHeading";
 
-const photos = [
-  { src: "/Hero1.jpg", width: 1600, height: 900 },
-  { src: "/Hero2.jpg", width: 1600, height: 900 },
-  { src: "/Hero3.jpg", width: 1600, height: 900 },
-  { src: "/Hero4.jpg", width: 1600, height: 900 },
-  { src: "/Hero5.jpg", width: 1600, height: 900 },
-  { src: "/Hero6.jpg", width: 1600, height: 900 },
-  { src: "/Hero7.jpg", width: 1600, height: 900 },
-  { src: "/Hero8.jpg", width: 1600, height: 900 },
-];
-
 function renderNextImage(RenderImageProps, RenderImageContext) {
   const { alt = "", title, sizes } = RenderImageProps;
   const { photo, width, height } = RenderImageContext;
@@ -49,16 +38,16 @@ function renderNextImage(RenderImageProps, RenderImageContext) {
   );
 }
 
-export default function ImageGallery({ smallHeading, bigHeading }) {
+export default function ImageGallery({ smallHeading, bigHeading, photos }) {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="max-w-screen-xl xl:mx-auto mx-10">
+    <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
       <HomeHeading
         smallTitle={smallHeading}
         smallTitleCSS="justify-start"
         bigTitle={bigHeading}
-        bigTitleCSS="justify-center text-left mb-14"
+        bigTitleCSS="justify-center text-left mb-5 lg:mb-14"
       />
       <RowsPhotoAlbum
         photos={photos}

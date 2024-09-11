@@ -32,25 +32,25 @@ export default function FAQ() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-screen-xl xl:mx-auto mx-10 my-28">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-screen-xl xl:mx-auto mx-10 my-20 lg:my-28">
       <div className="hidden lg:flex justify-center items-center">
-        <div className="relative w-full h-full flex-shrink-0">
+        <div className="relative">
           <Image
-            src="/Hero1.jpg"
+            src="/images/homepage/sunpro-lucrare (7).webp"
             alt="Construction workers"
-            width={1200}
-            height={800}
-            className=" object-cover w-full relative h-full"
+            width={2000}
+            height={1200}
+            className="object-cover w-full rounded-lg h-full"
           />
         </div>
       </div>
       <div>
         <HomeHeading
           smallTitle="Intrebări Frecvente"
-          smallTitleCSS="justify-center lg:justify-start"
+          smallTitleCSS="justify-start"
           bigTitle="Planificarea Proiectului și Consultanță"
           bigTitleSecond="cu Noi"
-          bigTitleCSS="justify-center text-center lg:text-left mb-8"
+          bigTitleCSS="justify-center text-left mb-8"
         />
         <div className="flex flex-col justify-center gap-4">
           {faqs.map((faq, index) => (

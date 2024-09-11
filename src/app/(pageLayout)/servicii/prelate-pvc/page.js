@@ -38,10 +38,20 @@ const texts = {
   ],
 };
 
+const photos = [];
+
+for (let i = 1; i <= 14; i++) {
+  photos.push({
+    src: `/images/prelate-pvc/sunpro-prelate-pvc (${i}).webp`,
+    width: 1000,
+    height: 1000,
+  });
+}
+
 const page = () => {
   return (
     <>
-      <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
         <HomeHeading
           smallTitle="Prelate PVC"
           smallTitleCSS="justify-start"
@@ -72,6 +82,7 @@ const page = () => {
         />
       </section>
       <ServiciiBlockModel1
+        image="/images/prelate-pvc/sunpro-prelate-pvc (2).webp"
         CTAButton={false}
         id="prelate-pvc"
         reversed={true}
@@ -141,6 +152,7 @@ const page = () => {
         ]}
       />
       <ServiciiBlockModel3
+        image="/images/prelate-pvc/sunpro-prelate-pvc (6).webp"
         smallHeading="Prelate PVC"
         bigHeading="Tipuri de Prelate PVC"
         description="Prelatele PVC variază în funcție de grosimea și calitatea materialului, oferind soluții adaptate nevoilor specifice fiecărui client. Printre cele mai populare tipuri se numără prelatele standard, prelatele pentru vehicule și prelatele industriale."
@@ -174,7 +186,11 @@ const page = () => {
           },
         ]}
       />
-      <ImageGallery smallHeading="Prelate PVC" bigHeading="Galerie" />
+      <ImageGallery
+        photos={photos}
+        smallHeading="Prelate PVC"
+        bigHeading="Galerie"
+      />
       <WorkProcess />
       <CTA />
     </>

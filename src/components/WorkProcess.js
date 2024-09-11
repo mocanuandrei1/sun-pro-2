@@ -5,14 +5,14 @@ import { GiChoice, GiHammerNails } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
 import HomeHeading from "./custom ui/HomeHeading";
 
-export default function WorkProcess() {
+export default function WorkProcess({ subtitle }) {
   return (
-    <section className="mx-10 my-28 max-w-screen-xl xl:mx-auto">
+    <section className="mx-10 my-12 lg:my-28 max-w-screen-xl xl:mx-auto">
       <HomeHeading
-        smallTitle="Procesul de lucru"
+        smallTitle={subtitle ? subtitle : "Procesul de lucru"}
         smallTitleCSS="justify-start"
         bigTitle="Etapele colaborării noastre"
-        bigTitleCSS="justify-start text-left mb-20"
+        bigTitleCSS="justify-start text-left mb-5 lg:mb-20"
       />
       <div className="relative max-w-6xl w-full mx-auto">
         <Image
@@ -79,7 +79,7 @@ export default function WorkProcess() {
         </div>
 
         {/* Layout pentru mobil */}
-        <div className="block custom:hidden px-10">
+        <div className="block custom:hidden">
           <div className="flex items-center mb-6">
             <div className="min-w-[64px] rounded-full bg-gray-100 w-16 h-16 flex items-center justify-center text-white border-2 border-black">
               <IoNewspaperOutline className="text-[#f68a09] text-3xl icon-rotate" />

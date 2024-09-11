@@ -14,6 +14,7 @@ export default function page() {
               title={serviciu.title}
               description={serviciu.description}
               url={serviciu.href}
+              image={serviciu.image}
             />
           ))}
         </div>

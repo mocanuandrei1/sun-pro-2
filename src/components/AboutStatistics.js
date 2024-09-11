@@ -12,49 +12,55 @@ export default function AboutStatistics() {
             end={158}
             duration={3}
             suffix="+"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
           />
-          <p className="mt-2 text-lg text-custom-orange">Copertine Instalate</p>
+          <h3 className="mt-2 text-custom-orange uppercase">
+            Copertine Instalate
+          </h3>
         </div>
         <div className="text-left">
           <CountUp
+            start={0}
             end={65}
             duration={3}
             suffix="+"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
           />
-          <p className="mt-2 text-lg text-custom-orange">Pergole Montate</p>
+          <h3 className="mt-2 text-custom-orange uppercase">Pergole Montate</h3>
         </div>
         <div className="text-left">
           <CountUp
+            start={0}
             end={42}
             duration={3}
             suffix="+"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
           />
-          <p className="mt-2 text-lg text-custom-orange">Terase Închise</p>
+          <h3 className="mt-2 text-custom-orange uppercase">Terase Închise</h3>
         </div>
         <div className="text-left">
           <CountUp
+            start={0}
             end={20}
             duration={3}
             suffix="+"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
           />
-          <p className="mt-2 text-lg text-custom-orange">
+          <h3 className="mt-2 text-custom-orange uppercase">
             Prelate PVC Instalate
-          </p>
+          </h3>
         </div>
         <div className="text-left lg:block hidden">
           <CountUp
+            start={0}
             end={16}
             duration={3}
             suffix="+"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
           />
-          <p className="mt-2 text-lg text-custom-orange">
+          <h3 className="mt-2 text-custom-orange uppercase">
             Rulouri Exterioare Montate
-          </p>
+          </h3>
         </div>
       </div>
     </div>

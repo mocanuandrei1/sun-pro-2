@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-screen-xl xl:mx-auto mx-10 py-10">
         <div className="md:col-span-1">
           <Image
-            src="/logo2.png"
+            src="/logo-black.webp"
             alt="Loading..."
             width={70}
             height={70}
@@ -38,25 +38,15 @@ export default function Footer() {
           </p>
           <div className="flex space-x-4 mt-4">
             <a
-              href="#"
+              href="https://www.facebook.com/p/Sun-Pro-100064291921110/"
+              target="_blank"
               className="p-2 bg-custom-orange rounded hover:text-black"
             >
               <FaFacebookF className="text-xl" />
             </a>
             <a
-              href="#"
-              className="p-2 bg-custom-orange rounded hover:text-black"
-            >
-              <FaTwitter className="text-xl" />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-custom-orange rounded hover:text-black"
-            >
-              <FaLinkedinIn className="text-xl" />
-            </a>
-            <a
-              href="#"
+              href="https://wa.me/+40771097050"
+              target="_blank"
               className="p-2 bg-custom-orange rounded hover:text-black"
             >
               <FaWhatsapp className="text-xl" />
@@ -121,9 +111,8 @@ export default function Footer() {
               </div>
             </a>
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                companyData.location
-              )}`}
+              target="_blank"
+              href="https://www.google.com/maps/place/Sun+Pro/@44.5925009,25.9296391,17z/data=!4m6!3m5!1s0x40b2103815ad743b:0x2e8657d965e8abff!8m2!3d44.5925009!4d25.9296391!16s%2Fg%2F11c52yjtc5?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D"
               className="hover:text-custom-orange"
             >
               <div className="flex gap-1">

@@ -122,10 +122,20 @@ const texts4 = {
   ],
 };
 
+const photos = [];
+
+for (let i = 1; i <= 19; i++) {
+  photos.push({
+    src: `/images/inchideri-terase/sunpro-inchideri-terase (${i}).webp`,
+    width: 1000,
+    height: 1000,
+  });
+}
+
 const page = () => {
   return (
     <>
-      <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
         <HomeHeading
           smallTitle="Închideri Terase"
           smallTitleCSS="justify-start"
@@ -193,6 +203,7 @@ const page = () => {
         />
       </section>
       <ServiciiBlockModel1
+        image="/images/inchideri-terase/sunpro-inchideri-terase (15).webp"
         CTAButton={false}
         id="inchideri-cu-caseta"
         reversed={true}
@@ -207,6 +218,7 @@ const page = () => {
         thirdH3Text={texts.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/inchideri-terase/sunpro-inchideri-terase (6).webp"
         CTAButton={true}
         id="inchideri-cu-tambur"
         reversed={false}
@@ -221,6 +233,7 @@ const page = () => {
         thirdH3Text={texts2.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/inchideri-terase/sunpro-inchideri-terase (19).webp"
         CTAButton={false}
         id="inchideri-cu-capse"
         reversed={true}
@@ -235,6 +248,7 @@ const page = () => {
         thirdH3Text={texts3.thirdH3Text}
       />
       <ServiciiBlockModel1
+        image="/images/inchideri-terase/sunpro-inchideri-terase (10).webp"
         CTAButton={true}
         id="inchideri-cu-sticla-pliabila"
         reversed={false}
@@ -248,7 +262,11 @@ const page = () => {
         thirdH3={texts4.thirdH3}
         thirdH3Text={texts4.thirdH3Text}
       />
-      <ImageGallery smallHeading="Închideri Terase" bigHeading="Galerie" />
+      <ImageGallery
+        photos={photos}
+        smallHeading="Închideri Terase"
+        bigHeading="Galerie"
+      />
       <WorkProcess />
       <CTA />
     </>

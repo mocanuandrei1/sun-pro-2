@@ -8,9 +8,9 @@ import Button from "./custom ui/Button";
 export default function Hero() {
   const images = ["/Hero1.jpg", "/Hero2.jpg", "/Hero3.jpg"];
   const texts = [
-    "Transformă Ideile Tale în Realitate",
-    "Asigură Confort și Siguranță în Orice Vreme",
-    "Savurează Momente de Liniște și Relaxare",
+    "SunPro este Liderul Soluțiilor pentru Spații Exterioare",
+    "Asigură Confort și Siguranță Indiferent de Anotimp",
+    "Protejează-ți Exteriorul cu Soluțiile Durabile SunPro",
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);

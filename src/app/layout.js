@@ -3,6 +3,8 @@ import "./globals.css";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Header";
+import Script from "next/script";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({
@@ -25,12 +27,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
+        <Script src="https://www.google.com/recaptcha/api.js" />
+      </head>
       <body
         className={`${inter.variable} ${montserrat.variable} ${poppins.variable}`}
       >
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

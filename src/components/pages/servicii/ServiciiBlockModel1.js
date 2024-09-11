@@ -9,6 +9,7 @@ import {
 } from "react-icons/tb";
 
 const ServiciiBlockModel1 = ({
+  image,
   CTAButton,
   id,
   reversed,
@@ -23,7 +24,7 @@ const ServiciiBlockModel1 = ({
   thirdH3Text,
 }) => {
   return (
-    <section className={"my-28 " + backgroundColor} id={id}>
+    <section className={"my-10 lg:my-28 " + backgroundColor} id={id}>
       <div
         className={`max-w-screen-xl xl:mx-auto mx-10 ${
           reversed ? "py-10" : "py-0"
@@ -35,10 +36,10 @@ const ServiciiBlockModel1 = ({
           }`}
         >
           <Image
-            src="/Hero1.jpg"
-            alt="Copertine cu brațe laterale"
-            width={1200}
-            height={800}
+            src={image}
+            alt={bigHeading}
+            width={1000}
+            height={1000}
             className="rounded-lg"
           ></Image>
           {CTAButton && (

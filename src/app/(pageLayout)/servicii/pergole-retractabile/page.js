@@ -38,10 +38,20 @@ const texts = {
   ],
 };
 
+const photos = [];
+
+for (let i = 1; i <= 18; i++) {
+  photos.push({
+    src: `/images/pergole-retractabile/sunpro-pergole-retractabile (${i}).webp`,
+    width: 1000,
+    height: 1000,
+  });
+}
+
 const page = () => {
   return (
     <>
-      <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
         <HomeHeading
           smallTitle="Pergole Retractabile"
           smallTitleCSS="justify-start"
@@ -75,6 +85,7 @@ const page = () => {
         />
       </section>
       <ServiciiBlockModel1
+        image="/images/pergole-retractabile/sunpro-pergole-retractabile (14).webp"
         CTAButton={false}
         id="copertine-cu-brate-laterale"
         reversed={true}
@@ -144,6 +155,7 @@ const page = () => {
         ]}
       />
       <ServiciiBlockModel3
+        image="/images/pergole-retractabile/sunpro-pergole-retractabile (17).webp"
         smallHeading="Pergole Retractabile"
         bigHeading="Tipuri de Pergole Retractabile"
         description="Pergolele retractabile se diferențiază prin materialele utilizate și funcționalitatea oferită. Printre cele mai populare tipuri se numără pergolele bioclimatice, cele din aluminiu și cele motorizate, fiecare având avantaje distincte în funcție de nevoile și stilul dorit."
@@ -177,7 +189,11 @@ const page = () => {
           },
         ]}
       />
-      <ImageGallery smallHeading="Pergole Retractabile" bigHeading="Galerie" />
+      <ImageGallery
+        photos={photos}
+        smallHeading="Pergole Retractabile"
+        bigHeading="Galerie"
+      />
       <WorkProcess />
       <CTA />
     </>

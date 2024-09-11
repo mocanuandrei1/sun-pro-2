@@ -1,107 +1,226 @@
 "use client";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { FaUser, FaEnvelope, FaPhone, FaEdit } from "react-icons/fa";
-import dynamic from "next/dynamic";
-import Button from "../custom ui/Button";
 import { LuCrown } from "react-icons/lu";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { FiArrowUpRight } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
+import HomeHeading from "../custom ui/HomeHeading";
 
-// Importă componenta `Select` doar pe client, prevenind rendering-ul pe server
-const Select = dynamic(() => import("react-select"), { ssr: false });
+const formSchema = z.object({
+  lastname: z.string().min(2, {
+    message: "Numele trebuie să aibă cel puțin 2 caractere.",
+  }),
+  firstname: z.string().min(2, {
+    message: "Prenumele trebuie să aibă cel puțin 2 caractere.",
+  }),
+  email: z.string().email({
+    message: "Adresa de email trebuie să fie validă.",
+  }),
+  phone: z.string().min(10, {
+    message: "Numărul de telefon trebuie să aibă cel puțin 10 caractere.",
+  }),
+  message: z.string().min(10, {
+    message: "Mesajul trebuie să aibă cel puțin 10 caractere.",
+  }),
+});
 
 export default function ServicesGetInTouchWithoutPhoto() {
-  const options = [
-    { label: "Construction" },
-    { label: "Real Estate" },
-    { label: "Industry" },
-    { label: "Architect" },
-  ];
+  const { toast } = useToast();
 
-  const customStyles = {
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isFocused ? "#f68a09" : "white",
-      color: state.isFocused ? "white" : "black",
-      cursor: "pointer",
-    }),
-    control: (provided, state) => ({
-      ...provided,
-      backgroundColor: "#F3F4F6",
-      borderColor: state.isFocused ? "black" : "#E5E7EB",
-      borderWidth: "2px",
-      padding: "6px",
-      boxShadow: state.isFocused ? "0 0 0 0px black" : "none",
-      "&:hover": {
-        borderColor: "black",
-      },
-    }),
-    singleValue: (provided) => ({
-      ...provided,
-      color: "gray",
-    }),
-  };
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      lastname: "",
+      firstname: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values) {
+    // Get the reCAPTCHA token
+    const token = grecaptcha.getResponse();
+    if (!token) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+
+    const templateParams = {
+      firstname: values.firstname,
+      lastname: values.lastname,
+      email: values.email,
+      phone: values.phone,
+      message: values.message,
+      "g-recaptcha-response": token, // Add the token to templateParams
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then(
+        (response) => {
+          form.reset();
+          grecaptcha.reset();
+          toast({
+            title: "Cererea a fost trimisă cu succes!",
+            description: "Vă vom contacta în cel mai scurt timp posibil.",
+          });
+        },
+        (err) => {}
+      );
+  }
 
   return (
     <section className="bg-white w-full ">
       <div>
-        <p className="flex text-lg items-center text-[#f68a09] font-semibold lg:mb-6 justify-center">
-          <LuCrown className="pr-2 text-3xl" />
-          Intram in legatura
-        </p>
-        <h2 className="lg:text-3xl text-2xl font-bold leading-relaxed grid-about-3 mb-4 text-center ">
-          Ai un proiect viitor? Trimite-ne un mesaj acum!
-        </h2>
-        <form className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="relative">
-              <FaUser className="absolute flex top-4 left-3 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Numele tau"
-                className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+        <HomeHeading
+          smallTitle="Intreaba-ne orice"
+          smallTitleCSS="justify-start"
+          bigTitle="Ai un proiect viitor?"
+          bigTitleSecond="Trimite-ne un mesaj acum!"
+          bigTitleCSS="justify-center text-left mb-6"
+        />
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="lastname"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative">
+                        <FaUser className="absolute flex top-4 left-3 text-gray-400" />
+                        <Input
+                          placeholder="Numele tau"
+                          {...field}
+                          className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="firstname"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative">
+                        <FaUser className="absolute flex top-4 left-3 text-gray-400" />
+                        <Input
+                          placeholder="Prenumele tau"
+                          {...field}
+                          className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
-            <div className="relative">
-              <FaEnvelope className="absolute flex top-4 left-3 text-gray-400" />
-              <input
-                type="email"
-                placeholder="Adresa de email"
-                className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative">
+                        <FaEnvelope className="absolute flex top-4 left-3 text-gray-400" />
+                        <Input
+                          placeholder="Adresa de email"
+                          {...field}
+                          className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative">
+                        <FaPhone className="absolute flex top-4 left-3 text-gray-400" />
+                        <Input
+                          placeholder="Numarul tau de telefon"
+                          {...field}
+                          className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="relative">
-              <FaPhone className="absolute flex top-4 left-3 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Numarul tau de telefon"
-                className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
-              />
-            </div>
-            <Select
-              options={options}
-              styles={customStyles}
-              placeholder="Selecteaza subiectul"
-              inputId="subject-select" // ID fix
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <div className="relative">
+                      <FaEdit className="absolute flex top-4 left-3 text-gray-400" />
+                      <Textarea
+                        placeholder="Mesajul tau"
+                        {...field}
+                        className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-          <div className="relative">
-            <FaEdit className="absolute flex top-4 left-3 text-gray-400" />
-            <textarea
-              placeholder="Mesajul tau"
-              className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
-            ></textarea>
-          </div>
-        </form>
+            <div
+              className="g-recaptcha"
+              data-sitekey="6LcFLD8qAAAAAFSE1_W90zcrPCcVvQRhZr3WL5ZC"
+            ></div>
+            <button
+              type="submit"
+              className="relative bg-custom-blue px-6 py-3 flex items-center justify-center text-white rounded-sm clip-bottom-right group lg:mt-10 mt-2 mb-6 lg:mb-0 w-full sm:w-[290px] mx-auto"
+            >
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="h-1/2 transform bg-custom-orange -translate-x-[110%] group-hover:-translate-x-0 transition-transform duration-500"></div>
+                <div className="h-1/2 bg-custom-orange transform translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+              </div>
+              <div className="flex items-center relative z-10">
+                <span>Trimite mesajul</span>
+                <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
+              </div>
+            </button>
+          </form>
+        </Form>
       </div>
-      <Button
-        type="link"
-        mainColor="blue"
-        secondColor="orange"
-        href="despre-noi"
-        text="Trimite Mesajul"
-        customClass="lg:mt-10 mt-2 mb-6 lg:mb-0 w-full sm:w-[290px] mx-auto "
-      />
     </section>
   );
 }

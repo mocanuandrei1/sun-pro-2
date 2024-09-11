@@ -38,10 +38,20 @@ const texts = {
   ],
 };
 
+const photos = [];
+
+for (let i = 1; i <= 14; i++) {
+  photos.push({
+    src: `/images/rulouri-exterioare/sunpro-rulouri-exterioare (${i}).webp`,
+    width: 1000,
+    height: 1000,
+  });
+}
+
 const page = () => {
   return (
     <>
-      <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+      <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
         <HomeHeading
           smallTitle="Rulouri Exterioare"
           smallTitleCSS="justify-start"
@@ -77,6 +87,7 @@ const page = () => {
         />
       </section>
       <ServiciiBlockModel1
+        image="/images/rulouri-exterioare/sunpro-rulouri-exterioare (4).webp"
         CTAButton={false}
         id="rulouri-exterioare"
         reversed={true}
@@ -146,6 +157,7 @@ const page = () => {
         ]}
       />
       <ServiciiBlockModel3
+        image="/images/rulouri-exterioare/sunpro-rulouri-exterioare (8).webp"
         smallHeading="Rulouri Exterioare"
         bigHeading="Tipuri de Rulouri Exterioare"
         description="Există două tipuri principale de rulouri exterioare: rulourile suprapuse, care se montează odată cu tâmplăria, și rulourile aplicate, care se pot instala pe tâmplăria deja existentă sau direct pe zidărie. Fiecare tip oferă opțiuni variate pentru a se potrivi diferitelor cerințe estetice și funcționale."
@@ -170,7 +182,11 @@ const page = () => {
           },
         ]}
       />
-      <ImageGallery smallHeading="Rulouri Exterioare" bigHeading="Galerie" />
+      <ImageGallery
+        photos={photos}
+        smallHeading="Rulouri Exterioare"
+        bigHeading="Galerie"
+      />
       <WorkProcess />
       <CTA />
     </>

@@ -21,7 +21,7 @@ const ServiciiBlockModel2 = ({
   const titleToIconMap = generateTitleToIconMap(cards);
 
   return (
-    <section className="max-w-screen-xl xl:mx-auto mx-10 my-28">
+    <section className="max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
       <HomeHeading
         smallTitle={smallHeading}
         smallTitleCSS="justify-start"

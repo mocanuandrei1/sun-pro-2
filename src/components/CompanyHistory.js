@@ -5,46 +5,35 @@ import HomeHeading from "./custom ui/HomeHeading";
 export default function CompanyHistory() {
   const historyData = [
     {
-      date: "22 IULIE, 2024",
-      title: "10 Ani de Experiență în Soluții de Protecție Exterioară",
-      description:
-        "SunPro a acumulat o vastă experiență în oferirea de soluții inovatoare pentru protecția spațiilor exterioare, inclusiv pergole retractabile, prelate PVC și rulouri exterioare.",
-    },
-    {
-      date: "23 IULIE, 2013",
+      date: "23 August, 2013",
       title: "Fondarea SunPro",
       description:
-        "SunPro a fost fondată cu misiunea de a îmbunătăți confortul și protecția spațiilor exterioare prin produse de înaltă calitate și design modern.",
+        "SunPro a fost fondată cu misiunea clară de a aduce un plus de confort și protecție spațiilor exterioare. Cei doi parteneri fondatori au pornit la drum cu determinare și viziunea de a oferi produse de înaltă calitate și design modern, care să răspundă nevoilor clienților.",
     },
     {
-      date: "24 IULIE, 2024",
-      title: "Extinderea Gamelor de Produse",
+      date: "2018",
+      title: "Pragul de 500.000 RON depășit",
       description:
-        "Am extins gama noastră de produse pentru a include o varietate de soluții, de la pergole retractabile și prelate PVC până la rulouri exterioare personalizate.",
+        "Cu dedicare și muncă susținută, SunPro a reușit să depășească pragul de 500.000 RON cifră de afaceri în anul 2018. Această realizare a marcat o etapă importantă în evoluția companiei, consolidându-ne poziția pe piață și demonstrând încrederea tot mai mare pe care clienții o au în serviciile noastre.",
+    },
+    {
+      date: "2020",
+      title: "SunPro devine unul dintre cei mai mari distribuitori din România",
+      description:
+        "Anul 2020 a adus o nouă realizare majoră pentru SunPro: am devenit unul dintre cei mai mari distribuitori de folie din România. Această expansiune a fost posibilă datorită angajamentului nostru de a oferi produse și servicii de calitate superioară.",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6  py-20 lg:max-w-7xl lg:mx-auto mx-10">
-      <div className="relative h-full lg:block hidden">
-        <Image
-          src="/Hero1.jpg"
-          alt="Istoria Companiei SunPro"
-          width={500}
-          height={500}
-          className="h-full w-full object-cover"
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-screen-xl xl:mx-auto mx-10 my-10 lg:my-28">
+      <div>
+        <HomeHeading
+          smallTitle="Despre SunPro"
+          smallTitleCSS="justify-start"
+          bigTitle="Istoria Companiei SunPro"
+          bigTitleCSS="justify-center text-left mb-8"
         />
-      </div>
-      <div className="flex flex-col">
-        <div>
-          <HomeHeading
-            smallTitle="Istoria Companiei"
-            smallTitleCSS="justify-start"
-            bigTitle="Exterior confortabil, protecție garantată"
-            bigTitleCSS="justify-center text-left mb-6"
-          />
-        </div>
-        <div className="space-y-8">
+        <div className="flex flex-col justify-center gap-4">
           {historyData.map((item, index) => (
             <div
               key={index}
@@ -57,6 +46,15 @@ export default function CompanyHistory() {
           ))}
         </div>
       </div>
-    </div>
+      <div className="hidden relative lg:flex justify-center items-center">
+        <Image
+          src="/images/homepage/sunpro-lucrare (2).webp"
+          alt="Istorie SunPro"
+          width={2000}
+          height={1200}
+          className="object-cover h-3/4 rounded-lg"
+        />
+      </div>
+    </section>
   );
 }
