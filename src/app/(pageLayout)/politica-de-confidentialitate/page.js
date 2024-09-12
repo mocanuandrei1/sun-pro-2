@@ -22,7 +22,7 @@ const page = () => {
         Acest document are rolul de a vă informa cu privire la prelucrarea
         datelor dumneavoastră cu caracter personal, în contextul utilizării
         paginii de internet <strong>https://sunpro.ro</strong>, la care ne vom
-        referi în continuare cu denumirea "site-ul".
+        referi în continuare cu denumirea &quot;site-ul&quot;.
       </p>
       <br></br>
       <p className="font-bold text-xl">Cuprins</p>
@@ -155,7 +155,9 @@ const page = () => {
         <li>Dreptul la informare</li>
         <li>Dreptul de acces la date</li>
         <li>Dreptul la rectificare</li>
-        <li>Dreptul la ștergerea datelor („dreptul de a fi uitat”)</li>
+        <li>
+          Dreptul la ștergerea datelor (&quot;dreptul de a fi uitat&quot;)
+        </li>
         <li>Dreptul la restricționarea prelucrării</li>
         <li>Dreptul la portabilitatea datelor</li>
         <li>Dreptul la opoziție</li>

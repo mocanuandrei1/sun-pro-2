@@ -12,7 +12,7 @@ const WhyUsCard = () => {
   ];
 
   const tabContents = [
-    <div>
+    <div key="content-0">
       <h3 className="text-2xl font-bold mb-4">
         Lider în Soluții pentru Spații Exterioare!
       </h3>
@@ -46,7 +46,7 @@ const WhyUsCard = () => {
         </div>
       </div>
     </div>,
-    <div>
+    <div key="content-1">
       <h3 className="text-2xl font-bold mb-4">Abilitățile Noastre</h3>
       <div className="mb-6">
         <div className="flex justify-between mb-2">
@@ -80,7 +80,7 @@ const WhyUsCard = () => {
         </div>
       </div>
     </div>,
-    <div>
+    <div key="content-2">
       <h3 className="text-2xl font-bold mb-4">Viziunea Noastră</h3>
       <p className="mb-8">
         Ne angajăm să oferim soluții excepționale pentru spațiile exterioare,

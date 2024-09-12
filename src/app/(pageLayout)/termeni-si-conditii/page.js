@@ -61,9 +61,9 @@ const page = () => {
         Domeniul www.sunpro.ro este deținut de către{" "}
         <span class="font-bold">SUN PRO SRL</span>. Utilizarea acestei mărci, a
         domeniului sau a numelor de comercializare, siglelor și emblemelor, în
-        formă directă sau "ascunsă" (de tipul, dar nu limitat la, meta taguri
-        sau alte tehnici de indexare, căutare web) fără permisiunea prealabilă
-        scrisă este interzisă și se pedepsește conform legii.
+        formă directă sau &quot;ascunsă&quot; (de tipul, dar nu limitat la, meta
+        taguri sau alte tehnici de indexare, căutare web) fără permisiunea
+        prealabilă scrisă este interzisă și se pedepsește conform legii.
       </p>
       <p class="text-gray-600 mb-4">
         Produsele prezentate pe{" "}
