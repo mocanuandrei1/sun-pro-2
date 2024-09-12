@@ -11,7 +11,7 @@ export default function PageLayout({ children }) {
           alt="Construction workers"
           width={1200}
           height={800}
-          className=" object-cover w-full relative h-full"
+          className="object-cover w-full relative h-full"
         />
         <Breadcrumb />
       </div>
