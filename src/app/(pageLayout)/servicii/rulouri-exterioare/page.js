@@ -10,6 +10,28 @@ import Button from "@/components/custom ui/Button";
 import ServiciiBlockModel3 from "@/components/pages/servicii/ServiciiBlockModel3";
 import WorkProcess from "@/components/WorkProcess";
 
+export const metadata = {
+  title: "Rulouri Exterioare",
+  description:
+    "Rulourile exterioare sunt soluția ideală pentru protecția împotriva radiațiilor solare și îmbunătățirea confortului termic și fonic al spațiilor interioare.",
+  keywords: [
+    "rulouri exterioare",
+    "rulouri.exterioare",
+    "rulouri exterioare pret",
+    "rulouri exterioare preturi",
+    "pret rulouri exterioare",
+    "preturi rulouri exterioare",
+    "rulouri exterioare electrice",
+    "inlocuire snur rulouri exterioare",
+    "reparatii rulouri exterioare",
+    "rulouri exterioare aplicate",
+    "tipuri de rulouri exterioare",
+    "montaj rulouri exterioare",
+    "montare rulouri exterioare",
+    "rulouri exterioare pvc",
+  ],
+};
+
 const texts = {
   smallHeading: "Rulouri Exterioare",
   bigHeading: "Ce sunt Rulourile Exterioare?",

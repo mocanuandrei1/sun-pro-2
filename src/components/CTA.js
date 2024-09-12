@@ -26,7 +26,7 @@ export default function CTA() {
         <div className="flex lg:flex-row flex-col gap-4 items-center lg:justify-end">
           <Button
             type="link"
-            href="despre-noi"
+            href="contact"
             text="Obține Consultația Gratuită"
             customClass="mt-0 lg:mt-10 w-full sm:w-[290px] grid-about-6 "
             mainColor="orange"
@@ -34,7 +34,7 @@ export default function CTA() {
           />
           <Button
             type="link"
-            href="despre-noi"
+            href="contact"
             text="Lucrează cu noi"
             customClass="mt-0 lg:mt-10 w-full sm:w-[220px] grid-about-6 "
             mainColor="blue"

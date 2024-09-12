@@ -1,6 +1,29 @@
 import React from "react";
 import Image from "next/image";
 import { FaCalendarAlt, FaTags, FaUser } from "react-icons/fa";
+import RecentPosts from "@/components/RecentPosts";
+
+export const metadata = {
+  title:
+    "Ghid complet pentru închiderea teraselor: Avantaje și soluții populare",
+  description:
+    "În acest ghid detaliat, vom explora avantajele închiderii teraselor, precum și cele mai eficiente și populare soluții disponibile.",
+  keywords: [
+    "inchideri terasa",
+    "inchideri terase",
+    "închidere terasa",
+    "închideri terase",
+    "inchideri terase cu sticla",
+    "terase inchise",
+    "inchideri terase cu folie",
+    "folie inchideri terase",
+    "inchideri terase cu termopan",
+    "inchideri terase cu sticla glisanta",
+    "inchideri terase cu rulouri transparente casetate pret",
+    "inchideri terase sticla",
+    "inchideri terase cu folie transparenta",
+  ],
+};
 
 export default function BlogPost() {
   return (
@@ -9,10 +32,10 @@ export default function BlogPost() {
         <div className="bg-gray-100 mb-6 rounded-lg">
           <div className="relative overflow-hidden group">
             <Image
-              src="/images/inchideri-terase/sunpro-inchideri-terase (16).webp"
+              src="/images/blog/blog (2).webp"
               alt="Ghid complet pentru închiderea teraselor: Avantaje și soluții populare"
-              width={1000}
-              height={1000}
+              width={960}
+              height={320}
               className="w-full h-80 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
             />
             <div className="vertical-rect"></div>
@@ -324,6 +347,9 @@ export default function BlogPost() {
           </p>
         </div>
       </article>
+
+      {/* Bara laterală - Postări Recente */}
+      <RecentPosts exclude={1} />
     </div>
   );
 }

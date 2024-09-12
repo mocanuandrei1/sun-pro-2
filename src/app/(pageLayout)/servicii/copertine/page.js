@@ -6,6 +6,26 @@ import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1
 import WorkProcess from "@/components/WorkProcess";
 import React from "react";
 
+export const metadata = {
+  title: "Copertine",
+  description:
+    "SunPro oferă o gamă variată de copertine pentru protecția spațiilor exterioare împotriva soarelui, ploii și altor condiții meteorologice.",
+  keywords: [
+    "copertine",
+    "copertine terasa",
+    "copertină terasă",
+    "copertine retractabila",
+    "copertine terase",
+    "copertine usa intrare",
+    "copertine exterioare",
+    "copertine exterior",
+    "copertine retractabile terase",
+    "copertine retractabile",
+    "copertine terase exterior",
+    "copertine usa",
+  ],
+};
+
 const texts = {
   smallHeading: "Copertine",
   bigHeading: "Copertine cu brațe laterale",

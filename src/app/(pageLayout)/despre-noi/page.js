@@ -6,6 +6,12 @@ import CTA from "@/components/CTA";
 import WorkProcess from "@/components/WorkProcess";
 import React from "react";
 
+export const metadata = {
+  title: "Despre Noi",
+  description:
+    "SunPro oferă soluții personalizate pentru a satisface nevoile unice și specificațiile fiecărui proiect.",
+};
+
 export default function page() {
   return (
     <div>

@@ -3,6 +3,20 @@ import ServicesCards from "@/components/Services/ServicesCards";
 import { servicii } from "@/lib/variables";
 import React from "react";
 
+export const metadata = {
+  title: "Servicii",
+  description:
+    "SunPro oferă servicii de calitate pentru amenajarea și protejarea spațiului exterior al casei tale sau al afacerii tale.",
+  keywords: [
+    "Copertine",
+    "Pergole",
+    "Rulouri",
+    "Prelate PVC",
+    "Terase",
+    "Inchideri Terase",
+  ],
+};
+
 export default function page() {
   return (
     <div>

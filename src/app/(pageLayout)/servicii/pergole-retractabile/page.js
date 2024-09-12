@@ -10,6 +10,24 @@ import Button from "@/components/custom ui/Button";
 import ServiciiBlockModel3 from "@/components/pages/servicii/ServiciiBlockModel3";
 import WorkProcess from "@/components/WorkProcess";
 
+export const metadata = {
+  title: "Pergole Retractabile",
+  description:
+    "Pergolele retractabile sunt soluția ideală pentru acoperirea teraselor, a restaurantelor și a cafenelelor, oferind protecție și confort maxim.",
+  keywords: [
+    "pergole retractabile",
+    "pergolă retractabilă",
+    "pergola retractabila pret",
+    "pergole terasa retractabile",
+    "pergole terase retractabile",
+    "terase retractabile pret",
+    "pergole terasa retractabile pret",
+    "pergole bioclimatice retractabile",
+    "montaj pergola retractabila",
+    "pergole retractabile bucuresti",
+  ],
+};
+
 const texts = {
   smallHeading: "Pergole Retractabile",
   bigHeading: "Ce sunt Pergolele Retractabile?",

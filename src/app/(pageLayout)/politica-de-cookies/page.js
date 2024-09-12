@@ -1,5 +1,13 @@
 import React from "react";
 
+export const metadata = {
+  title: "Politica de Cookie-uri",
+  robots: {
+    follow: true,
+    index: false,
+  },
+};
+
 const page = () => {
   return (
     <div className="max-w-screen-xl xl:mx-auto mx-10 my-10">

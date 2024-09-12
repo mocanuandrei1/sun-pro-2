@@ -65,8 +65,7 @@ export const servicii = [
   {
     title: "Copertine",
     href: "/servicii/copertine",
-    description:
-      "Copertine retractabile, fixe, din policarbonat sau din panza.",
+    description: "Copertine retractabile, fixe sau din panza.",
     image: "/images/copertine/sunpro-copertine (7).webp",
   },
   {
@@ -78,7 +77,7 @@ export const servicii = [
   {
     title: "Inchideri Terase",
     href: "/servicii/inchideri-terase",
-    description: "Inchideri terase din sticla sau din policarbonat.",
+    description: "Inchideri terase din sticla sau folie.",
     image: "/images/inchideri-terase/sunpro-inchideri-terase (19).webp",
   },
   {
@@ -92,5 +91,38 @@ export const servicii = [
     href: "/servicii/prelate-pvc",
     description: "Prelate PVC pentru terase, piscine, balcoane.",
     image: "/images/prelate-pvc/sunpro-prelate-pvc (1).webp",
+  },
+];
+
+export const blogs = [
+  {
+    id: 1,
+    image: "/images/blog/blog (2).webp",
+    author: "Andrei Mocanu",
+    date: "6 Iulie, 2024",
+    readTime: "4 minute",
+    title:
+      "Ghid complet pentru închiderea teraselor: Avantaje și soluții populare",
+    link: "/blog/ghid-complet-pentru-inchiderea-teraselor",
+  },
+  {
+    id: 2,
+    image: "/images/blog/blog (3).webp",
+    author: "Andrei Mocanu",
+    date: "25 Iulie, 2024",
+    readTime: "5 minute",
+    title:
+      "Avantajele închiderii terasei cu folie transparentă: O soluție practică și accesibilă",
+    link: "/blog/avantajele-inchiderii-terasei-cu-folie-transparenta",
+  },
+  {
+    id: 3,
+    image: "/images/blog/blog (1).webp",
+    author: "Andrei Mocanu",
+    date: "23 August, 2024",
+    readTime: "3 minute",
+    title:
+      "Cum să alegi materialul potrivit pentru închiderea terasei: Sticlă vs. folie transparentă",
+    link: "/blog/cum-sa-alegi-materialul-potrivit-pentru-inchiderea-terasei",
   },
 ];

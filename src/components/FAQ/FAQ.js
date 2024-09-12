@@ -9,7 +9,7 @@ const faqs = [
     question:
       "Ce tipuri de copertine oferim și cum să alegi varianta potrivita?",
     answer:
-      "Pentru fiecare client, oferim copertine retractabile, fixe, din policarbonat sau din pânză. Alegerea copertinei depinde de nevoile și preferințele tale, de condițiile climatice din zonă și de stilul arhitectural al casei tale. Echipa noastră te poate ajuta să alegi soluția ideală.",
+      "Pentru fiecare client, oferim copertine retractabile, fixe sau din pânză. Alegerea copertinei depinde de nevoile și preferințele tale, de condițiile climatice din zonă și de stilul arhitectural al casei tale. Echipa noastră te poate ajuta să alegi soluția ideală.",
   },
   {
     question:
@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "Ce opțiuni avem pentru închiderea teraselor?",
     answer:
-      "Oferim închideri de terase cu sticlă sau policarbonat. Închiderea terasei poate oferi protecție împotriva vântului și ploii, permițând utilizarea acesteia pe tot parcursul anului. Sticla oferă un aspect elegant și vizibilitate, în timp ce policarbonatul este durabil și eficient din punct de vedere termic.",
+      "Oferim închideri de terase cu sticlă sau folie. Închiderea terasei poate oferi protecție împotriva vântului și ploii, permițând utilizarea acesteia pe tot parcursul anului. Sticla oferă un aspect elegant și vizibilitate, pe când folia transparentă este o soluție accesibilă și practică.",
   },
 ];
 

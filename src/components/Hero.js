@@ -49,7 +49,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative lg:h-[800px] h-[700px] bg-black lg:px-20 overflow-hidden">
+    <section
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="relative lg:h-[800px] h-[700px] bg-black lg:px-20 overflow-hidden"
+    >
       <Image
         src={images[currentImageIndex]}
         alt="Hero Image"

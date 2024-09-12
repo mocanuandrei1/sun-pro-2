@@ -10,6 +10,34 @@ import Button from "@/components/custom ui/Button";
 import ServiciiBlockModel3 from "@/components/pages/servicii/ServiciiBlockModel3";
 import WorkProcess from "@/components/WorkProcess";
 
+export const metadata = {
+  title: "Prelate PVC",
+  description:
+    "Prelatele PVC sunt soluții versatile și durabile pentru acoperirea și protejarea diferitelor tipuri de spații, de la terase și balcoane la vehicule și echipamente industriale.",
+  keywords: [
+    "prelate pvc",
+    "pvc-u",
+    "material pvc",
+    "prelata pvc",
+    "prelata 3x4",
+    "prelata 4x4",
+    "prelata 6x4",
+    "prelata 2x3",
+    "prelata 4x6",
+    "folie pvc constructii",
+    "prelata 4x5",
+    "prelata 6x6",
+    "prelata 2x2",
+    "prelata 3x5",
+    "prelata 5x4",
+    "prelata 5x6",
+    "prelate pt terase",
+    "prelata 6x3",
+    "prelata 8x4",
+    "prelata 8x6",
+  ],
+};
+
 const texts = {
   smallHeading: "Prelate PVC",
   bigHeading: "Ce sunt Prelatele PVC?",

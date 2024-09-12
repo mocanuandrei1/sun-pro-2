@@ -1,23 +1,18 @@
 import Breadcrumb from "@/components/custom ui/Breadcrumb";
+import { blogs } from "@/lib/variables";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaCalendarAlt, FaUser } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaUser } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 
-export default function page() {
-  const blogs = [
-    {
-      id: 1,
-      image: "/images/inchideri-terase/sunpro-inchideri-terase (16).webp",
-      author: "Andrei Mocanu",
-      date: "6 Iulie, 2024",
-      title:
-        "Ghid complet pentru închiderea teraselor: Avantaje și soluții populare",
-      link: "/blog/ghid-complet-pentru-inchiderea-teraselor-avantaje-si-solutii-populare",
-    },
-  ];
+export const metadata = {
+  title: "Blog",
+  description:
+    "Articole despre inchideri terase, copertine, pergole, rulouri si prelate PVC.",
+};
 
+export default function page() {
   return (
     <main>
       <div className="relative w-full h-64">
@@ -42,8 +37,8 @@ export default function page() {
               <Image
                 src={blog.image}
                 alt={blog.title}
-                width={400}
-                height={300}
+                width={960}
+                height={320}
                 className="w-full h-56 object-cover rounded-t-lg transition-transform duration-500 hover:scale-105"
               />
               <div className="vertical-rect"></div>
@@ -64,10 +59,15 @@ export default function page() {
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">
                   {blog.title}
                 </h3>
-                <div className="mt-auto">
+                <div className="mt-auto flex justify-between">
                   <span className="text-[#f68a09] text-sm font-bold flex items-center group">
                     Citeste mai mult
                     <FiArrowUpRight className="pl-2 text-2xl transition-transform duration-500 group-hover:rotate-45" />
+                  </span>
+
+                  <span className="flex items-center gap-2 hover:text-[#f68a09]">
+                    <FaClock className="text-[#f68a09]" />
+                    {blog.readTime}
                   </span>
                 </div>
               </div>

@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaUser, FaEnvelope, FaPhone, FaEdit } from "react-icons/fa";
-import { LuCrown } from "react-icons/lu";
 import {
   Form,
   FormControl,
@@ -18,6 +17,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 import HomeHeading from "../custom ui/HomeHeading";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const formSchema = z.object({
   lastname: z.string().min(2, {
@@ -38,6 +38,7 @@ const formSchema = z.object({
 });
 
 export default function ServicesGetInTouchWithoutPhoto() {
+  const recaptchaRef = useRef();
   const { toast } = useToast();
 
   const form = useForm({
@@ -53,8 +54,8 @@ export default function ServicesGetInTouchWithoutPhoto() {
 
   function onSubmit(values) {
     // Get the reCAPTCHA token
-    const token = grecaptcha.getResponse();
-    if (!token) {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    if (!recaptchaValue) {
       alert("Please complete the reCAPTCHA");
       return;
     }
@@ -65,7 +66,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
       email: values.email,
       phone: values.phone,
       message: values.message,
-      "g-recaptcha-response": token, // Add the token to templateParams
+      "g-recaptcha-response": recaptchaValue, // Add the token to templateParams
     };
 
     emailjs
@@ -80,13 +81,18 @@ export default function ServicesGetInTouchWithoutPhoto() {
       .then(
         (response) => {
           form.reset();
-          grecaptcha.reset();
+          recaptchaRef.current.reset();
           toast({
             title: "Cererea a fost trimisă cu succes!",
             description: "Vă vom contacta în cel mai scurt timp posibil.",
           });
         },
-        (err) => {}
+        (err) => {
+          toast({
+            title: "Cererea a eșuat!",
+            description: "Vă rugăm să încercați din nou.",
+          });
+        }
       );
   }
 
@@ -201,10 +207,10 @@ export default function ServicesGetInTouchWithoutPhoto() {
                 </FormItem>
               )}
             />
-            <div
-              className="g-recaptcha"
-              data-sitekey="6LcFLD8qAAAAAFSE1_W90zcrPCcVvQRhZr3WL5ZC"
-            ></div>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}
+            />
             <button
               type="submit"
               className="relative bg-custom-blue px-6 py-3 flex items-center justify-center text-white rounded-sm clip-bottom-right group lg:mt-10 mt-2 mb-6 lg:mb-0 w-full sm:w-[290px] mx-auto"

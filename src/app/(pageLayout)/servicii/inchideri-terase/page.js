@@ -6,6 +6,27 @@ import ServiciiBlockModel1 from "@/components/pages/servicii/ServiciiBlockModel1
 import WorkProcess from "@/components/WorkProcess";
 import React from "react";
 
+export const metadata = {
+  title: "Închideri Terase",
+  description:
+    "SunPro oferă soluții inovatoare pentru închiderea teraselor, concepute pentru a proteja spațiile exterioare de intemperii și pentru a transforma fiecare spațiu deschis într-un loc confortabil și protejat pe tot parcursul anului.",
+  keywords: [
+    "inchideri terasa",
+    "inchideri terase",
+    "închidere terasa",
+    "închideri terase",
+    "inchideri terase cu sticla",
+    "terase inchise",
+    "inchideri terase cu folie",
+    "folie inchideri terase",
+    "inchideri terase cu termopan",
+    "inchideri terase cu sticla glisanta",
+    "inchideri terase cu rulouri transparente casetate pret",
+    "inchideri terase sticla",
+    "inchideri terase cu folie transparenta",
+  ],
+};
+
 const texts = {
   smallHeading: "Închideri Terase",
   bigHeading: "Închideri terase cu caseta și ghidaje laterale",

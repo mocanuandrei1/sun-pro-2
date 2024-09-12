@@ -132,7 +132,27 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t flex flex-col-reverse gap-4 md:gap-0 md:flex-row justify-between items-center border-gray-800 max-w-screen-xl xl:mx-auto mx-10 py-4">
-        <p>Copyright © SunPro 2024. Toate drepturile rezervate.</p>
+        <div>
+          <p className="mb-2">
+            Copyright © SunPro 2024. Toate drepturile rezervate.
+          </p>
+          <p>
+            Dezvoltat de{" "}
+            <a
+              href="https://www.instagram.com/mocanu.andreii/"
+              className="underline text-custom-blue"
+            >
+              Mocanu Andrei
+            </a>{" "}
+            și{" "}
+            <a
+              href="https://www.instagram.com/sande3277/"
+              className="underline text-custom-blue"
+            >
+              Alexandru Ionită
+            </a>
+          </p>
+        </div>
         <div className="flex gap-6 flex-col md:flex-row">
           <a href="https://anpc.ro/ce-este-sal/">
             <Image
