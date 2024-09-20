@@ -5,7 +5,7 @@ import HomeHeading from "./custom ui/HomeHeading";
 export default function CompanyHistory() {
   const historyData = [
     {
-      date: "23 August, 2013",
+      date: "2013",
       title: "Fondarea SunPro",
       description:
         "SunPro a fost fondată cu misiunea clară de a aduce un plus de confort și protecție spațiilor exterioare. Cei doi parteneri fondatori au pornit la drum cu determinare și viziunea de a oferi produse de înaltă calitate și design modern, care să răspundă nevoilor clienților.",
@@ -17,10 +17,10 @@ export default function CompanyHistory() {
         "Cu dedicare și muncă susținută, SunPro a reușit să depășească pragul de 500.000 RON cifră de afaceri în anul 2018. Această realizare a marcat o etapă importantă în evoluția companiei, consolidându-ne poziția pe piață și demonstrând încrederea tot mai mare pe care clienții o au în serviciile noastre.",
     },
     {
-      date: "2020",
+      date: "2019",
       title: "SunPro devine unul dintre cei mai mari distribuitori din România",
       description:
-        "Anul 2020 a adus o nouă realizare majoră pentru SunPro: am devenit unul dintre cei mai mari distribuitori de folie din România. Această expansiune a fost posibilă datorită angajamentului nostru de a oferi produse și servicii de calitate superioară.",
+        "Anul 2019 a adus o nouă realizare majoră pentru SunPro: am devenit unul dintre cei mai mari distribuitori de folie din România, cu peste 50.000 de m² de folie distribuită. Această expansiune a fost posibilă datorită angajamentului nostru de a oferi produse și servicii de calitate superioară.",
     },
   ];
 

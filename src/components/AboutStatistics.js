@@ -9,7 +9,7 @@ export default function AboutStatistics() {
         <div className="text-left">
           <CountUp
             start={0}
-            end={158}
+            end={238}
             duration={3}
             suffix="+"
             className="text-5xl font-bold text-white"
@@ -21,7 +21,7 @@ export default function AboutStatistics() {
         <div className="text-left">
           <CountUp
             start={0}
-            end={65}
+            end={164}
             duration={3}
             suffix="+"
             className="text-5xl font-bold text-white"
@@ -31,7 +31,7 @@ export default function AboutStatistics() {
         <div className="text-left">
           <CountUp
             start={0}
-            end={42}
+            end={800}
             duration={3}
             suffix="+"
             className="text-5xl font-bold text-white"
@@ -41,7 +41,7 @@ export default function AboutStatistics() {
         <div className="text-left">
           <CountUp
             start={0}
-            end={20}
+            end={395}
             duration={3}
             suffix="+"
             className="text-5xl font-bold text-white"
@@ -53,7 +53,7 @@ export default function AboutStatistics() {
         <div className="text-left lg:block hidden">
           <CountUp
             start={0}
-            end={16}
+            end={275}
             duration={3}
             suffix="+"
             className="text-5xl font-bold text-white"

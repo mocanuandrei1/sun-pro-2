@@ -19,7 +19,16 @@ export default function NavBarMobile({ triggerRef }) {
   return (
     <div>
       <DrawerHeader className="bg-black h-20 flex justify-between">
-        <Image src="/logo2.png" alt="Kotar Logo" width={80} height={80} />
+        <Link href="/">
+          <Image
+            src="/logo-black.webp"
+            alt="Sun Pro Logo"
+            priority
+            width={80}
+            height={80}
+            className="cursor-pointer mt-2"
+          />
+        </Link>
         <DrawerClose>
           <AiOutlineClose
             className="text-white text-3xl cursor-pointer rounded-full"

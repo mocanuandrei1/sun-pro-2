@@ -40,7 +40,7 @@ export default function ContactInformation() {
           <FaMapMarkerAlt className="text-[#f68a09] text-3xl mr-4 col-span-2 sm:col-span-1" />
           <div className="col-span-10 sm:col-span-11">
             <h2 className="text-lg">Locatie</h2>
-            <p>DN1A nr. 697C, Crevedia 137180</p>
+            <p>DN1A nr. 697C, Crevedia, Dâmbovița 137180</p>
           </div>
         </div>
 
@@ -49,9 +49,9 @@ export default function ContactInformation() {
           <div className="col-span-10 sm:col-span-11">
             <h2 className="text-lg">Orele de lucru</h2>
             <div className="lg:flex flex-col hidden">
-              <p>Luni - Sambata: 8:00 - 16:00 </p>
+              <p>Luni - Vineri: 8:00 - 16:30 </p>
               <p>
-                Duminica: <span className="text-red-600">Inchis</span>{" "}
+                Duminică / Sâmbată <span className="text-red-600">Inchis</span>{" "}
               </p>
             </div>
             <div className="block lg:hidden">

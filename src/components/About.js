@@ -32,7 +32,7 @@ export default function About() {
       <div className="grid-about-5 flex flex-col sm:flex-row gap-5 lg:gap-2">
         <div className="p-6 lg:mr-3 bg-gray-100 rounded-lg shadow-lg basis-1/2">
           <div className="text-2xl font-medium flex mb-3">
-            <p className="text-[#f68a09] pr-2 font-montserrat">13</p>
+            <p className="text-[#f68a09] pr-2 font-montserrat">15+</p>
             <h2>
               Ani <span className="block">Experiență</span>
             </h2>

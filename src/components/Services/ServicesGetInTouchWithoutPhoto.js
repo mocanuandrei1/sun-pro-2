@@ -118,7 +118,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
                       <div className="relative">
                         <FaUser className="absolute flex top-4 left-3 text-gray-400" />
                         <Input
-                          placeholder="Numele tau"
+                          placeholder="Numele tău"
                           {...field}
                           className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                         />
@@ -137,7 +137,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
                       <div className="relative">
                         <FaUser className="absolute flex top-4 left-3 text-gray-400" />
                         <Input
-                          placeholder="Prenumele tau"
+                          placeholder="Prenumele tău"
                           {...field}
                           className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                         />
@@ -177,7 +177,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
                       <div className="relative">
                         <FaPhone className="absolute flex top-4 left-3 text-gray-400" />
                         <Input
-                          placeholder="Numarul tau de telefon"
+                          placeholder="Numărul tău de telefon"
                           {...field}
                           className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                         />
@@ -197,7 +197,7 @@ export default function ServicesGetInTouchWithoutPhoto() {
                     <div className="relative">
                       <FaEdit className="absolute flex top-4 left-3 text-gray-400" />
                       <Textarea
-                        placeholder="Mesajul tau"
+                        placeholder="Mesajul tău"
                         {...field}
                         className="w-full pl-10 pr-4 py-3 border-2 rounded bg-gray-100 border-[#E5E7EB]"
                       />

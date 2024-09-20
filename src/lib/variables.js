@@ -3,7 +3,7 @@ export const companyData = {
   email: "info@sunpro.ro",
   location: "DN1A nr. 697C",
   regCom: "J23/3718/2013",
-  cui: "32577423",
+  cui: "RO32577423",
 };
 
 export const navBarLinks = [

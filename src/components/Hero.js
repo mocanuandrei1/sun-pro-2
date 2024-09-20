@@ -80,7 +80,7 @@ export default function Hero() {
             <hr className="animate-fade-in-down delay-3 w-5 border-t-2 border-[#f68a09] mx-1" />
             <span className="animate-fade-in-down delay-4">Protejează</span>
             <hr className="animate-fade-in-down delay-5 w-5 border-t-2 border-[#f68a09] mx-1" />
-            <span className="animate-fade-in-down delay-6">Bucura-te</span>
+            <span className="animate-fade-in-down delay-6">Bucură-te</span>
           </div>
           <p className="xl:text-5xl lg:text-4xl text-3xl font-bold mt-4 animate-fade-in-left delay-7">
             <span>{texts[currentImageIndex]}</span>
